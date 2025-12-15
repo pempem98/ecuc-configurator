@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>4.2.2</REVISION-LABEL>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>BodyECU_Config</SHORT-NAME>
+      <LONG-NAME>
+        <L-4 L="EN">BodyECU_Config</L-4>
+      </LONG-NAME>
+      <ELEMENTS>
+        <ECUC-VALUE-COLLECTION>
+          <SHORT-NAME>BodyECU_Config_EcucValues</SHORT-NAME>
+          <UUID>100c8b9f-585d-4feb-8476-77ab9e68d9cd</UUID>
+          <ECU-EXTRACT-VERSION>1.0.0</ECU-EXTRACT-VERSION>
+          <ECUC-VALUES>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>CanIf</SHORT-NAME>
+              <UUID>a9acd3e0-1733-4ebc-8c03-76d979fd77a2</UUID>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/CanIf</DEFINITION-REF>
+              <IMPLEMENTATION-CONFIG-VARIANT>VariantPostBuild</IMPLEMENTATION-CONFIG-VARIANT>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>CanIfInitCfg</SHORT-NAME>
+                  <UUID>aab33bbf-97e3-4a60-ab2e-0f6e1d58a6ac</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>CanIfCtrlCfg_BodyCAN</SHORT-NAME>
+                      <UUID>099f65be-a25c-4ad7-b1f7-69dd33c7ebc6</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfCtrlCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <SHORT-NAME>CanIfCtrlId</SHORT-NAME>
+                          <UUID>3a7a1718-ecb0-4f1f-99d8-14dfcdc94709</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfCtrlCfg/CanIfCtrlId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>CanIfRxPdu_BodyCAN_DoorStatus</SHORT-NAME>
+                      <UUID>8ff9847c-8447-4887-9582-f1a7bd90fa26</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <SHORT-NAME>CanIfRxPduId</SHORT-NAME>
+                          <UUID>660b1141-db81-4c87-ace8-9441a5df8d71</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                          <VALUE>512</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <SHORT-NAME>CanIfRxPduCanId</SHORT-NAME>
+                          <UUID>b437405d-e3c2-4674-8cc9-3ed41b311619</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                          <VALUE>512</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>Can</SHORT-NAME>
+              <UUID>61cdbade-70db-46b6-b8df-918057f1dc31</UUID>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Can</DEFINITION-REF>
+              <IMPLEMENTATION-CONFIG-VARIANT>VariantPostBuild</IMPLEMENTATION-CONFIG-VARIANT>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>CanGeneral</SHORT-NAME>
+                  <UUID>082dc947-d027-479c-bb9c-836e7c44a4f9</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <SHORT-NAME>CanDevErrorDetect</SHORT-NAME>
+                      <UUID>bebf7fa6-e8ad-421f-8065-c6d21f791839</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanGeneral/CanDevErrorDetect</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>CanConfigSet</SHORT-NAME>
+                  <UUID>87b4127f-232a-42b0-9614-1d5738a34aa3</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanConfigSet</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>CanController_BodyCAN</SHORT-NAME>
+                      <UUID>00c851e8-714a-49e3-aea2-5414e36e3dee</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanConfigSet/CanController</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <SHORT-NAME>CanControllerId</SHORT-NAME>
+                          <UUID>6bf34fdf-f90b-4a0e-89e6-4323fc6e28c0</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanConfigSet/CanController/CanControllerId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <SHORT-NAME>CanControllerBaudRate</SHORT-NAME>
+                          <UUID>7fa21bc1-9e6c-442e-b926-6a724b1627b6</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Can/CanConfigSet/CanController/CanControllerBaudRate</DEFINITION-REF>
+                          <VALUE>500000</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>LinIf</SHORT-NAME>
+              <UUID>4aa7926c-786d-487d-93d6-d4d9f167800b</UUID>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/LinIf</DEFINITION-REF>
+              <IMPLEMENTATION-CONFIG-VARIANT>VariantPostBuild</IMPLEMENTATION-CONFIG-VARIANT>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinIfGlobalConfig</SHORT-NAME>
+                  <UUID>736bf8e0-8d55-4211-9394-577653bd869a</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfGlobalConfig</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <SHORT-NAME>LinIfDevErrorDetect</SHORT-NAME>
+                      <UUID>04207d8a-75ab-48f8-b636-bd10d32be318</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfGlobalConfig/LinIfDevErrorDetect</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinIfChannel_DoorLIN</SHORT-NAME>
+                  <UUID>45f779a4-49c3-4969-b205-acd2213b00de</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfChannel</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>LinIfFrame_DoorCommand</SHORT-NAME>
+                      <UUID>cbb34235-7070-45ba-bfeb-73863bbc7709</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <SHORT-NAME>LinIfFrameType</SHORT-NAME>
+                          <UUID>27435edf-b724-4b87-8bdb-0f6eb8a74e66</UUID>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>unconditional</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>Lin</SHORT-NAME>
+              <UUID>d5fceda0-4888-4f84-891c-d8fe61926592</UUID>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Lin</DEFINITION-REF>
+              <IMPLEMENTATION-CONFIG-VARIANT>VariantPostBuild</IMPLEMENTATION-CONFIG-VARIANT>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinGeneral</SHORT-NAME>
+                  <UUID>c635dab2-35f8-4fff-9efc-05fe4b26d0d9</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Lin/LinGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <SHORT-NAME>LinDevErrorDetect</SHORT-NAME>
+                      <UUID>46fa2b9f-f76c-414f-a25d-97160674c74f</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Lin/LinGeneral/LinDevErrorDetect</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinChannel_DoorLIN</SHORT-NAME>
+                  <UUID>dcf90f53-fadb-4868-b10d-ae93ab097c16</UUID>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Lin/LinChannel</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <SHORT-NAME>LinChannelBaudRate</SHORT-NAME>
+                      <UUID>1eb2ff64-83ef-42c5-9295-14f4f9c8c178</UUID>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Lin/LinChannel/LinChannelBaudRate</DEFINITION-REF>
+                      <VALUE>19200</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ECUC-VALUES>
+        </ECUC-VALUE-COLLECTION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
