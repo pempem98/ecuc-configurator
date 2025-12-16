@@ -1,0 +1,1334 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                Chrysler LLC                                */
+/*                            All rights reserved                             */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Description:   LIN Description file                                       */
+/*  Network:       Engine LIN network #1b                                     */
+/*  Release:       2014-17a                                                   */
+/*                                                                            */
+/*  Engineer:      Prusot Kulasekaram                                         */
+/*                 (248)xxx-xxxx                                              */
+/*  Creation Date: 2019-07-30                                                 */
+/*  Status:        IN PROCESS                                                 */
+/*                                                                            */
+/* ************************************************************************** */
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: ECM_GAS, 5 ms, 0.16 ms ;
+  Slaves: AAD, AGS, EEV1, EEV2, GEN1, LTR, PLA, RATVM, AGS2, HAPM, LCVM, PCPM, LCVM2 ;
+}
+
+Signals {
+  AAD_CalActv: 1, 0, AAD, ECM_GAS ;
+  AAD_CalRq: 1, 0, ECM_GAS, AAD ;
+  AAD_CalStat: 1, 0, AAD, ECM_GAS ;
+  AAD_CurrPos: 4, 15, AAD, ECM_GAS ;
+  AAD_ErrMechBreak: 1, 0, AAD, ECM_GAS ;
+  AAD_ErrMechStuck: 1, 0, AAD, ECM_GAS ;
+  AAD_ErrOvrTemp: 1, 0, AAD, ECM_GAS ;
+  AAD_ErrOvrVolt: 1, 0, AAD, ECM_GAS ;
+  AAD_ErrUnVolt: 1, 0, AAD, ECM_GAS ;
+  AAD_InitialIP_CalRq: 1, 0, ECM_GAS, AAD ;
+  AAD_PosRq: 4, 15, ECM_GAS, AAD ;
+  AGS_BoostRq: 1, 0, ECM_GAS, AGS ;
+  AGS_BoostStat: 1, 0, AGS, ECM_GAS ;
+  AGS_CalActv: 1, 0, AGS, ECM_GAS ;
+  AGS_CalRq: 1, 0, ECM_GAS, AGS ;
+  AGS_CalStat: 1, 0, AGS, ECM_GAS ;
+  AGS_CurrPos: 4, 0, AGS, ECM_GAS ;
+  AGS_ErrLIN: 2, 0, AGS, ECM_GAS ;
+  AGS_ErrMechBreak: 1, 0, AGS, ECM_GAS ;
+  AGS_ErrMechStuck: 1, 0, AGS, ECM_GAS ;
+  AGS_ErrOvrTemp: 1, 0, AGS, ECM_GAS ;
+  AGS_ErrOvrVolt: 1, 0, AGS, ECM_GAS ;
+  AGS_ErrUnVolt: 1, 0, AGS, ECM_GAS ;
+  AGS_PosRq: 4, 0, ECM_GAS, AGS ;
+  EEV1_CalRq: 2, 0, ECM_GAS, EEV1, EEV2 ;
+  EEV1_CalStat: 2, 0, EEV1, ECM_GAS ;
+  EEV1_ERR: 8, 0, EEV1, ECM_GAS ;
+  EEV1_HALL: 8, 127, EEV1, ECM_GAS ;
+  EEV1_MotorCurr: 8, 0, EEV1, ECM_GAS ;
+  EEV1_MotorVolt: 8, 0, EEV1, ECM_GAS ;
+  EEV1_PosAct: 8, 0, EEV1, ECM_GAS ;
+  EEV1_PosRq: 8, 0, ECM_GAS, EEV1, EEV2 ;
+  EEV1_Sts: 4, 0, EEV1, ECM_GAS ;
+  EEV1_SupplyVolt: 8, 0, EEV1, ECM_GAS ;
+  EEV1_Temp: 8, 0, EEV1, ECM_GAS ;
+  EEV2_CalRq: 2, 0, ECM_GAS, EEV1, EEV2 ;
+  EEV2_CalStat: 2, 0, EEV2, ECM_GAS ;
+  EEV2_ERR: 8, 0, EEV2, ECM_GAS ;
+  EEV2_HALL: 8, 127, EEV2, ECM_GAS ;
+  EEV2_MotorCurr: 8, 0, EEV2, ECM_GAS ;
+  EEV2_MotorVolt: 8, 0, EEV2, ECM_GAS ;
+  EEV2_PosAct: 8, 0, EEV2, ECM_GAS ;
+  EEV2_PosRq: 8, 0, ECM_GAS, EEV1, EEV2 ;
+  EEV2_Sts: 4, 0, EEV2, ECM_GAS ;
+  EEV2_SupplyVolt: 8, 0, EEV2, ECM_GAS ;
+  EEV2_Temp: 8, 0, EEV2, ECM_GAS ;
+  GEN1_ExicCurrent: 6, 0, GEN1, ECM_GAS ;
+  GEN1_ExicDutyCycle: 5, 0, GEN1, ECM_GAS ;
+  GEN1_ExicLimit: 5, 0, ECM_GAS, GEN1 ;
+  GEN1_Fault_CE: 1, 0, GEN1, ECM_GAS ;
+  GEN1_Fault_El: 1, 0, GEN1, ECM_GAS ;
+  GEN1_Fault_HT: 1, 0, GEN1, ECM_GAS ;
+  GEN1_Fault_Mec: 1, 0, GEN1, ECM_GAS ;
+  GEN1_Fault_TO: 1, 0, GEN1, ECM_GAS ;
+  GEN1_ID_Alter: 4, 0, GEN1, ECM_GAS ;
+  GEN1_ID_Supp: 3, 0, GEN1, ECM_GAS ;
+  GEN1_RampCOSpeed: 4, 0, ECM_GAS, GEN1 ;
+  GEN1_RampTime: 4, 0, ECM_GAS, GEN1 ;
+  GEN1_SetVoltage: 6, 0, ECM_GAS, GEN1 ;
+  LTRP_AIR_PRE_ERR: 2, 3, LTR, ECM_GAS ;
+  LTRP_CURR: 8, 255, LTR, ECM_GAS ;
+  LTRP_DBLK_ACTV: 2, 3, LTR, ECM_GAS ;
+  LTRP_DR_RN_ERR: 2, 3, LTR, ECM_GAS ;
+  LTRP_NODE_ERR: 2, 3, LTR, ECM_GAS ;
+  LTRP_OVR_CUR_ERR: 2, 3, LTR, ECM_GAS ;
+  LTRP_OVR_TMP_ERR: 2, 3, LTR, ECM_GAS ;
+  LTRP_POST_RUN_REQ: 3, 7, ECM_GAS, LTR ;
+  LTRP_POST_RUN_STAT: 3, 7, LTR, ECM_GAS ;
+  LTRP_RPM_ACTL: 8, 255, LTR, ECM_GAS ;
+  LTRP_RPM_REQ: 8, 255, ECM_GAS, LTR ;
+  LTRP_RPM_TGT: 8, 255, LTR, ECM_GAS ;
+  LTRP_SUPPLIER: 4, 0, LTR, ECM_GAS ;
+  LTRP_TEMP: 8, 255, LTR, ECM_GAS ;
+  LTRP_VERSION: 8, 255, LTR, ECM_GAS ;
+  LTRP_VLTG: 8, 255, LTR, ECM_GAS ;
+  LTRP_VLTG_ERR: 2, 3, LTR, ECM_GAS ;
+  M2SRes2Bit: 2, 0, ECM_GAS, AGS ;
+  M2SResByte1: 8, 0, ECM_GAS, AGS ;
+  M2SResByte2: 8, 0, ECM_GAS, AGS ;
+  M2SResByte3: 8, 0, ECM_GAS, AGS ;
+  PLA_ExicCurrent: 8, 0, PLA, ECM_GAS ;
+  PLA_ExicDutyCycle: 5, 0, PLA, ECM_GAS ;
+  PLA_ExicLimit: 7, 0, ECM_GAS, PLA ;
+  PLA_Fault_El: 1, 0, PLA, ECM_GAS ;
+  PLA_Fault_HT: 1, 0, PLA, ECM_GAS ;
+  PLA_Fault_Mec: 1, 0, PLA, ECM_GAS ;
+  PLA_Fault_TO: 1, 0, PLA, ECM_GAS ;
+  PLA_IC_supplier_ID: 3, 0, PLA, ECM_GAS ;
+  PLA_ID_Alter: 5, 0, PLA, ECM_GAS ;
+  PLA_ID_Supp: 3, 0, PLA, ECM_GAS ;
+  PLA_RampCOSpeed: 4, 0, ECM_GAS, PLA ;
+  PLA_RampTime: 4, 0, ECM_GAS, PLA ;
+  PLA_Reg_parameter: 1, 0, ECM_GAS, PLA ;
+  PLA_Request_data: 3, 0, ECM_GAS, PLA ;
+  PLA_Request_data_Response: 3, 0, PLA, ECM_GAS ;
+  PLA_Requested_response_data: 8, 0, PLA, ECM_GAS ;
+  PLA_SetVoltage: 8, 0, ECM_GAS, PLA ;
+  PLA_Thermal_protection: 3, 0, ECM_GAS, PLA ;
+  RATVM_CalRq: 2, 0, ECM_GAS, RATVM ;
+  RATVM_CalStat: 2, 0, RATVM, ECM_GAS ;
+  RATVM_ERR: 8, 0, RATVM, ECM_GAS ;
+  RATVM_MotorVolt: 8, 0, RATVM, ECM_GAS ;
+  RATVM_PosAct: 8, 0, RATVM, ECM_GAS ;
+  RATVM_PosRq: 8, 0, ECM_GAS, RATVM ;
+  RATVM_PosSv: 1, 0, ECM_GAS, RATVM ;
+  RATVM_Sts: 2, 0, RATVM, ECM_GAS ;
+  RsErr_AAD: 1, 0, AAD, ECM_GAS ;
+  RsErr_AGS: 1, 0, AGS, ECM_GAS ;
+  RsErr_EEV1: 1, 0, EEV1, ECM_GAS ;
+  RsErr_EEV2: 1, 0, EEV2, ECM_GAS ;
+  RsErr_LTRP_PUMP: 1, 0, LTR, ECM_GAS ;
+  RsErr_PLA: 1, 0, PLA, ECM_GAS ;
+  RsErr_RATVM: 1, 0, RATVM, ECM_GAS ;
+  S2MRes1Bit: 1, 0, AGS, ECM_GAS ;
+  S2MResByte1: 8, 0, AGS, ECM_GAS ;
+  S2MResByte2: 8, 0, AGS, ECM_GAS ;
+  AGS2_BoostRq: 1, 0, ECM_GAS, AGS2 ;
+  AGS2_BoostStat: 1, 0, AGS2, ECM_GAS ;
+  AGS2_CalActv: 1, 0, AGS2, ECM_GAS ;
+  AGS2_CalRq: 1, 0, ECM_GAS, AGS2 ;
+  AGS2_CalStat: 1, 0, AGS2, ECM_GAS ;
+  AGS2_CurrPos: 4, 0, AGS2, ECM_GAS ;
+  AGS2_ErrLIN: 2, 0, AGS2, ECM_GAS ;
+  AGS2_ErrMechBreak: 1, 0, AGS2, ECM_GAS ;
+  AGS2_ErrMechStuck: 1, 0, AGS2, ECM_GAS ;
+  AGS2_ErrOvrTemp: 1, 0, AGS2, ECM_GAS ;
+  AGS2_ErrOvrVolt: 1, 0, AGS2, ECM_GAS ;
+  AGS2_ErrUnVolt: 1, 0, AGS2, ECM_GAS ;
+  AGS2_PosRq: 4, 0, ECM_GAS, AGS2 ;
+  M2SRes2Bit_AGS2: 2, 0, ECM_GAS, AGS2 ;
+  M2SResByte2_AGS2: 8, 0, ECM_GAS, AGS2 ;
+  RsErr_AGS2: 1, 0, AGS2, ECM_GAS ;
+  S2MResBit1_AGS2: 1, 0, AGS2, ECM_GAS ;
+  S2MResByte1_AGS2: 8, 0, AGS2, ECM_GAS ;
+  S2MResByte2_AGS2: 8, 0, AGS2, ECM_GAS ;
+  M2SResByte1_AGS2: 8, 0, ECM_GAS, AGS2 ;
+  HAPM_AIR_PRE_ERR: 2, 3, HAPM, ECM_GAS ;
+  HAPM_CURR: 8, 255, HAPM, ECM_GAS ;
+  HAPM_DBLK_ACTV: 2, 3, HAPM, ECM_GAS ;
+  HAPM_DR_RN_ERR: 2, 3, HAPM, ECM_GAS ;
+  HAPM_NODE_ERR: 2, 3, HAPM, ECM_GAS ;
+  HAPM_OVR_CUR_ERR: 2, 3, HAPM, ECM_GAS ;
+  HAPM_OVR_TMP_ERR: 2, 3, HAPM, ECM_GAS ;
+  HAPM_POST_RUN_REQ: 3, 7, ECM_GAS, HAPM ;
+  HAPM_POST_RUN_STAT: 3, 7, HAPM, ECM_GAS ;
+  HAPM_RPM_ACTL: 8, 255, HAPM, ECM_GAS ;
+  HAPM_RPM_REQ: 8, 255, ECM_GAS, HAPM ;
+  HAPM_RPM_TGT: 8, 255, HAPM, ECM_GAS ;
+  HAPM_SUPPLIER: 4, 0, HAPM, ECM_GAS ;
+  HAPM_TEMP: 8, 255, HAPM, ECM_GAS ;
+  HAPM_VERSION: 8, 255, HAPM, ECM_GAS ;
+  HAPM_VLTG: 8, 255, HAPM, ECM_GAS ;
+  HAPM_VLTG_ERR: 2, 3, HAPM, ECM_GAS ;
+  LCVM_CalRq: 2, 0, ECM_GAS, LCVM ;
+  LCVM_CalStat: 2, 0, LCVM, ECM_GAS ;
+  LCVM_ERR: 8, 0, LCVM, ECM_GAS ;
+  LCVM_MotorVolt: 8, 0, LCVM, ECM_GAS ;
+  LCVM_PosAct: 8, 0, LCVM, ECM_GAS ;
+  LCVM_PosRq: 8, 0, ECM_GAS, LCVM ;
+  LCVM_PosSv: 1, 0, ECM_GAS, LCVM ;
+  LCVM_Sts: 2, 0, LCVM, ECM_GAS ;
+  RsErr_HAPM_PUMP: 1, 0, HAPM, ECM_GAS ;
+  RsErr_LCVM: 1, 0, LCVM, ECM_GAS ;
+  PCPM_RPM_REQ: 8, 255, ECM_GAS, PCPM ;
+  PCPM_POST_RUN_REQ: 3, 7, ECM_GAS, PCPM ;
+  PCPM_RPM_TGT: 8, 255, PCPM, ECM_GAS ;
+  PCPM_RPM_ACTL: 8, 255, PCPM, ECM_GAS ;
+  PCPM_VLTG: 8, 255, PCPM, ECM_GAS ;
+  PCPM_TEMP: 8, 255, PCPM, ECM_GAS ;
+  PCPM_CURR: 8, 255, PCPM, ECM_GAS ;
+  PCPM_AIR_PRE_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_OVR_TMP_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_OVR_CUR_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_DR_RN_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_VLTG_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_DBLK_ACTV: 2, 3, PCPM, ECM_GAS ;
+  PCPM_NODE_ERR: 2, 3, PCPM, ECM_GAS ;
+  PCPM_POST_RUN_STAT: 3, 7, PCPM, ECM_GAS ;
+  RsErr_PCPM_PUMP: 1, 0, PCPM, ECM_GAS ;
+  PCPM_VERSION: 8, 255, PCPM, ECM_GAS ;
+  PCPM_SUPPLIER: 4, 0, PCPM, ECM_GAS ;
+  LCVM2_CalRq: 2, 0, ECM_GAS, LCVM2 ;
+  LCVM2_CalStat: 2, 0, LCVM2, ECM_GAS ;
+  LCVM2_ERR: 8, 0, LCVM2, ECM_GAS ;
+  LCVM2_MotorVolt: 8, 0, LCVM2, ECM_GAS ;
+  LCVM2_PosAct: 8, 0, LCVM2, ECM_GAS ;
+  LCVM2_PosRq: 8, 0, ECM_GAS, LCVM2 ;
+  LCVM2_PosSv: 1, 0, ECM_GAS, LCVM2 ;
+  LCVM2_Sts: 2, 0, LCVM2, ECM_GAS ;
+  RsErr_LCVM2: 1, 0, LCVM2, ECM_GAS ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  GEN1_INFO: 17, GEN1, 2 {
+    GEN1_Fault_HT, 0 ;
+    GEN1_Fault_Mec, 1 ;
+    GEN1_Fault_El, 2 ;
+    GEN1_ExicDutyCycle, 3 ;
+    GEN1_ExicCurrent, 8 ;
+    GEN1_Fault_CE, 14 ;
+    GEN1_Fault_TO, 15 ;
+  }
+  PLA_ID: 18, PLA, 2 {
+    PLA_ID_Supp, 0 ;
+    PLA_ID_Alter, 3 ;
+    PLA_IC_supplier_ID, 8 ;
+  }
+  PLA_INFO: 21, PLA, 4 {
+    PLA_Fault_HT, 0 ;
+    PLA_Fault_Mec, 1 ;
+    PLA_Fault_El, 2 ;
+    PLA_ExicDutyCycle, 3 ;
+    PLA_ExicCurrent, 8 ;
+    PLA_Request_data_Response, 16 ;
+    RsErr_PLA, 22 ;
+    PLA_Fault_TO, 23 ;
+    PLA_Requested_response_data, 24 ;
+  }
+  GEN1_ID: 19, GEN1, 2 {
+    GEN1_ID_Supp, 0 ;
+    GEN1_ID_Alter, 3 ;
+  }
+  ECM_AGS_DEMAND: 30, ECM_GAS, 4 {
+    AGS_PosRq, 0 ;
+    AGS_CalRq, 4 ;
+    AGS_BoostRq, 5 ;
+    M2SRes2Bit, 6 ;
+    M2SResByte1, 8 ;
+    M2SResByte2, 16 ;
+    M2SResByte3, 24 ;
+  }
+  ECM_EEV: 31, ECM_GAS, 8 {
+    EEV1_PosRq, 0 ;
+    EEV1_CalRq, 14 ;
+    EEV2_PosRq, 16 ;
+    EEV2_CalRq, 30 ;
+  }
+  AGS_ECM_STATUS: 32, AGS, 4 {
+    AGS_CurrPos, 0 ;
+    AGS_CalStat, 4 ;
+    AGS_CalActv, 5 ;
+    AGS_ErrUnVolt, 6 ;
+    AGS_ErrOvrVolt, 7 ;
+    AGS_ErrOvrTemp, 8 ;
+    AGS_ErrMechStuck, 9 ;
+    AGS_ErrMechBreak, 10 ;
+    AGS_ErrLIN, 11 ;
+    RsErr_AGS, 13 ;
+    AGS_BoostStat, 14 ;
+    S2MRes1Bit, 15 ;
+    S2MResByte1, 16 ;
+    S2MResByte2, 24 ;
+  }
+  EEV1_ECM: 33, EEV1, 8 {
+    EEV1_PosAct, 0 ;
+    EEV1_CalStat, 8 ;
+    RsErr_EEV1, 11 ;
+    EEV1_Sts, 12 ;
+    EEV1_ERR, 16 ;
+    EEV1_HALL, 24 ;
+    EEV1_SupplyVolt, 32 ;
+    EEV1_MotorVolt, 40 ;
+    EEV1_MotorCurr, 48 ;
+    EEV1_Temp, 56 ;
+  }
+  EEV2_ECM: 34, EEV2, 8 {
+    EEV2_PosAct, 0 ;
+    EEV2_CalStat, 8 ;
+    RsErr_EEV2, 11 ;
+    EEV2_Sts, 12 ;
+    EEV2_ERR, 16 ;
+    EEV2_HALL, 24 ;
+    EEV2_SupplyVolt, 32 ;
+    EEV2_MotorVolt, 40 ;
+    EEV2_MotorCurr, 48 ;
+    EEV2_Temp, 56 ;
+  }
+  RATVM_ECM: 35, RATVM, 8 {
+    RATVM_PosAct, 0 ;
+    RATVM_ERR, 8 ;
+    RATVM_MotorVolt, 16 ;
+    RATVM_Sts, 27 ;
+    RsErr_RATVM, 29 ;
+    RATVM_CalStat, 30 ;
+  }
+  ECM_AAD_DEMAND: 37, ECM_GAS, 4 {
+    AAD_PosRq, 0 ;
+    AAD_CalRq, 4 ;
+    AAD_InitialIP_CalRq, 5 ;
+  }
+  AAD_ECM_STATUS: 38, AAD, 4 {
+    AAD_CurrPos, 0 ;
+    AAD_CalStat, 4 ;
+    AAD_CalActv, 5 ;
+    AAD_ErrUnVolt, 6 ;
+    AAD_ErrOvrVolt, 7 ;
+    AAD_ErrOvrTemp, 8 ;
+    AAD_ErrMechStuck, 9 ;
+    AAD_ErrMechBreak, 10 ;
+    RsErr_AAD, 11 ;
+  }
+  MASTER_PLA: 41, ECM_GAS, 4 {
+    PLA_SetVoltage, 0 ;
+    PLA_RampTime, 8 ;
+    PLA_RampCOSpeed, 12 ;
+    PLA_ExicLimit, 17 ;
+    PLA_Request_data, 24 ;
+    PLA_Thermal_protection, 28 ;
+    PLA_Reg_parameter, 31 ;
+  }
+  MASTER_GEN1_1: 48, ECM_GAS, 4 {
+    GEN1_SetVoltage, 0 ;
+    GEN1_RampTime, 8 ;
+    GEN1_RampCOSpeed, 12 ;
+    GEN1_ExicLimit, 16 ;
+  }
+  ECM_RATVM: 46, ECM_GAS, 8 {
+    RATVM_PosRq, 0 ;
+    RATVM_PosSv, 13 ;
+    RATVM_CalRq, 14 ;
+  }
+  LTRP_STAT: 56, LTR, 8 {
+    LTRP_RPM_TGT, 0 ;
+    LTRP_RPM_ACTL, 8 ;
+    LTRP_VLTG, 16 ;
+    LTRP_TEMP, 24 ;
+    LTRP_CURR, 32 ;
+    LTRP_AIR_PRE_ERR, 44 ;
+    LTRP_OVR_TMP_ERR, 46 ;
+    LTRP_OVR_CUR_ERR, 48 ;
+    LTRP_DR_RN_ERR, 50 ;
+    LTRP_VLTG_ERR, 52 ;
+    LTRP_DBLK_ACTV, 54 ;
+    LTRP_NODE_ERR, 58 ;
+    LTRP_POST_RUN_STAT, 60 ;
+    RsErr_LTRP_PUMP, 63 ;
+  }
+  LTRP_REQ: 57, ECM_GAS, 2 {
+    LTRP_RPM_REQ, 0 ;
+    LTRP_POST_RUN_REQ, 8 ;
+  }
+  LTRP_VER: 58, LTR, 2 {
+    LTRP_VERSION, 0 ;
+    LTRP_SUPPLIER, 8 ;
+  }
+  ECM_AGS2_DEMAND: 12, ECM_GAS, 4 {
+    AGS2_PosRq, 0 ;
+    AGS2_CalRq, 4 ;
+    AGS2_BoostRq, 5 ;
+    M2SRes2Bit_AGS2, 6 ;
+    M2SResByte1_AGS2, 8 ;
+    M2SResByte2_AGS2, 16 ;
+  }
+  AGS2_ECM_STATUS: 52, AGS2, 4 {
+    AGS2_CurrPos, 0 ;
+    AGS2_CalStat, 4 ;
+    AGS2_CalActv, 5 ;
+    AGS2_ErrUnVolt, 6 ;
+    AGS2_ErrOvrVolt, 7 ;
+    AGS2_ErrOvrTemp, 8 ;
+    AGS2_ErrMechStuck, 9 ;
+    AGS2_ErrMechBreak, 10 ;
+    AGS2_ErrLIN, 11 ;
+    RsErr_AGS2, 13 ;
+    AGS2_BoostStat, 14 ;
+    S2MResBit1_AGS2, 15 ;
+    S2MResByte1_AGS2, 16 ;
+    S2MResByte2_AGS2, 24 ;
+  }
+  ECM_LCVM: 3, ECM_GAS, 8 {
+    LCVM_PosRq, 0 ;
+    LCVM_PosSv, 13 ;
+    LCVM_CalRq, 14 ;
+  }
+  LCVM_ECM: 4, LCVM, 8 {
+    LCVM_PosAct, 0 ;
+    LCVM_ERR, 8 ;
+    LCVM_MotorVolt, 16 ;
+    LCVM_Sts, 27 ;
+    RsErr_LCVM, 29 ;
+    LCVM_CalStat, 30 ;
+  }
+  HAPM_VER: 7, HAPM, 2 {
+    HAPM_VERSION, 0 ;
+    HAPM_SUPPLIER, 8 ;
+  }
+  HAPM_STAT: 10, HAPM, 8 {
+    HAPM_RPM_TGT, 0 ;
+    HAPM_RPM_ACTL, 8 ;
+    HAPM_VLTG, 16 ;
+    HAPM_TEMP, 24 ;
+    HAPM_CURR, 32 ;
+    HAPM_AIR_PRE_ERR, 44 ;
+    HAPM_OVR_TMP_ERR, 46 ;
+    HAPM_OVR_CUR_ERR, 48 ;
+    HAPM_DR_RN_ERR, 50 ;
+    HAPM_VLTG_ERR, 52 ;
+    HAPM_DBLK_ACTV, 54 ;
+    HAPM_NODE_ERR, 58 ;
+    HAPM_POST_RUN_STAT, 60 ;
+    RsErr_HAPM_PUMP, 63 ;
+  }
+  HAPM_REQ: 11, ECM_GAS, 2 {
+    HAPM_RPM_REQ, 0 ;
+    HAPM_POST_RUN_REQ, 8 ;
+  }
+  PCPM_REQ: 5, ECM_GAS, 2 {
+    PCPM_RPM_REQ, 0 ;
+    PCPM_POST_RUN_REQ, 8 ;
+  }
+  PCPM_Stat: 6, PCPM, 8 {
+    PCPM_RPM_TGT, 0 ;
+    PCPM_RPM_ACTL, 8 ;
+    PCPM_VLTG, 16 ;
+    PCPM_TEMP, 24 ;
+    PCPM_CURR, 32 ;
+    PCPM_AIR_PRE_ERR, 44 ;
+    PCPM_OVR_TMP_ERR, 46 ;
+    PCPM_OVR_CUR_ERR, 48 ;
+    PCPM_DR_RN_ERR, 50 ;
+    PCPM_VLTG_ERR, 52 ;
+    PCPM_DBLK_ACTV, 54 ;
+    PCPM_NODE_ERR, 58 ;
+    PCPM_POST_RUN_STAT, 60 ;
+    RsErr_PCPM_PUMP, 63 ;
+  }
+  PCPM_VER: 22, PCPM, 2 {
+    PCPM_VERSION, 0 ;
+    PCPM_SUPPLIER, 8 ;
+  }
+  LCVM2_ECM: 36, LCVM2, 8 {
+    LCVM2_PosAct, 0 ;
+    LCVM2_ERR, 8 ;
+    LCVM2_MotorVolt, 16 ;
+    LCVM2_Sts, 27 ;
+    RsErr_LCVM2, 29 ;
+    LCVM2_CalStat, 30 ;
+  }
+  ECM_LCVM2: 47, ECM_GAS, 8 {
+    LCVM2_PosRq, 0 ;
+    LCVM2_PosSv, 13 ;
+    LCVM2_CalRq, 14 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  AAD{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x4B ;
+    initial_NAD = 0x4B ;
+    product_id = 0xFFF, 0xFFEF, 0 ;
+    response_error = RsErr_AAD ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      AAD_ECM_STATUS ;
+      ECM_AAD_DEMAND ;
+    }
+  }
+  AGS{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0xB ;
+    initial_NAD = 0xB ;
+    product_id = 0xFFF, 0xFFEF, 0 ;
+    response_error = RsErr_AGS ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      AGS_ECM_STATUS ;
+      ECM_AGS_DEMAND ;
+    }
+  }
+  EEV1{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x9 ;
+    initial_NAD = 0x9 ;
+    product_id = 0xFFF, 0x0, 0 ;
+    response_error = RsErr_EEV1 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_EEV ;
+      EEV1_ECM ;
+    }
+  }
+  EEV2{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0xA ;
+    initial_NAD = 0xA ;
+    product_id = 0xFFF, 0x0, 0 ;
+    response_error = RsErr_EEV2 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_EEV ;
+      EEV2_ECM ;
+    }
+  }
+  GEN1{
+    LIN_protocol = "1.3" ;
+    configured_NAD = 0x1 ;
+  }
+  LTR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x5A ;
+    initial_NAD = 0x5A ;
+    product_id = 0x48, 0x8000, 2 ;
+    response_error = RsErr_LTRP_PUMP ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      LTRP_REQ ;
+      LTRP_STAT ;
+      LTRP_VER ;
+    }
+  }
+  PLA{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x46 ;
+    initial_NAD = 0x46 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = RsErr_PLA ;
+    P2_min = 150 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      MASTER_PLA ;
+      PLA_ID ;
+      PLA_INFO ;
+    }
+  }
+  RATVM{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x3 ;
+    initial_NAD = 0x3 ;
+    product_id = 0xFFF, 0x0, 0 ;
+    response_error = RsErr_RATVM ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_RATVM ;
+      RATVM_ECM ;
+    }
+  }
+  AGS2{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0xF ;
+    initial_NAD = 0xF ;
+    product_id = 0xFFF, 0xFFEF, 0 ;
+    response_error = RsErr_AGS2 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      AGS2_ECM_STATUS ;
+      ECM_AGS2_DEMAND ;
+    }
+  }
+  HAPM{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x11 ;
+    initial_NAD = 0x11 ;
+    product_id = 0x0, 0xFFFE, 0 ;
+    response_error = RsErr_HAPM_PUMP ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      HAPM_REQ ;
+      HAPM_STAT ;
+      HAPM_VER ;
+    }
+  }
+  LCVM{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x4A ;
+    initial_NAD = 0x4A ;
+    product_id = 0x0, 0xFFFE, 0 ;
+    response_error = RsErr_LCVM ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_LCVM ;
+      LCVM_ECM ;
+    }
+  }
+  PCPM{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x5B ;
+    initial_NAD = 0x5B ;
+    product_id = 0x0, 0x0, 255 ;
+    response_error = RsErr_PCPM_PUMP ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      PCPM_REQ ;
+      PCPM_Stat ;
+      PCPM_VER ;
+    }
+  }
+  LCVM2{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x2F ;
+    initial_NAD = 0x2F ;
+    product_id = 0xFFF, 0x0, 0 ;
+    response_error = RsErr_LCVM2 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_LCVM2 ;
+      LCVM2_ECM ;
+    }
+  }
+}
+
+Schedule_tables {
+ Diag {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+ GAS_GME_GSE {
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 30 ms ;
+    ECM_AGS2_DEMAND delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 15 ms ;
+    LTRP_REQ delay 10 ms ;
+    LTRP_VER delay 15 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    ECM_AGS_DEMAND delay 30 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    LTRP_STAT delay 30 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 20 ms ;
+    AGS2_ECM_STATUS delay 10 ms ;
+    AGS_ECM_STATUS delay 10 ms ;
+  }
+ Gas_Gen {
+    ECM_EEV delay 25 ms ;
+    EEV1_ECM delay 25 ms ;
+    EEV2_ECM delay 25 ms ;
+    LTRP_REQ delay 10 ms ;
+    LTRP_VER delay 15 ms ;
+    ECM_AGS_DEMAND delay 25 ms ;
+    ECM_EEV delay 25 ms ;
+    EEV1_ECM delay 25 ms ;
+    EEV2_ECM delay 25 ms ;
+    LTRP_STAT delay 25 ms ;
+    AGS_ECM_STATUS delay 25 ms ;
+  }
+ Gas_Hybrid {
+    AGS_ECM_STATUS delay 125 ms ;
+    ECM_AGS_DEMAND delay 125 ms ;
+  }
+ Gas_Large {
+    MASTER_GEN1_1 delay 10 ms ;
+    GEN1_INFO delay 10 ms ;
+    ECM_AAD_DEMAND delay 10 ms ;
+    GEN1_ID delay 10 ms ;
+    ECM_RATVM delay 10 ms ;
+    MASTER_GEN1_1 delay 10 ms ;
+    GEN1_INFO delay 30 ms ;
+    LTRP_REQ delay 10 ms ;
+    MASTER_GEN1_1 delay 10 ms ;
+    GEN1_INFO delay 10 ms ;
+    ECM_AGS_DEMAND delay 10 ms ;
+    RATVM_ECM delay 10 ms ;
+    AAD_ECM_STATUS delay 10 ms ;
+    MASTER_GEN1_1 delay 10 ms ;
+    GEN1_INFO delay 30 ms ;
+    LTRP_STAT delay 10 ms ;
+    MASTER_GEN1_1 delay 10 ms ;
+    GEN1_INFO delay 20 ms ;
+    AGS_ECM_STATUS delay 10 ms ;
+    LTRP_VER delay 10 ms ;
+  }
+ PMBD_GMET6 {
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    ECM_RATVM delay 10 ms ;
+    ECM_AAD_DEMAND delay 10 ms ;
+    ECM_LCVM2 delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    PCPM_REQ delay 5 ms ;
+    LTRP_REQ delay 5 ms ;
+    PCPM_VER delay 5 ms ;
+    LTRP_VER delay 5 ms ;
+    ECM_AGS_DEMAND delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    ECM_EEV delay 10 ms ;
+    EEV1_ECM delay 10 ms ;
+    EEV2_ECM delay 10 ms ;
+    HAPM_REQ delay 5 ms ;
+    HAPM_STAT delay 10 ms ;
+    LTRP_STAT delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    HAPM_VER delay 5 ms ;
+    AAD_ECM_STATUS delay 10 ms ;
+    RATVM_ECM delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    LCVM2_ECM delay 10 ms ;
+    AGS_ECM_STATUS delay 10 ms ;
+    PCPM_Stat delay 10 ms ;
+    ECM_EEV delay 10 ms ;
+    EEV1_ECM delay 10 ms ;
+    EEV2_ECM delay 10 ms ;
+  }
+ PLA_ID_Request {
+    MASTER_PLA delay 10 ms ;
+    PLA_ID delay 40 ms ;
+  }
+ PMBD_GMET4 {
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    ECM_AGS2_DEMAND delay 10 ms ;
+    ECM_AAD_DEMAND delay 10 ms ;
+    ECM_LCVM2 delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    PCPM_REQ delay 5 ms ;
+    LTRP_REQ delay 5 ms ;
+    PCPM_VER delay 5 ms ;
+    LTRP_VER delay 5 ms ;
+    ECM_AGS_DEMAND delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    ECM_EEV delay 10 ms ;
+    EEV1_ECM delay 10 ms ;
+    EEV2_ECM delay 10 ms ;
+    HAPM_REQ delay 5 ms ;
+    HAPM_STAT delay 10 ms ;
+    LTRP_STAT delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    HAPM_VER delay 5 ms ;
+    AGS2_ECM_STATUS delay 10 ms ;
+    AAD_ECM_STATUS delay 10 ms ;
+    MASTER_PLA delay 10 ms ;
+    PLA_INFO delay 10 ms ;
+    PCPM_Stat delay 10 ms ;
+    LCVM2_ECM delay 10 ms ;
+    AGS_ECM_STATUS delay 10 ms ;
+    ECM_EEV delay 10 ms ;
+    EEV1_ECM delay 10 ms ;
+    EEV2_ECM delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  AAD_Position {
+    logical_value, 0, "Deploy_100" ;
+    logical_value, 1, "Deploy_89" ;
+    logical_value, 2, "Deploy_77" ;
+    logical_value, 3, "Deploy_66" ;
+    logical_value, 4, "Deploy_55" ;
+    logical_value, 5, "Deploy_44" ;
+    logical_value, 6, "Deploy_33" ;
+    logical_value, 7, "Deploy_22" ;
+    logical_value, 8, "Deploy_11" ;
+    logical_value, 9, "Deploy_0" ;
+    logical_value, 15, "SNA" ;
+  }
+  C_04_sec_0_15_logical_3sec {
+    logical_value, 0, "RMP_TIME_0" ;
+    logical_value, 1, "RMP_TIME_0_25" ;
+    logical_value, 2, "RMP_TIME_0_5" ;
+    logical_value, 3, "RMP_TIME_0_75" ;
+    logical_value, 4, "RMP_TIME_1" ;
+    logical_value, 5, "RMP_TIME_2" ;
+    logical_value, 6, "RMP_TIME_3" ;
+    logical_value, 7, "RMP_TIME_4" ;
+    logical_value, 8, "RMP_TIME_5" ;
+    logical_value, 9, "RMP_TIME_6" ;
+    logical_value, 10, "RMP_TIME_7" ;
+    logical_value, 11, "RMP_TIME_8" ;
+    logical_value, 12, "RMP_TIME_9" ;
+    logical_value, 13, "RMP_TIME_10" ;
+    logical_value, 14, "RMP_TIME_12" ;
+    logical_value, 15, "RMP_TIME_15" ;
+  }
+  C_07_Amp_0_11 {
+    physical_value, 1, 110, 0.1, 0, "Amp" ;
+    logical_value, 0, "NO_LIMIT" ;
+    logical_value, 111, "No_Limit_a" ;
+    logical_value, 112, "No_Limit_b" ;
+    logical_value, 113, "No_Limit_c" ;
+    logical_value, 114, "No_Limit_d" ;
+    logical_value, 115, "No_Limit_e" ;
+    logical_value, 116, "No_Limit_f" ;
+    logical_value, 117, "No_Limit_g" ;
+    logical_value, 118, "No_Limit_h" ;
+    logical_value, 119, "No_Limit_i" ;
+    logical_value, 120, "No_Limit_j" ;
+    logical_value, 121, "No_Limit_k" ;
+    logical_value, 122, "No_Limit_l" ;
+    logical_value, 123, "No_Limit_m" ;
+    logical_value, 124, "No_Limit_n" ;
+    logical_value, 125, "No_Limit_o" ;
+    logical_value, 126, "No_Limit_p" ;
+    logical_value, 127, "No_Limit_q" ;
+  }
+  ControlDuration {
+    logical_value, 0, "RMP_TIME_0" ;
+    logical_value, 1, "RMP_TIME_1_3" ;
+    logical_value, 2, "RMP_TIME_2_1" ;
+    logical_value, 3, "RMP_TIME_3_0" ;
+    logical_value, 4, "RMP_TIME_3_8" ;
+    logical_value, 5, "RMP_TIME_4_7" ;
+    logical_value, 6, "RMP_TIME_5_5" ;
+    logical_value, 7, "RMP_TIME_6_4" ;
+    logical_value, 8, "RMP_TIME_7_2" ;
+    logical_value, 9, "RMP_TIME_8_1" ;
+    logical_value, 10, "RMP_TIME_8_9" ;
+    logical_value, 11, "RMP_TIME_9_8" ;
+    logical_value, 12, "RMP_TIME_10_6" ;
+    logical_value, 13, "RMP_TIME_11_5" ;
+    logical_value, 14, "RMP_TIME_12_3" ;
+    logical_value, 15, "RMP_TIME_13_2" ;
+  }
+  CurrentLimitation01 {
+    physical_value, 9, 31, 0.25, 0, "Amp" ;
+    logical_value, 0, "NO_LIMIT" ;
+    logical_value, 1, "Amp_2_a" ;
+    logical_value, 2, "Amp_2_b" ;
+    logical_value, 3, "Amp_2_c" ;
+    logical_value, 4, "Amp_2_d" ;
+    logical_value, 5, "Amp_2_e" ;
+    logical_value, 6, "Amp_2_f" ;
+    logical_value, 7, "Amp_2_g" ;
+    logical_value, 8, "Amp_2_h" ;
+  }
+  EEVx_CalRq {
+    logical_value, 0, "NONE" ;
+    logical_value, 1, "CLOSED" ;
+    logical_value, 2, "OPEN" ;
+  }
+  EEVx_CalStat {
+    logical_value, 0, "CAL_NC" ;
+    logical_value, 1, "CAL_IPG" ;
+    logical_value, 2, "CAL_COMP" ;
+    logical_value, 3, "CAL_FAIL" ;
+  }
+  EEVx_Err {
+    logical_value, 0, "OK" ;
+    logical_value, 1, "BLOCK" ;
+    logical_value, 2, "NOK_INVALID" ;
+    logical_value, 3, "NOK_BLOCK" ;
+    logical_value, 4, "NOK_VOLT" ;
+    logical_value, 5, "NOK_SAVE" ;
+    logical_value, 6, "NOK_CURRENT" ;
+    logical_value, 7, "CURRENT_HI" ;
+    logical_value, 8, "MOT_CURR_LOW" ;
+    logical_value, 9, "MOT_CURR_HI" ;
+    logical_value, 10, "TEMP" ;
+    logical_value, 11, "VOLT_OC" ;
+    logical_value, 12, "VOLT_SC_GND" ;
+    logical_value, 13, "VOLT_SC_BATT" ;
+    logical_value, 255, "SNA" ;
+  }
+  EEVx_Sts {
+    logical_value, 0, "OK" ;
+    logical_value, 1, "BLOCK" ;
+    logical_value, 2, "LIN_TO" ;
+    logical_value, 15, "SNA" ;
+  }
+  Errorstate01 {
+    logical_value, 0, "NO_ERROR" ;
+    logical_value, 1, "ERROR" ;
+  }
+  ExcitaionCurrent_Gen {
+    physical_value, 0, 62, 0.125, 0, "Amp" ;
+  }
+  FALSE_TRUE_SNA {
+    logical_value, 0, "FALSE" ;
+    logical_value, 1, "TRUE" ;
+    logical_value, 3, "SNA" ;
+  }
+  GS_CurrPos {
+    logical_value, 0, "OPEN_100" ;
+    logical_value, 1, "OPEN_89" ;
+    logical_value, 2, "OPEN_77" ;
+    logical_value, 3, "OPEN_66" ;
+    logical_value, 4, "OPEN_55" ;
+    logical_value, 5, "OPEN_44" ;
+    logical_value, 6, "OPEN_33" ;
+    logical_value, 7, "OPEN_22" ;
+    logical_value, 8, "OPEN_11" ;
+    logical_value, 9, "OPEN_0" ;
+    logical_value, 15, "SNA" ;
+  }
+  GS_PosRq {
+    logical_value, 0, "OPEN_100" ;
+    logical_value, 1, "OPEN_89" ;
+    logical_value, 2, "OPEN_77" ;
+    logical_value, 3, "OPEN_66" ;
+    logical_value, 4, "OPEN_55" ;
+    logical_value, 5, "OPEN_44" ;
+    logical_value, 6, "OPEN_33" ;
+    logical_value, 7, "OPEN_22" ;
+    logical_value, 8, "OPEN_11" ;
+    logical_value, 9, "OPEN_0" ;
+  }
+  GenErrLIN {
+    logical_value, 0, "NO_ERROR" ;
+    logical_value, 1, "LIN_SHORT" ;
+    logical_value, 2, "LIN_TO" ;
+    logical_value, 3, "SNA" ;
+  }
+  Gen_Id_Supp {
+    logical_value, 0, "BOSCH" ;
+    logical_value, 1, "VALEO" ;
+    logical_value, 2, "DELPHI" ;
+    logical_value, 3, "HITACHI" ;
+    logical_value, 4, "DENSO" ;
+    logical_value, 5, "MELCO" ;
+    logical_value, 6, "VISTEON" ;
+    logical_value, 7, "OTHER" ;
+  }
+  Gen_Id_Supp_PLA {
+    logical_value, 0, "Bosch" ;
+    logical_value, 4, "DENSO" ;
+  }
+  HAPM_Post_Run_Rq {
+    logical_value, 0, "NO_POST_RUNNING" ;
+    logical_value, 1, "HAPM_1" ;
+    logical_value, 2, "HAPM_2" ;
+    logical_value, 3, "HAPM_3" ;
+    logical_value, 4, "HAPM_4" ;
+    logical_value, 5, "HAPM_5" ;
+    logical_value, 6, "HAPM_6" ;
+    logical_value, 7, "SNA" ;
+  }
+  LTRP_SUPPLIER {
+    logical_value, 0, "Unknown" ;
+    logical_value, 1, "BOSCH" ;
+    logical_value, 2, "COOPER_STD" ;
+    logical_value, 3, "MAGMA" ;
+    logical_value, 4, "PIERBURG" ;
+    logical_value, 5, "SALERI" ;
+    logical_value, 6, "GMB" ;
+  }
+  NODE_ERROR_STATUS {
+    logical_value, 0, "No_ERROR" ;
+    logical_value, 1, "ACTIVE_ERROR" ;
+    logical_value, 2, "ERROR_STATUS_CHANGED" ;
+    logical_value, 3, "SNA" ;
+  }
+  PCPM_CURR_Encoding {
+    physical_value, 0, 255, 0.275, 0, "A" ;
+  }
+  PCPM_NODE_ERR_Encoding {
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Active Error" ;
+    logical_value, 2, "Error Status Changed" ;
+    logical_value, 3, "SNA" ;
+  }
+  PCPM_POST_RUN_REQ_Encoding {
+    logical_value, 0, "Ignition_On" ;
+    logical_value, 1, "Ignition_Off" ;
+    logical_value, 2, "Post run 2" ;
+    logical_value, 3, "Post run 3" ;
+    logical_value, 4, "Post run 4" ;
+    logical_value, 5, "Post run 5" ;
+    logical_value, 6, "Post run 6" ;
+    logical_value, 7, "SNA" ;
+  }
+  PCPM_POST_RUN_STAT_Encoding {
+    logical_value, 0, "No Post Running" ;
+    logical_value, 1, "Post run 1" ;
+    logical_value, 2, "Post run 2" ;
+    logical_value, 3, "Post run 3" ;
+    logical_value, 4, "Post run 4" ;
+    logical_value, 5, "Post run 5" ;
+    logical_value, 6, "Post run 6" ;
+    logical_value, 7, "SNA" ;
+  }
+  PCPM_RPM_REQ_Encoding {
+    physical_value, 0, 255, 0.3937, 0, "%" ;
+  }
+  PCPM_SUPPLIER_Encoding {
+    logical_value, 0, "Unknown" ;
+    logical_value, 1, "Bosch" ;
+    logical_value, 2, "Cooper Standard" ;
+    logical_value, 3, "Magna" ;
+    logical_value, 4, "Pierburg" ;
+    logical_value, 5, "Saleri" ;
+    logical_value, 6, "GMB" ;
+    logical_value, 7, "Buehler" ;
+    logical_value, 8, "Aisin" ;
+  }
+  PCPM_TEMP_Encoding {
+    physical_value, 0, 255, 1, -50, "C" ;
+  }
+  PCPM_VLTG_Encoding {
+    physical_value, 0, 255, 0.1, 0, "V" ;
+  }
+  PLA_SetVoltage {
+    physical_value, 0, 216, 0.025, 10.6, "Volts" ;
+  }
+  Post_Run_Rq {
+    logical_value, 0, "NO_POST_RUNNING" ;
+    logical_value, 1, "LTRP_1" ;
+    logical_value, 2, "LTRP_2" ;
+    logical_value, 3, "LTRP_3" ;
+    logical_value, 4, "LTRP_4" ;
+    logical_value, 5, "LTRP_5" ;
+    logical_value, 6, "LTRP_6" ;
+    logical_value, 7, "SNA" ;
+  }
+  Pump_Current {
+    physical_value, 0, 254, 0.2, 0, "Amp" ;
+    logical_value, 255, "SNA" ;
+  }
+  Pump_Temp {
+    physical_value, 0, 254, 1, -50, "�C" ;
+    logical_value, 255, "SNA" ;
+  }
+  Pump_Voltage {
+    physical_value, 0, 254, 0.1, 0, "Volts" ;
+    logical_value, 255, "SNA" ;
+  }
+  RPM_Threshold {
+    logical_value, 0, "rpm_2400" ;
+    logical_value, 1, "rpm_2530" ;
+    logical_value, 2, "rpm_2670" ;
+    logical_value, 3, "rpm_2830" ;
+    logical_value, 4, "rpm_3000" ;
+    logical_value, 5, "rpm_3200" ;
+    logical_value, 6, "rpm_3430" ;
+    logical_value, 7, "rpm_3690" ;
+    logical_value, 8, "rpm_4000" ;
+    logical_value, 9, "rpm_4360" ;
+    logical_value, 10, "rpm_4790" ;
+    logical_value, 11, "rpm_5320" ;
+    logical_value, 12, "rpm_5990" ;
+    logical_value, 13, "rpm_6860" ;
+    logical_value, 14, "rpm_8010" ;
+    logical_value, 15, "rpm_0" ;
+  }
+  RPM_Threshold_PLA {
+    logical_value, 0, "rpm_2400" ;
+    logical_value, 1, "rpm_2530" ;
+    logical_value, 2, "rpm_2670" ;
+    logical_value, 3, "rpm_2820" ;
+    logical_value, 4, "rpm_3000" ;
+    logical_value, 5, "rpm_3200" ;
+    logical_value, 6, "rpm_3430" ;
+    logical_value, 7, "rpm_3690" ;
+    logical_value, 8, "rpm_4000" ;
+    logical_value, 9, "rpm_4360" ;
+    logical_value, 10, "rpm_4800" ;
+    logical_value, 11, "rpm_5330" ;
+    logical_value, 12, "rpm_6000" ;
+    logical_value, 13, "rpm_6860" ;
+    logical_value, 14, "rpm_8000" ;
+    logical_value, 15, "Always_Active" ;
+  }
+  RsErr_PCPM_PUMP_Encoding {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  VoltageRange01 {
+    physical_value, 0, 54, 0.1, 10.6, "Volts" ;
+  }
+  alternator_type {
+    logical_value, 0, "XS30_50A" ;
+    logical_value, 1, "S45_80A" ;
+    logical_value, 2, "M55_105A" ;
+    logical_value, 3, "L70_130A" ;
+    logical_value, 4, "XL95_160A" ;
+    logical_value, 5, "XL85_180A" ;
+    logical_value, 6, "XXL120_200A" ;
+    logical_value, 7, "OTHER_a" ;
+    logical_value, 8, "OTHER_b" ;
+  }
+  alternator_type_PLA {
+    logical_value, 0, "NA" ;
+    logical_value, 4, "BOSCH_ALTERNATOR_0272223022" ;
+    logical_value, 9, "A115_ALTERNATOR" ;
+    logical_value, 19, "SC_ALTERNATOR" ;
+  }
+  c01_FalseTrue {
+    logical_value, 0, "FALSE" ;
+    logical_value, 1, "TRUE" ;
+  }
+  c01_Standard_No_Function {
+    logical_value, 0, "STANDARD" ;
+    logical_value, 1, "NO_FUNCTION" ;
+  }
+  c08_percent_0_to_100_0k5 {
+    physical_value, 0, 200, 0.5, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  c08_percent_0_to_100_0p3937 {
+    physical_value, 0, 254, 0.3937, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  c0_255_by1 {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  c0_25volts_0p1 {
+    physical_value, 0, 250, 0.1, 0, "Volts" ;
+  }
+  c0_2p54amps_at0p01amp {
+    physical_value, 0, 254, 0.01, 0, "Amp" ;
+    logical_value, 255, "SNA" ;
+  }
+  c3bit_request_data_indicator_SNA {
+    logical_value, 0, "No_Request" ;
+    logical_value, 1, "Vlt_Setpoint_Set_Value" ;
+    logical_value, 2, "Measured_B_Plus_Vlt_Value" ;
+    logical_value, 3, "IC_Chip_Temp" ;
+    logical_value, 4, "Alt_Rot_Speed" ;
+    logical_value, 5, "No_Request_a" ;
+    logical_value, 6, "No_Request_b" ;
+    logical_value, 7, "No_Request_c" ;
+  }
+  c8bit_0_254_Version {
+    physical_value, 0, 254, 1, 0, "Version" ;
+    logical_value, 255, "SNA" ;
+  }
+  c8bit_96_160_no_units {
+    physical_value, 96, 160, 1, -96 ;
+    logical_value, 255, "SNA" ;
+  }
+  cPLA_Exic_Current {
+    physical_value, 0, 252, 0.05, 0, "Amp" ;
+    logical_value, 253, "12_6_AMPS_A" ;
+    logical_value, 254, "12_6_AMPS_B" ;
+    logical_value, 255, "12_6_AMPS_C" ;
+  }
+  cRATVM_CalRq {
+    logical_value, 0, "NONE" ;
+    logical_value, 1, "CLOSED" ;
+    logical_value, 2, "OPEN" ;
+    logical_value, 3, "BOTH_DIRECTION_CALIBRATION" ;
+  }
+  cRATVM_Err {
+    logical_value, 0, "OK" ;
+    logical_value, 1, "Over_Voltage" ;
+    logical_value, 2, "Under_Voltage" ;
+    logical_value, 4, "Thermal_warning" ;
+    logical_value, 8, "Open_Load" ;
+    logical_value, 16, "Over_current" ;
+    logical_value, 32, "Mechanical_Break" ;
+    logical_value, 64, "Unexpected_Blocking_Point" ;
+    logical_value, 128, "SNA" ;
+  }
+  cRATVM_Sts {
+    logical_value, 0, "OK" ;
+    logical_value, 1, "BLOCK" ;
+    logical_value, 2, "Calibration_Rq" ;
+    logical_value, 3, "SNA" ;
+  }
+  cm16to12degrees_celsius {
+    logical_value, 0, "0" ;
+    logical_value, 1, "Negative_16" ;
+    logical_value, 2, "Negative_12" ;
+    logical_value, 3, "Negative_8" ;
+    logical_value, 4, "Negative_4" ;
+    logical_value, 5, "Positive_4" ;
+    logical_value, 6, "Positive_8" ;
+    logical_value, 7, "Positive_12" ;
+  }
+  m40_p210C {
+    physical_value, 0, 250, 1, -40, "�C" ;
+    logical_value, 255, "SNA" ;
+  }
+  percentage03 {
+    physical_value, 0, 31, 3.23, 0, "%" ;
+  }
+}
+
+Signal_representation {
+  AAD_Position: AAD_CurrPos, AAD_PosRq ;
+  C_04_sec_0_15_logical_3sec: PLA_RampTime ;
+  C_07_Amp_0_11: PLA_ExicLimit ;
+  ControlDuration: GEN1_RampTime ;
+  CurrentLimitation01: GEN1_ExicLimit ;
+  EEVx_CalRq: EEV1_CalRq, EEV2_CalRq ;
+  EEVx_CalStat: EEV1_CalStat, EEV2_CalStat, RATVM_CalStat, LCVM2_CalStat ;
+  EEVx_Err: EEV1_ERR, EEV2_ERR ;
+  EEVx_Sts: EEV1_Sts, EEV2_Sts ;
+  Errorstate01: GEN1_Fault_CE, GEN1_Fault_El, GEN1_Fault_HT, GEN1_Fault_Mec, GEN1_Fault_TO, PLA_Fault_El, PLA_Fault_HT, PLA_Fault_Mec, PLA_Fault_TO, RsErr_PLA ;
+  ExcitaionCurrent_Gen: GEN1_ExicCurrent ;
+  FALSE_TRUE_SNA: LTRP_AIR_PRE_ERR, LTRP_DBLK_ACTV, LTRP_DR_RN_ERR, LTRP_OVR_CUR_ERR, LTRP_OVR_TMP_ERR, LTRP_VLTG_ERR, HAPM_AIR_PRE_ERR, HAPM_DBLK_ACTV, HAPM_DR_RN_ERR, HAPM_OVR_CUR_ERR, HAPM_OVR_TMP_ERR, HAPM_VLTG_ERR, PCPM_AIR_PRE_ERR, PCPM_OVR_TMP_ERR, PCPM_OVR_CUR_ERR, PCPM_DR_RN_ERR, PCPM_VLTG_ERR, PCPM_DBLK_ACTV ;
+  GS_CurrPos: AGS_CurrPos, AGS2_CurrPos ;
+  GS_PosRq: AGS_PosRq, AGS2_PosRq ;
+  GenErrLIN: AGS_ErrLIN, AGS2_ErrLIN ;
+  Gen_Id_Supp: GEN1_ID_Supp, PLA_ID_Supp ;
+  Gen_Id_Supp_PLA: PLA_IC_supplier_ID ;
+  HAPM_Post_Run_Rq: HAPM_POST_RUN_REQ, HAPM_POST_RUN_STAT ;
+  LTRP_SUPPLIER: LTRP_SUPPLIER ;
+  NODE_ERROR_STATUS: LTRP_NODE_ERR, HAPM_NODE_ERR ;
+  PCPM_CURR_Encoding: PCPM_CURR ;
+  PCPM_NODE_ERR_Encoding: PCPM_NODE_ERR ;
+  PCPM_POST_RUN_REQ_Encoding: PCPM_POST_RUN_REQ ;
+  PCPM_POST_RUN_STAT_Encoding: PCPM_POST_RUN_STAT ;
+  PCPM_RPM_REQ_Encoding: PCPM_RPM_REQ, PCPM_RPM_TGT, PCPM_RPM_ACTL ;
+  PCPM_SUPPLIER_Encoding: PCPM_SUPPLIER ;
+  PCPM_TEMP_Encoding: PCPM_TEMP ;
+  PCPM_VLTG_Encoding: PCPM_VLTG ;
+  PLA_SetVoltage: PLA_SetVoltage ;
+  Post_Run_Rq: LTRP_POST_RUN_REQ, LTRP_POST_RUN_STAT ;
+  Pump_Current: LTRP_CURR, HAPM_CURR ;
+  Pump_Temp: LTRP_TEMP, HAPM_TEMP ;
+  Pump_Voltage: LTRP_VLTG, HAPM_VLTG ;
+  RPM_Threshold: GEN1_RampCOSpeed ;
+  RPM_Threshold_PLA: PLA_RampCOSpeed ;
+  RsErr_PCPM_PUMP_Encoding: RsErr_PCPM_PUMP ;
+  VoltageRange01: GEN1_SetVoltage ;
+  alternator_type: GEN1_ID_Alter ;
+  alternator_type_PLA: PLA_ID_Alter ;
+  c01_FalseTrue: RsErr_LTRP_PUMP, RsErr_HAPM_PUMP, LCVM2_PosSv, RsErr_LCVM2 ;
+  c01_Standard_No_Function: PLA_Reg_parameter ;
+  c08_percent_0_to_100_0k5: EEV1_PosAct, EEV1_PosRq, EEV2_PosAct, EEV2_PosRq, RATVM_PosAct, RATVM_PosRq, LCVM_PosAct, LCVM_PosRq, LCVM2_PosAct, LCVM2_PosRq ;
+  c08_percent_0_to_100_0p3937: LTRP_RPM_ACTL, LTRP_RPM_REQ, LTRP_RPM_TGT, HAPM_RPM_ACTL, HAPM_RPM_REQ, HAPM_RPM_TGT ;
+  c0_255_by1: PLA_Requested_response_data ;
+  c0_25volts_0p1: EEV1_MotorVolt, EEV1_SupplyVolt, EEV2_MotorVolt, EEV2_SupplyVolt, RATVM_MotorVolt, LCVM_MotorVolt, LCVM2_MotorVolt ;
+  c0_2p54amps_at0p01amp: EEV1_MotorCurr, EEV2_MotorCurr ;
+  c3bit_request_data_indicator_SNA: PLA_Request_data, PLA_Request_data_Response ;
+  c8bit_0_254_Version: LTRP_VERSION, HAPM_VERSION ;
+  c8bit_96_160_no_units: EEV1_HALL, EEV2_HALL ;
+  cPLA_Exic_Current: PLA_ExicCurrent ;
+  cRATVM_CalRq: RATVM_CalRq, LCVM_CalRq, LCVM2_CalRq ;
+  cRATVM_Err: RATVM_ERR, LCVM_ERR, LCVM2_ERR ;
+  cRATVM_Sts: RATVM_Sts, LCVM_Sts, LCVM2_Sts ;
+  cm16to12degrees_celsius: PLA_Thermal_protection ;
+  m40_p210C: EEV1_Temp, EEV2_Temp ;
+  percentage03: GEN1_ExicDutyCycle, PLA_ExicDutyCycle ;
+}

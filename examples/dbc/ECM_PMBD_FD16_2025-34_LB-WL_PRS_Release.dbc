@@ -1,0 +1,2157 @@
+VERSION ""
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+
+BS_:
+
+
+BU_: ECM 
+
+
+BO_ 1450 TRANSM_FD_4: 32 Vector__XXX
+ SG_ TxDisengaged : 126|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ ShiftModeSts : 94|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ ShiftInProgress : 114|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ MIReq : 127|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ LimpHomeSts : 112|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ GearEngaged : 107|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ ShiftMapNotAchieved : 121|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ MessageCounter_TRANSM4 : 179|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ CRC_TRANSM4 : 191|8@0+ (1,0) [0|255] "-"  ECM
+ SG_ DriveModeSts : 83|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ TxDisengaged_Fault : 118|1@0+ (1,0) [0|1] "-"  ECM
+
+
+BO_ 520 TRANSM_FD_2: 32 Vector__XXX
+ SG_ TurbineSpeed : 111|16@0+ (1,0) [0|65534] "RPM"  ECM
+ SG_ TRNS_StpSt_FLT : 125|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ Trns_EMCC_Achvd : 96|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TransReadyForESS : 124|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TransmissionTemperature : 103|6@0+ (3,-40) [-40|149] "°C"  ECM
+ SG_ OUTPUT_SPEED : 87|16@0+ (1,0) [0|65534] "RPM"  ECM
+ SG_ APCM_Rq : 135|2@0+ (1,0) [0|2] "-"  ECM
+ SG_ MessageCounter_TRANSM2 : 179|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ EngShutOffRq_TCM : 123|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ CRC_TRANSM2 : 191|8@0+ (1,0) [0|255] "-"  ECM
+ SG_ Trans_ESS_Inhibit : 2|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ GearEngagedForDisplay : 15|5@0+ (1,0) [0|30] "-"  ECM
+ SG_ AirFlowRequest_TCM : 22|7@0+ (1,0) [0|100] "%"  ECM
+ SG_ TCM_TrqGradLimActive : 161|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TCM_TrqGradLim_Up : 151|8@0+ (49.8,-6325) [-6325|6374] "Nm/s"  ECM
+ SG_ TCM_TrqGradLim_Lo : 159|8@0+ (49.8,-6325) [-6325|6374] "Nm/s"  ECM
+ SG_ TCM_EngFSO_Rq : 120|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TCM_EngFSO_Allw : 62|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TransInputSpeedMaxReq : 57|10@0+ (16,0) [0|16368] "rpm"  ECM
+
+
+BO_ 1058 OBD_CONTENT_FRAME: 32 ECM
+ SG_ LoadOBD : 87|8@0+ (0.3922,0) [0|100] "%"  Vector__XXX
+ SG_ InputsGDFail : 94|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ Inp_ICC_Fail : 117|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ IgnCntrTrue : 118|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ GenDenominator : 95|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ EngineOFFTime : 89|10@0+ (1,0) [0|1022] "min"  Vector__XXX
+ SG_ CldStrtDenominator : 116|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ CarbWarmUp : 93|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ CARB_PERM : 119|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ AccelPdlPosn_OBD : 111|8@0+ (0.3922,0) [0|100] "%"  Vector__XXX
+ SG_ InpICCFuelEng_Fail : 7|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ IgnCntrFuelEngTrue : 6|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ MessageCounter_OBDCONTENTFRAME : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_OBDCONTENTFRAME : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ EngActiveTimer_OBD : 135|16@0+ (1,0) [0|65535] "Seconds"  Vector__XXX
+
+
+BO_ 1055 ENGINE_FD_8: 32 ECM
+ SG_ MdsAct : 25|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ MessageCounter_ENGINE8 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_ENGINE8 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+
+
+BO_ 1448 ENGINE_FD_7: 32 ECM
+ SG_ CompressorSts : 85|2@0+ (1,0) [0|3] "-"  Vector__XXX
+ SG_ SpStSwStat : 55|2@0+ (1,0) [0|3] "-"  Vector__XXX
+ SG_ SpStDispstat : 53|6@0+ (1,0) [0|63] "-"  Vector__XXX
+ SG_ MessageCounter_ENGINE7 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_ENGINE7 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+
+
+BO_ 751 ENGINE_FD_6: 32 ECM
+ SG_ StartRelayECMFeedbackFault : 163|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ EngineWaterTemp : 95|8@0+ (1,-40) [-40|215] "°C"  Vector__XXX
+ SG_ TerrainModeStat_ECM : 61|5@0+ (1,0) [0|30] "" Vector__XXX
+ SG_ TerrainModeDesiredStat : 28|5@0+ (1,0) [0|30] "0"  Vector__XXX
+ SG_ Terrain_HMI_Rq_ECM : 36|5@0+ (1,0) [0|30] "-"  Vector__XXX
+ SG_ MessageCounter_ENGINE6 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_ENGINE6 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ Selector_SystemFailSts : 172|1@0+ (1,0) [0|1] "0"  Vector__XXX
+ SG_ Trns_DrvMdReq_ECM : 77|5@0+ (1,0) [0|30] "-"  Vector__XXX
+
+
+BO_ 518 ENGINE_FD_5: 32 ECM
+ SG_ RPMOverRev_W : 115|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ MessageCounter_ENGINE5 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ GrMin_Rq_ECM_W : 139|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ GrMax_Rq_ECM_W : 135|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ EngTrqMaxCorrFctr_W : 127|8@0+ (0.0078,0) [0|1.98] "Nm"  Vector__XXX
+ SG_ EngineReadyForESS_W : 116|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ ECM_READINESS_RESET_W : 140|1@0+ (1,0) [0|0] "0"  Vector__XXX
+ SG_ ECM_CODE_CLR_W : 141|1@0+ (1,0) [0|0] "0"  Vector__XXX
+ SG_ CRC_ENGINE5 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+
+
+BO_ 1054 ENGINE_FD_1: 32 ECM
+ SG_ TransWarmUpReq : 3|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ TransWarmUpMin_RPM : 159|8@0+ (25,0) [0|6375] "rpm"  Vector__XXX
+ SG_ ThermalManagementActive_W : 1|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ MessageCounter_ENGINE1 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ EngMaxRPM_W : 127|8@0+ (50,0) [0|10000] "-"  Vector__XXX
+ SG_ CRC_ENGINE1 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ AtmosphericPressureFailSts_W : 0|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ AtmosphericPressure_W : 143|8@0+ (3.6,300) [300|1214.4] "mbar"  Vector__XXX
+
+
+BO_ 255 PT_TORQUE_FD_1: 48 ECM
+ SG_ SumTorqueTgt_SEM : 130|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorqueStatic_SEM : 114|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorqueStatic : 98|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorqueSel_D_TTC : 82|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorqueMin : 66|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorqueMax : 50|11@0+ (1,-500) [-500|1546] "Nm"  Vector__XXX
+ SG_ SumTorque_DrvReqMod : 20|13@0+ (0.25,-500) [-500|1547.5] "Nm"  Vector__XXX
+ SG_ MessageCounter_PT_TORQUE_FD_1 : 307|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_PT_TORQUE_FD_1 : 319|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ Accel_Pedal_Override : 37|1@0+ (1,0) [0|1] "-"  Vector__XXX
+
+
+BO_ 1036 ENGINE_FD_3: 32 ECM
+ SG_ MessageCounter_ENGINE3 : 179|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ CRC_ENGINE3 : 191|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ EngineOilTemperature : 103|8@0+ (1,-40) [-40|214] "°C"  Vector__XXX
+
+
+BO_ 278 TRANSM_FD_1: 64 Vector__XXX
+ SG_ TransmissionSailingSts : 119|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ TransLosses : 241|10@0+ (1,-500) [-500|522] "Nm"  ECM
+ SG_ TorqueConverterSts : 55|2@0+ (1,0) [0|3] "-"  ECM
+ SG_ TorqueConverterSTO : 195|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ TargetGear : 151|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ MaxTrqDes : 162|11@0+ (1,-500) [-500|1546] "Nm"  ECM
+ SG_ EngTrq_Rq_TCM : 178|11@0+ (1,-500) [-500|1546] "Nm"  ECM
+ SG_ CRC_TRANSM1 : 447|8@0+ (1,0) [0|255] "-"  ECM
+ SG_ REPRGD_PFC_CLR_TCM : 275|1@0+ (1,0) [0|0] "-"  ECM
+ SG_ PaddleShiftRequest : 399|3@0+ (1,0) [0|6] "-"  ECM
+ SG_ MessageCounter_TRANSM1 : 435|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ DriveLineRatio : 405|14@0+ (0.01,0) [0|163.83] "-"  ECM
+ SG_ CODE_CLR_TCM : 258|1@0+ (1,0) [0|0] "-"  ECM
+ SG_ TxIdleRq : 351|8@0+ (8,0) [0|2032] "rpm"  ECM
+ SG_ TCASERANGESTATUS_TCM : 407|2@0+ (1,0) [0|2] "-"  ECM
+ SG_ Trans_Adapt_Status : 423|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ TorqueAmpTransmission : 330|11@0+ (0.01,0) [0|20.46] "-"  ECM
+ SG_ TrqCtrlModeReq : 23|2@0+ (1,0) [0|2] "-"  ECM
+ SG_ TransIntakeTorq : 210|11@0+ (1.2,-1200) [-1200|1255.2] "Nm"  ECM
+ SG_ CrankEnable_Fast : 211|1@0+ (1,0) [0|1] "-"  ECM
+ SG_ EngTrq_Rq_TCM_Prdtd : 194|11@0+ (1,-500) [-500|1547] "Nm"  ECM
+ SG_ PumpTrqOnImpShaft : 305|10@0+ (0.2,-102.4) [-102.4|102.2] "Nm"  ECM
+ SG_ TorqueCtrlModeReq_Prdtd : 309|2@0+ (1,0) [0|3] "-"  ECM
+
+
+BO_ 271 ENGINE_HYBD_FD_1: 64 ECM
+ SG_ MinImmedEngTorqCapV : 215|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ MinImmedEngTorqCap : 227|12@0+ (0.32,-300.16) [-300.16|1008] "Nm"  Vector__XXX
+ SG_ MinAirFlowMinSparkTorqCapV : 197|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ MinAirFlowMinSparkTorqCap : 195|12@0+ (0.32,-300.16) [-300.16|1008] "Nm"  Vector__XXX
+ SG_ MessageCounter_ENGINE_HYBD_FD_1 : 435|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ MaxPrdtdEngTorqCapV : 198|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ MaxPrdtdEngTorqCap : 179|12@0+ (0.32,-300.16) [-300.16|1008] "Nm"  Vector__XXX
+ SG_ EngAirFlwStdyStTorqV : 262|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ EngAirFlwStdyStTorq : 275|12@0+ (0.32,-300.16) [-300.16|1008] "Nm"  Vector__XXX
+ SG_ CRC_ENGINE_HYBD_FD_1 : 447|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ EngTrqFSO_CurrAir : 391|12@0+ (0.32,-300.16) [-300.16|1008] "Nm"  Vector__XXX
+
+
+BO_ 262 ENGINE_FD_2: 64 ECM
+ SG_ TxAC_EMCC_rq_W : 189|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ TRANS_CLU_SLIP_MODE_W : 71|3@0+ (1,0) [0|7] "-"  Vector__XXX
+ SG_ PowertrainPrplsnActv : 181|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MessageCounter_ENGINE2 : 435|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ LV12PwrFreeRq_W : 176|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ KickDownRequest_W : 182|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ IntakeAirTemperature_W : 151|8@0+ (1,-40) [-40|214] "C"  Vector__XXX
+ SG_ GasPedalPositionFailSts_W : 169|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ GasPedalPosition_W : 143|8@0+ (0.392,0) [0|99.568] "%"  Vector__XXX
+ SG_ ESS_RqShftPark_W : 115|1@0+ (1,0) [0|0] "-"  Vector__XXX
+ SG_ ESS_ENG_ST_W : 175|4@0+ (1,0) [0|15] "-"  Vector__XXX
+ SG_ EngTrq_Enbl_Rq_TCM_W : 178|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ EngineSts_W : 87|2@0+ (1,0) [0|3] "-"  Vector__XXX
+ SG_ EngineSpeed_W : 21|14@0+ (1,0) [0|16382] "1/min"  Vector__XXX
+ SG_ EngineIdleRefSpeed : 35|12@0+ (1,0) [0|4094] "1/min"  Vector__XXX
+ SG_ EngineFrictionTorque_W : 112|9@0+ (1,0) [0|510] "Nm"  Vector__XXX
+ SG_ ECM_LHOM_W : 188|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ ECM_LHOM_Trans_W : 117|2@0+ (1,0) [0|3] "-"  Vector__XXX
+ SG_ CRC_ENGINE2 : 447|8@0+ (1,0) [0|255] "-"  Vector__XXX
+ SG_ CrankHold_W : 179|1@0+ (1,0) [0|1] "-"  Vector__XXX
+ SG_ ESS_EBOOST_BRKHLD_STATUS : 279|3@0+ (1,0) [0|6] "-"  Vector__XXX
+ SG_ Torque_Interface_Mask : 79|6@0+ (1,0) [0|63] "" Vector__XXX
+
+
+BO_ 263 PT_SYSTEM_FD_1: 64 Vector__XXX
+ SG_ MessageCounter_PT_SYSTEM_FD_1 : 435|4@0+ (1,0) [0|15] "-"  ECM
+ SG_ CRC_PT_SYSTEM_FD_1 : 447|8@0+ (1,0) [0|255] "-"  ECM
+
+
+
+
+
+
+CM_ "Project_WL25_ProjectStandard_FD-CAN16 [CS00155_FD]";
+CM_ SG_ 263 CRC_PT_SYSTEM_FD_1 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 263 MessageCounter_PT_SYSTEM_FD_1 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 278 DriveLineRatio "Drive Line Ratio";
+CM_ SG_ 278 MessageCounter_TRANSM1 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 278 PaddleShiftRequest "Paddle shifter request by driver";
+CM_ SG_ 278 REPRGD_PFC_CLR_TCM "Set readiness to incomplete";
+CM_ SG_ 278 CRC_TRANSM1 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 278 EngTrq_Rq_TCM "Requested engine torque";
+CM_ SG_ 278 TrqCtrlModeReq "Torque control mode request";
+CM_ SG_ 278 TorqueAmpTransmission "It is the torque transmission ratio from gearbox primary to wheels, calculated by gearbox . It is only used in Automatic Transmission application";
+CM_ SG_ 278 Trans_Adapt_Status "Transmission clutch adaptation status";
+CM_ SG_ 278 TCASERANGESTATUS_TCM "Transfer case Range status from Transmission";
+CM_ SG_ 278 TxIdleRq "-";
+CM_ SG_ 278 CODE_CLR_TCM "Clear emission related faults";
+CM_ SG_ 278 TorqueCtrlModeReq_Prdtd "Predicted Torque Control Mode";
+CM_ SG_ 278 PumpTrqOnImpShaft "Torque on Impeller shaft for transmission pump";
+CM_ SG_ 278 EngTrq_Rq_TCM_Prdtd "Predicted Transmission Torque Request";
+CM_ SG_ 278 CrankEnable_Fast "This signal is used to enable the cranking in safety condition";
+CM_ SG_ 278 TransIntakeTorq "Transmission intake torque";
+CM_ SG_ 278 MaxTrqDes "Maximum engine torque desired";
+CM_ SG_ 278 TargetGear "Tells of the intended target gear that the transmission will be shifting to. Also includes an cancel shift that the DASM uses for better control.";
+CM_ SG_ 278 TorqueConverterSTO "Conf. (torque converter lock-up) Starts to open";
+CM_ SG_ 278 TorqueConverterSts "This signal indicates the control phase of lockup clutch.";
+CM_ SG_ 278 TransLosses "Transmission drag torques";
+CM_ SG_ 278 TransmissionSailingSts "This signal indicates the status of the Sailing functionality";
+CM_ SG_ 520 GearEngagedForDisplay "Transmission Gear engaged signal for Display on cluster.";
+CM_ SG_ 520 Trans_ESS_Inhibit "ESS inhibit flag from transmission related to temperature warnings.";
+CM_ SG_ 520 CRC_TRANSM2 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 520 EngShutOffRq_TCM "TCM request engine shut off";
+CM_ SG_ 520 MessageCounter_TRANSM2 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 520 APCM_Rq "Auto position correction mode request";
+CM_ SG_ 520 TCM_EngFSO_Allw "Signal indicating fuel shutoff allowed for transmission torque request.";
+CM_ SG_ 520 TCM_EngFSO_Rq "Fuel Shutoff request by ransmission";
+CM_ SG_ 520 TCM_TrqGradLim_Lo "Trans input torque gradient lower limit";
+CM_ SG_ 520 TCM_TrqGradLim_Up "Trans input torque gradient upper limit";
+CM_ SG_ 520 TCM_TrqGradLimActive "Trans input torque gradient limit is active";
+CM_ SG_ 520 AirFlowRequest_TCM "Request from TCM to activate AGS,Rad Fan";
+CM_ SG_ 520 TransInputSpeedMaxReq "Transmission request for maximum input speed limit";
+CM_ SG_ 520 OUTPUT_SPEED "Activation request flag for P2 speed  profile";
+CM_ SG_ 520 TransmissionTemperature "-";
+CM_ SG_ 520 TransReadyForESS "-";
+CM_ SG_ 520 Trns_EMCC_Achvd "-";
+CM_ SG_ 520 TRNS_StpSt_FLT "-";
+CM_ SG_ 520 TurbineSpeed "-";
+CM_ SG_ 1450 DriveModeSts "-";
+CM_ SG_ 1450 TxDisengaged_Fault "Transmission is disengaged";
+CM_ SG_ 1450 CRC_TRANSM4 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1450 MessageCounter_TRANSM4 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 1450 ShiftMapNotAchieved "Transmission shift in progress";
+CM_ SG_ 1450 GearEngaged "Current engaged gear.";
+CM_ SG_ 1450 LimpHomeSts "This signal is used in case of those gearbox faults that limit the higher usable gear.";
+CM_ SG_ 1450 MIReq "This signal indicates that the gearbox has any EOBD errors.";
+CM_ SG_ 1450 ShiftInProgress "Transmission shift in progress";
+CM_ SG_ 1450 ShiftModeSts "This signal indicates the gear selector modality selected by driver (Manual or Automatic).";
+CM_ SG_ 1450 TxDisengaged "Transmission is disengaged";
+CM_ SG_ 262 ESS_EBOOST_BRKHLD_STATUS "ESS brake hold release status";
+CM_ SG_ 262 EngTrq_Enbl_Rq_TCM_W "Allow TRANS torque request";
+CM_ SG_ 262 ESS_ENG_ST_W "ESS Engine State";
+CM_ SG_ 262 ESS_RqShftPark_W "ESS Request shift to Park.  1 = True, 0 = False";
+CM_ SG_ 262 GasPedalPosition_W "-";
+CM_ SG_ 262 GasPedalPositionFailSts_W "-";
+CM_ SG_ 262 IntakeAirTemperature_W "";
+CM_ SG_ 262 ECM_LHOM_Trans_W "Indicates to the transmission the Limp Home Status of ECM and Torque Accuracy";
+CM_ SG_ 262 ECM_LHOM_W "-";
+CM_ SG_ 262 EngineFrictionTorque_W "-";
+CM_ SG_ 262 EngineIdleRefSpeed "This signal represents target of engine speed for the idle control function, at the end of dynamic transient conditions. It takes into account changes of idle speed due to temperature and auxiliary loads. It is updated even when the engine is ou(...)";
+CM_ SG_ 262 EngineSpeed_W "It gives information on C-CAN network about  engine speed";
+CM_ SG_ 262 EngineSts_W "-";
+CM_ SG_ 262 Torque_Interface_Mask "Bit mask signal representing conditions when the torque is not accurate.";
+CM_ SG_ 262 CrankHold_W "Used by ECM to command an action to the BCM cranking relay during cranking phase";
+CM_ SG_ 262 CRC_ENGINE2 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 262 KickDownRequest_W "It is set to KD_requested whenever the Kick-Down condition is detected by the ECM.";
+CM_ SG_ 262 LV12PwrFreeRq_W "-";
+CM_ SG_ 262 MessageCounter_ENGINE2 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 262 PowertrainPrplsnActv "Powertrain Propulsion Status.";
+CM_ SG_ 262 TRANS_CLU_SLIP_MODE_W "-";
+CM_ SG_ 262 TxAC_EMCC_rq_W "-";
+CM_ SG_ 271 EngTrqFSO_CurrAir "Engine torque at current air at with all cylinders in fuel shut off";
+CM_ SG_ 271 CRC_ENGINE_HYBD_FD_1 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 271 EngAirFlwStdyStTorq "Engine airflow steady state torque (potential)";
+CM_ SG_ 271 EngAirFlwStdyStTorqV "Engine airflow steady state torque validity; Invalid = [1]";
+CM_ SG_ 271 MaxPrdtdEngTorqCap "Maximum predicted engine torque capacity";
+CM_ SG_ 271 MaxPrdtdEngTorqCapV "Maximum predicted engine torque capacity validity; Invalid = [1]";
+CM_ SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 271 MinAirFlowMinSparkTorqCap "Engine Torque capacity at minimum air flow and  minimum spark";
+CM_ SG_ 271 MinAirFlowMinSparkTorqCapV "Engine Torque capacity at minimum air flow and  minimum spark validity; Invalid = [1]";
+CM_ SG_ 271 MinImmedEngTorqCap "Minimum immediate engine torque capacity (current air flow, minimum spark)";
+CM_ SG_ 271 MinImmedEngTorqCapV "Minimum immediate engine torque capacity validity; Invalid = [1]";
+CM_ SG_ 1036 EngineOilTemperature "Engine Oil Temperature";
+CM_ SG_ 1036 CRC_ENGINE3 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1036 MessageCounter_ENGINE3 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 255 Accel_Pedal_Override "Driver Accelerator Pedal Override. True =[1]";
+CM_ SG_ 255 CRC_PT_TORQUE_FD_1 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 255 MessageCounter_PT_TORQUE_FD_1 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 255 SumTorque_DrvReqMod "Driver requested sum torque modified";
+CM_ SG_ 255 SumTorqueMax "Maximum sum torque";
+CM_ SG_ 255 SumTorqueMin "Minimum sum torque";
+CM_ SG_ 255 SumTorqueSel_D_TTC "Corrected (substitute) driver torque demand";
+CM_ SG_ 255 SumTorqueStatic "Static sum torque (effective sum torque)";
+CM_ SG_ 255 SumTorqueStatic_SEM "Static sum torque (transmission torque request)";
+CM_ SG_ 255 SumTorqueTgt_SEM "Target torque (transmission torque request)";
+CM_ SG_ 1054 AtmosphericPressure_W "-";
+CM_ SG_ 1054 AtmosphericPressureFailSts_W "-";
+CM_ SG_ 1054 CRC_ENGINE1 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1054 EngMaxRPM_W "-";
+CM_ SG_ 1054 MessageCounter_ENGINE1 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 1054 ThermalManagementActive_W "-";
+CM_ SG_ 1054 TransWarmUpMin_RPM "Minimum engine speed for transmission warm-up strategy.";
+CM_ SG_ 1054 TransWarmUpReq "ECM enable flag for transmission warm-up strategy.";
+CM_ SG_ 518 CRC_ENGINE5 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 518 ECM_CODE_CLR_W "Handshake for not to send";
+CM_ SG_ 518 ECM_READINESS_RESET_W "Handshake for not to send";
+CM_ SG_ 518 EngineReadyForESS_W "ESS request HIS charget (1=do charge)";
+CM_ SG_ 518 EngTrqMaxCorrFctr_W "Factor of reduction from max torque based on ambient conditions";
+CM_ SG_ 518 GrMax_Rq_ECM_W "Target gear upper limit (ECM requested limit)";
+CM_ SG_ 518 GrMin_Rq_ECM_W "Target gear lower limit (ECM requested limit)";
+CM_ SG_ 518 MessageCounter_ENGINE5 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 518 RPMOverRev_W "-";
+CM_ SG_ 751 Trns_DrvMdReq_ECM "The requested state of the drive mode feature";
+CM_ SG_ 751 Selector_SystemFailSts "Used to require a vehicle modality";
+CM_ SG_ 751 CRC_ENGINE6 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 751 MessageCounter_ENGINE6 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 751 Terrain_HMI_Rq_ECM "";
+CM_ SG_ 751 TerrainModeDesiredStat "Signal indicates customer desired terrain mode status";
+CM_ SG_ 751 TerrainModeStat_ECM "Used to require a vehicle modality";
+CM_ SG_ 751 EngineWaterTemp "-";
+CM_ SG_ 751 StartRelayECMFeedbackFault "-";
+CM_ SG_ 1448 SpStSwStat "Stop start switch status";
+CM_ SG_ 1448 CRC_ENGINE7 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1448 MessageCounter_ENGINE7 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 1448 SpStDispstat "Stop start display status";
+CM_ SG_ 1448 CompressorSts "This signal gives information about the present status of A/C external request and actual A/C activation by ECM.";
+CM_ SG_ 1055 CRC_ENGINE8 "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1055 MessageCounter_ENGINE8 "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 1055 MdsAct "MDS Active";
+CM_ SG_ 1058 IgnCntrFuelEngTrue "Second Ignition Cycle Counter";
+CM_ SG_ 1058 InpICCFuelEng_Fail "Second Ignition Cycle Counter Fault Present";
+CM_ SG_ 1058 AccelPdlPosn_OBD "Pedal value for OBD (ISO 15031-5.4 PID 49)";
+CM_ SG_ 1058 CARB_PERM "Fault code for diagnostics.";
+CM_ SG_ 1058 CarbWarmUp "CARB warmup criteria true.  The engine controller will set this bit when the engine coolant temp achieves the CARB warm-up criteria.";
+CM_ SG_ 1058 CldStrtDenominator "Cold start denominator conditions are met [1]";
+CM_ SG_ 1058 EngActiveTimer_OBD "Time since Engine start for OBD functionality";
+CM_ SG_ 1058 CRC_OBDCONTENTFRAME "CRC according to SAE J1850 standard at each frame transmission.";
+CM_ SG_ 1058 MessageCounter_OBDCONTENTFRAME "This signal is a counter used for safety checks strategies. This counter is incremented of 1 (one) unit at each frame transmission.";
+CM_ SG_ 1058 EngineOFFTime "The number of minutes the engine was off.";
+CM_ SG_ 1058 GenDenominator "General denominator conditions are met.  The engine controller will set this bit when the conditions for setting the General Denominator are met for rate based diagnostics.";
+CM_ SG_ 1058 IgnCntrTrue "Ignition cycle counter is true [1]";
+CM_ SG_ 1058 Inp_ICC_Fail "Inputs to the Ign Cycle Cntr are in a Pend or MIL cond.";
+CM_ SG_ 1058 InputsGDFail "General Denominator Requirements Achieved Validity. The engine controller sets this bit when any of the inputs to the General Denominator are in a pending or MIL fault.";
+CM_ SG_ 1058 LoadOBD "Engine calculated load value in percentage of load.";
+BA_DEF_ SG_ "GenSigTimeoutTime_EVCU2" INT 0 65535;
+BA_DEF_ SG_ "GenSigTimeoutTime_MCPA" INT 0 65535;
+BA_DEF_ SG_ "GenSigTimeoutTime_MCPB" INT 0 65535;
+BA_DEF_ SG_ "GenSigTimeoutTime_MRGB" INT 0 65535;
+BA_DEF_ BO_ "NmMessage" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 255;
+BA_DEF_ BO_ "GenMsgILSupport" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_ "NmAsrMessage" ENUM "No","Yes";
+BA_DEF_ BO_ "DiagState" ENUM "No","Yes";
+BA_DEF_ BO_ "DiagConnection" HEX 0 65535;
+BA_DEF_ BO_ "DiagRoeResponse" ENUM "No","Yes";
+BA_DEF_ BO_ "DiagRoeFlowControl" ENUM "No","Yes";
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_ "CANFD_BRS" ENUM "0","1";
+BA_DEF_ "Manufacturer" ENUM "DBAG","VAG","BWVAG","PAG","GM";
+BA_DEF_ "NmType" STRING ;
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ "Baudrate" INT 0 1000000;
+BA_DEF_ "DBName" STRING ;
+BA_DEF_ "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_ "NmAsrWaitBusSleepTime" INT 1 65535;
+BA_DEF_ "NmAsrRepeatMessageTime" INT 1 65535;
+BA_DEF_ "NmAsrMessageCount" INT 1 256;
+BA_DEF_ "NmAsrBaseAddress" HEX 235487232 2147483647;
+BA_DEF_ "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_ "Version" HEX 0 255;
+BA_DEF_ "VersionWeek" INT 0 53;
+BA_DEF_ "VersionYear" INT 0 99;
+BA_DEF_ BU_ "Description" STRING ;
+BA_DEF_ BU_ "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_ "NmNode" ENUM "No","Yes";
+BA_DEF_ BU_ "NmAsrNode" ENUM "No","Yes";
+BA_DEF_ BU_ "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_ BU_ "NmAsrNodeIdentifier" HEX 0 255;
+BA_DEF_ BU_ "IsOBDrelevant" ENUM "No","Yes";
+BA_DEF_ BU_ "NmAsrCanMsgReducedTime" INT 1 65535;
+BA_DEF_ BU_ "NmNodeType" ENUM "+15_NotWakeable","+30_Wakeable","+30_NotWakeable","kMaster","kSlave15","kSlave30","none";
+BA_DEF_ BU_ "NwmNodeType" ENUM "+15_NotWakeable","+30_Wakeable","+30_NotWakeable","kMaster","kSlave15","kSlave30","none";
+BA_DEF_ SG_ "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_ "GenSigInactiveValue" INT 0 2147483647;
+BA_DEF_ SG_ "GenSigSendType" ENUM "NotUsed","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_ "SystemSignalLongSymbol" STRING ;
+BA_DEF_ SG_ "GenSigTimeoutTime_AGSM" INT 0 65535;
+BA_DEF_ SG_ "GenSigTimeoutTime_ECM" INT 0 65535;
+BA_DEF_ SG_ "GenSigTimeoutTime_TCM" INT 0 65535;
+BA_DEF_ BO_ "DiagRequest" ENUM "No","Yes";
+BA_DEF_ BO_ "Type" ENUM "P","C","PE","COC","PE_Cntrl","E","E_Cntrl","OC","S","BAF","DC","EM","MM","ISO-TP","-";
+BA_DEF_ BO_ "DiagResponse" ENUM "No","Yes";
+BA_DEF_DEF_ "GenSigTimeoutTime_EVCU2" 2500;
+BA_DEF_DEF_ "GenSigTimeoutTime_MCPA" 2500;
+BA_DEF_DEF_ "GenSigTimeoutTime_MCPB" 2500;
+BA_DEF_DEF_ "GenSigTimeoutTime_MRGB" 2500;
+BA_DEF_DEF_ "NmMessage" "No";
+BA_DEF_DEF_ "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_ "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_ "GenMsgILSupport" "No";
+BA_DEF_DEF_ "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_ "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenMsgDelayTime" 0;
+BA_DEF_DEF_ "NmAsrMessage" "No";
+BA_DEF_DEF_ "DiagState" "No";
+BA_DEF_DEF_ "DiagConnection" 0;
+BA_DEF_DEF_ "DiagRoeResponse" "No";
+BA_DEF_DEF_ "DiagRoeFlowControl" "No";
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN_FD";
+BA_DEF_DEF_ "CANFD_BRS" "0";
+BA_DEF_DEF_ "Manufacturer" "DBAG";
+BA_DEF_DEF_ "NmType" "";
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "Baudrate" 500000;
+BA_DEF_DEF_ "DBName" "CAN";
+BA_DEF_DEF_ "NmAsrTimeoutTime" 1000;
+BA_DEF_DEF_ "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_ "NmAsrRepeatMessageTime" 800;
+BA_DEF_DEF_ "NmAsrMessageCount" 256;
+BA_DEF_DEF_ "NmAsrBaseAddress" 506724352;
+BA_DEF_DEF_ "NmAsrCanMsgCycleTime" 200;
+BA_DEF_DEF_ "Version" 160;
+BA_DEF_DEF_ "VersionWeek" 34;
+BA_DEF_DEF_ "VersionYear" 25;
+BA_DEF_DEF_ "Description" "";
+BA_DEF_DEF_ "NmStationAddress" 0;
+BA_DEF_DEF_ "NmNode" "Yes";
+BA_DEF_DEF_ "NmAsrNode" "Yes";
+BA_DEF_DEF_ "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_ "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_ "IsOBDrelevant" "No";
+BA_DEF_DEF_ "NmAsrCanMsgReducedTime" 100;
+BA_DEF_DEF_ "NmNodeType" "none";
+BA_DEF_DEF_ "NwmNodeType" "none";
+BA_DEF_DEF_ "GenSigStartValue" 0;
+BA_DEF_DEF_ "GenSigInactiveValue" 0;
+BA_DEF_DEF_ "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_ "SystemSignalLongSymbol" "";
+BA_DEF_DEF_ "GenSigTimeoutTime_AGSM" 2500;
+BA_DEF_DEF_ "GenSigTimeoutTime_ECM" 2500;
+BA_DEF_DEF_ "GenSigTimeoutTime_TCM" 2500;
+BA_DEF_DEF_ "DiagRequest" "No";
+BA_DEF_DEF_ "Type" "-";
+BA_DEF_DEF_ "DiagResponse" "No";
+BA_ "NmType" "NmAsr";
+BA_ "BusType" "CAN FD";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "FDCAN16";
+BA_ "NmAsrTimeoutTime" 8000;
+BA_ "NmAsrWaitBusSleepTime" 1000;
+BA_ "NmAsrRepeatMessageTime" 5000;
+BA_ "NmAsrMessageCount" 256;
+BA_ "NmAsrBaseAddress" 507002880;
+BA_ "NmAsrCanMsgCycleTime" 1000;
+BA_ "VersionWeek" 34;
+BA_ "VersionYear" 25;
+BA_ "Description" BU_ ECM "Engine Control Module";
+BA_ "NmStationAddress" BU_ ECM 1;
+BA_ "NmNode" BU_ ECM 0;
+BA_ "NmAsrNode" BU_ ECM 0;
+BA_ "NmAsrNodeIdentifier" BU_ ECM 1;
+BA_ "NmNodeType" BU_ ECM 0;
+BA_ "NwmNodeType" BU_ ECM 0;
+BA_ "NmMessage" BO_ 263 0;
+BA_ "GenMsgSendType" BO_ 263 0;
+BA_ "GenMsgNrOfRepetition" BO_ 263 0;
+BA_ "GenMsgILSupport" BO_ 263 1;
+BA_ "GenMsgCycleTimeFast" BO_ 263 0;
+BA_ "GenMsgCycleTime" BO_ 263 10;
+BA_ "GenMsgDelayTime" BO_ 263 0;
+BA_ "NmAsrMessage" BO_ 263 0;
+BA_ "DiagState" BO_ 263 0;
+BA_ "DiagConnection" BO_ 263 0;
+BA_ "VFrameFormat" BO_ 263 14;
+BA_ "CANFD_BRS" BO_ 263 1;
+BA_ "DiagRequest" BO_ 263 0;
+BA_ "Type" BO_ 263 1;
+BA_ "DiagResponse" BO_ 263 0;
+BA_ "NmMessage" BO_ 278 0;
+BA_ "GenMsgSendType" BO_ 278 0;
+BA_ "GenMsgNrOfRepetition" BO_ 278 0;
+BA_ "GenMsgILSupport" BO_ 278 1;
+BA_ "GenMsgCycleTimeFast" BO_ 278 0;
+BA_ "GenMsgCycleTime" BO_ 278 10;
+BA_ "GenMsgDelayTime" BO_ 278 0;
+BA_ "NmAsrMessage" BO_ 278 0;
+BA_ "DiagState" BO_ 278 0;
+BA_ "DiagConnection" BO_ 278 0;
+BA_ "VFrameFormat" BO_ 278 14;
+BA_ "CANFD_BRS" BO_ 278 1;
+BA_ "DiagRequest" BO_ 278 0;
+BA_ "Type" BO_ 278 1;
+BA_ "DiagResponse" BO_ 278 0;
+BA_ "NmMessage" BO_ 520 0;
+BA_ "GenMsgSendType" BO_ 520 0;
+BA_ "GenMsgNrOfRepetition" BO_ 520 0;
+BA_ "GenMsgILSupport" BO_ 520 1;
+BA_ "GenMsgCycleTimeFast" BO_ 520 0;
+BA_ "GenMsgCycleTime" BO_ 520 20;
+BA_ "GenMsgDelayTime" BO_ 520 0;
+BA_ "NmAsrMessage" BO_ 520 0;
+BA_ "DiagState" BO_ 520 0;
+BA_ "DiagConnection" BO_ 520 0;
+BA_ "VFrameFormat" BO_ 520 14;
+BA_ "CANFD_BRS" BO_ 520 1;
+BA_ "DiagRequest" BO_ 520 0;
+BA_ "Type" BO_ 520 1;
+BA_ "DiagResponse" BO_ 520 0;
+BA_ "NmMessage" BO_ 1450 0;
+BA_ "GenMsgSendType" BO_ 1450 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1450 2;
+BA_ "GenMsgILSupport" BO_ 1450 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1450 20;
+BA_ "GenMsgCycleTime" BO_ 1450 1000;
+BA_ "GenMsgDelayTime" BO_ 1450 20;
+BA_ "NmAsrMessage" BO_ 1450 0;
+BA_ "DiagState" BO_ 1450 0;
+BA_ "DiagConnection" BO_ 1450 0;
+BA_ "VFrameFormat" BO_ 1450 14;
+BA_ "CANFD_BRS" BO_ 1450 1;
+BA_ "DiagRequest" BO_ 1450 0;
+BA_ "Type" BO_ 1450 3;
+BA_ "DiagResponse" BO_ 1450 0;
+BA_ "NmMessage" BO_ 262 0;
+BA_ "GenMsgSendType" BO_ 262 0;
+BA_ "GenMsgNrOfRepetition" BO_ 262 0;
+BA_ "GenMsgILSupport" BO_ 262 1;
+BA_ "GenMsgCycleTimeFast" BO_ 262 0;
+BA_ "GenMsgCycleTime" BO_ 262 10;
+BA_ "GenMsgDelayTime" BO_ 262 0;
+BA_ "NmAsrMessage" BO_ 262 0;
+BA_ "DiagState" BO_ 262 0;
+BA_ "DiagConnection" BO_ 262 0;
+BA_ "VFrameFormat" BO_ 262 14;
+BA_ "CANFD_BRS" BO_ 262 1;
+BA_ "DiagRequest" BO_ 262 0;
+BA_ "Type" BO_ 262 1;
+BA_ "DiagResponse" BO_ 262 0;
+BA_ "NmMessage" BO_ 271 0;
+BA_ "GenMsgSendType" BO_ 271 0;
+BA_ "GenMsgNrOfRepetition" BO_ 271 0;
+BA_ "GenMsgILSupport" BO_ 271 1;
+BA_ "GenMsgCycleTimeFast" BO_ 271 0;
+BA_ "GenMsgCycleTime" BO_ 271 10;
+BA_ "GenMsgDelayTime" BO_ 271 0;
+BA_ "NmAsrMessage" BO_ 271 0;
+BA_ "DiagState" BO_ 271 0;
+BA_ "DiagConnection" BO_ 271 0;
+BA_ "VFrameFormat" BO_ 271 14;
+BA_ "CANFD_BRS" BO_ 271 1;
+BA_ "DiagRequest" BO_ 271 0;
+BA_ "Type" BO_ 271 1;
+BA_ "DiagResponse" BO_ 271 0;
+BA_ "NmMessage" BO_ 1036 0;
+BA_ "GenMsgSendType" BO_ 1036 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1036 2;
+BA_ "GenMsgILSupport" BO_ 1036 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1036 20;
+BA_ "GenMsgCycleTime" BO_ 1036 100;
+BA_ "GenMsgDelayTime" BO_ 1036 20;
+BA_ "NmAsrMessage" BO_ 1036 0;
+BA_ "DiagState" BO_ 1036 0;
+BA_ "DiagConnection" BO_ 1036 0;
+BA_ "VFrameFormat" BO_ 1036 14;
+BA_ "CANFD_BRS" BO_ 1036 1;
+BA_ "DiagRequest" BO_ 1036 0;
+BA_ "Type" BO_ 1036 3;
+BA_ "DiagResponse" BO_ 1036 0;
+BA_ "NmMessage" BO_ 255 0;
+BA_ "GenMsgSendType" BO_ 255 0;
+BA_ "GenMsgNrOfRepetition" BO_ 255 0;
+BA_ "GenMsgILSupport" BO_ 255 1;
+BA_ "GenMsgCycleTimeFast" BO_ 255 0;
+BA_ "GenMsgCycleTime" BO_ 255 10;
+BA_ "GenMsgDelayTime" BO_ 255 0;
+BA_ "NmAsrMessage" BO_ 255 0;
+BA_ "DiagState" BO_ 255 0;
+BA_ "DiagConnection" BO_ 255 0;
+BA_ "VFrameFormat" BO_ 255 14;
+BA_ "CANFD_BRS" BO_ 255 1;
+BA_ "DiagRequest" BO_ 255 0;
+BA_ "Type" BO_ 255 1;
+BA_ "DiagResponse" BO_ 255 0;
+BA_ "NmMessage" BO_ 1054 0;
+BA_ "GenMsgSendType" BO_ 1054 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1054 0;
+BA_ "GenMsgILSupport" BO_ 1054 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1054 0;
+BA_ "GenMsgCycleTime" BO_ 1054 100;
+BA_ "GenMsgDelayTime" BO_ 1054 0;
+BA_ "NmAsrMessage" BO_ 1054 0;
+BA_ "DiagState" BO_ 1054 0;
+BA_ "DiagConnection" BO_ 1054 0;
+BA_ "VFrameFormat" BO_ 1054 14;
+BA_ "CANFD_BRS" BO_ 1054 1;
+BA_ "DiagRequest" BO_ 1054 0;
+BA_ "Type" BO_ 1054 1;
+BA_ "DiagResponse" BO_ 1054 0;
+BA_ "NmMessage" BO_ 518 0;
+BA_ "GenMsgSendType" BO_ 518 0;
+BA_ "GenMsgNrOfRepetition" BO_ 518 0;
+BA_ "GenMsgILSupport" BO_ 518 1;
+BA_ "GenMsgCycleTimeFast" BO_ 518 0;
+BA_ "GenMsgCycleTime" BO_ 518 20;
+BA_ "GenMsgDelayTime" BO_ 518 0;
+BA_ "NmAsrMessage" BO_ 518 0;
+BA_ "DiagState" BO_ 518 0;
+BA_ "DiagConnection" BO_ 518 0;
+BA_ "VFrameFormat" BO_ 518 14;
+BA_ "CANFD_BRS" BO_ 518 1;
+BA_ "DiagRequest" BO_ 518 0;
+BA_ "Type" BO_ 518 1;
+BA_ "DiagResponse" BO_ 518 0;
+BA_ "NmMessage" BO_ 751 0;
+BA_ "GenMsgSendType" BO_ 751 0;
+BA_ "GenMsgNrOfRepetition" BO_ 751 0;
+BA_ "GenMsgILSupport" BO_ 751 1;
+BA_ "GenMsgCycleTimeFast" BO_ 751 0;
+BA_ "GenMsgCycleTime" BO_ 751 50;
+BA_ "GenMsgDelayTime" BO_ 751 0;
+BA_ "NmAsrMessage" BO_ 751 0;
+BA_ "DiagState" BO_ 751 0;
+BA_ "DiagConnection" BO_ 751 0;
+BA_ "VFrameFormat" BO_ 751 14;
+BA_ "CANFD_BRS" BO_ 751 1;
+BA_ "DiagRequest" BO_ 751 0;
+BA_ "Type" BO_ 751 1;
+BA_ "DiagResponse" BO_ 751 0;
+BA_ "NmMessage" BO_ 1448 0;
+BA_ "GenMsgSendType" BO_ 1448 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1448 2;
+BA_ "GenMsgILSupport" BO_ 1448 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1448 20;
+BA_ "GenMsgCycleTime" BO_ 1448 1000;
+BA_ "GenMsgDelayTime" BO_ 1448 20;
+BA_ "NmAsrMessage" BO_ 1448 0;
+BA_ "DiagState" BO_ 1448 0;
+BA_ "DiagConnection" BO_ 1448 0;
+BA_ "VFrameFormat" BO_ 1448 14;
+BA_ "CANFD_BRS" BO_ 1448 1;
+BA_ "DiagRequest" BO_ 1448 0;
+BA_ "Type" BO_ 1448 3;
+BA_ "DiagResponse" BO_ 1448 0;
+BA_ "NmMessage" BO_ 1055 0;
+BA_ "GenMsgSendType" BO_ 1055 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1055 0;
+BA_ "GenMsgILSupport" BO_ 1055 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1055 0;
+BA_ "GenMsgCycleTime" BO_ 1055 100;
+BA_ "GenMsgDelayTime" BO_ 1055 0;
+BA_ "NmAsrMessage" BO_ 1055 0;
+BA_ "DiagState" BO_ 1055 0;
+BA_ "DiagConnection" BO_ 1055 0;
+BA_ "VFrameFormat" BO_ 1055 14;
+BA_ "CANFD_BRS" BO_ 1055 1;
+BA_ "DiagRequest" BO_ 1055 0;
+BA_ "Type" BO_ 1055 1;
+BA_ "DiagResponse" BO_ 1055 0;
+BA_ "NmMessage" BO_ 1058 0;
+BA_ "GenMsgSendType" BO_ 1058 0;
+BA_ "GenMsgNrOfRepetition" BO_ 1058 0;
+BA_ "GenMsgILSupport" BO_ 1058 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1058 0;
+BA_ "GenMsgCycleTime" BO_ 1058 100;
+BA_ "GenMsgDelayTime" BO_ 1058 0;
+BA_ "NmAsrMessage" BO_ 1058 0;
+BA_ "DiagState" BO_ 1058 0;
+BA_ "DiagConnection" BO_ 1058 0;
+BA_ "VFrameFormat" BO_ 1058 14;
+BA_ "CANFD_BRS" BO_ 1058 1;
+BA_ "DiagRequest" BO_ 1058 0;
+BA_ "Type" BO_ 1058 1;
+BA_ "DiagResponse" BO_ 1058 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 263 CRC_PT_SYSTEM_FD_1 0;
+BA_ "GenSigStartValue" SG_ 263 CRC_PT_SYSTEM_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 263 CRC_PT_SYSTEM_FD_1 0;
+BA_ "GenSigSendType" SG_ 263 CRC_PT_SYSTEM_FD_1 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 263 CRC_PT_SYSTEM_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 263 MessageCounter_PT_SYSTEM_FD_1 0;
+BA_ "GenSigStartValue" SG_ 263 MessageCounter_PT_SYSTEM_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 263 MessageCounter_PT_SYSTEM_FD_1 0;
+BA_ "GenSigSendType" SG_ 263 MessageCounter_PT_SYSTEM_FD_1 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 263 MessageCounter_PT_SYSTEM_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TxIdleRq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TxIdleRq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TxIdleRq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TxIdleRq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TargetGear 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TargetGear 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TargetGear 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TargetGear 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 278 TransLosses 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 278 TransLosses 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 278 TransLosses 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 278 TransLosses 0;
+BA_ "GenSigStartValue" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigInactiveValue" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigSendType" SG_ 278 DriveLineRatio 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 DriveLineRatio 0;
+BA_ "GenSigStartValue" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigInactiveValue" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigSendType" SG_ 278 MessageCounter_TRANSM1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 MessageCounter_TRANSM1 0;
+BA_ "GenSigStartValue" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigInactiveValue" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigSendType" SG_ 278 PaddleShiftRequest 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 PaddleShiftRequest 0;
+BA_ "GenSigStartValue" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigInactiveValue" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigSendType" SG_ 278 REPRGD_PFC_CLR_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 REPRGD_PFC_CLR_TCM 0;
+BA_ "GenSigStartValue" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigInactiveValue" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigSendType" SG_ 278 CRC_TRANSM1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 CRC_TRANSM1 0;
+BA_ "GenSigStartValue" SG_ 278 EngTrq_Rq_TCM 2047;
+BA_ "GenSigInactiveValue" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigSendType" SG_ 278 EngTrq_Rq_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 EngTrq_Rq_TCM 0;
+BA_ "GenSigStartValue" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigInactiveValue" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigSendType" SG_ 278 TrqCtrlModeReq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TrqCtrlModeReq 0;
+BA_ "GenSigStartValue" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigInactiveValue" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigSendType" SG_ 278 TorqueAmpTransmission 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TorqueAmpTransmission 0;
+BA_ "GenSigStartValue" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigInactiveValue" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigSendType" SG_ 278 Trans_Adapt_Status 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 Trans_Adapt_Status 0;
+BA_ "GenSigStartValue" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigInactiveValue" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigSendType" SG_ 278 TCASERANGESTATUS_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TCASERANGESTATUS_TCM 0;
+BA_ "GenSigStartValue" SG_ 278 TxIdleRq 0;
+BA_ "GenSigInactiveValue" SG_ 278 TxIdleRq 0;
+BA_ "GenSigSendType" SG_ 278 TxIdleRq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TxIdleRq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TxIdleRq 0;
+BA_ "GenSigStartValue" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigInactiveValue" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigSendType" SG_ 278 CODE_CLR_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 CODE_CLR_TCM 0;
+BA_ "GenSigStartValue" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigInactiveValue" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigSendType" SG_ 278 TorqueCtrlModeReq_Prdtd 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TorqueCtrlModeReq_Prdtd 0;
+BA_ "GenSigStartValue" SG_ 278 PumpTrqOnImpShaft 512;
+BA_ "GenSigInactiveValue" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigSendType" SG_ 278 PumpTrqOnImpShaft 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 PumpTrqOnImpShaft 0;
+BA_ "GenSigStartValue" SG_ 278 EngTrq_Rq_TCM_Prdtd 2047;
+BA_ "GenSigInactiveValue" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigSendType" SG_ 278 EngTrq_Rq_TCM_Prdtd 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 EngTrq_Rq_TCM_Prdtd 0;
+BA_ "GenSigStartValue" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigInactiveValue" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigSendType" SG_ 278 CrankEnable_Fast 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 CrankEnable_Fast 0;
+BA_ "GenSigStartValue" SG_ 278 TransIntakeTorq 1000;
+BA_ "GenSigInactiveValue" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigSendType" SG_ 278 TransIntakeTorq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TransIntakeTorq 0;
+BA_ "GenSigStartValue" SG_ 278 MaxTrqDes 2047;
+BA_ "GenSigInactiveValue" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigSendType" SG_ 278 MaxTrqDes 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 MaxTrqDes 0;
+BA_ "GenSigStartValue" SG_ 278 TargetGear 15;
+BA_ "GenSigInactiveValue" SG_ 278 TargetGear 0;
+BA_ "GenSigSendType" SG_ 278 TargetGear 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TargetGear 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TargetGear 0;
+BA_ "GenSigStartValue" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigInactiveValue" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigSendType" SG_ 278 TorqueConverterSTO 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TorqueConverterSTO 0;
+BA_ "GenSigStartValue" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigInactiveValue" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigSendType" SG_ 278 TorqueConverterSts 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TorqueConverterSts 0;
+BA_ "GenSigStartValue" SG_ 278 TransLosses 0;
+BA_ "GenSigInactiveValue" SG_ 278 TransLosses 0;
+BA_ "GenSigSendType" SG_ 278 TransLosses 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TransLosses 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TransLosses 0;
+BA_ "GenSigStartValue" SG_ 278 TransmissionSailingSts 0;
+BA_ "GenSigInactiveValue" SG_ 278 TransmissionSailingSts 0;
+BA_ "GenSigSendType" SG_ 278 TransmissionSailingSts 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 278 TransmissionSailingSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 278 TransmissionSailingSts 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigStartValue" SG_ 520 GearEngagedForDisplay 31;
+BA_ "GenSigInactiveValue" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigSendType" SG_ 520 GearEngagedForDisplay 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 GearEngagedForDisplay 0;
+BA_ "GenSigStartValue" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigInactiveValue" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigSendType" SG_ 520 Trans_ESS_Inhibit 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 Trans_ESS_Inhibit 0;
+BA_ "GenSigStartValue" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigInactiveValue" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigSendType" SG_ 520 CRC_TRANSM2 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 CRC_TRANSM2 0;
+BA_ "GenSigStartValue" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigInactiveValue" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigSendType" SG_ 520 EngShutOffRq_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 EngShutOffRq_TCM 0;
+BA_ "GenSigStartValue" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigInactiveValue" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigSendType" SG_ 520 MessageCounter_TRANSM2 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 MessageCounter_TRANSM2 0;
+BA_ "GenSigStartValue" SG_ 520 APCM_Rq 0;
+BA_ "GenSigInactiveValue" SG_ 520 APCM_Rq 0;
+BA_ "GenSigSendType" SG_ 520 APCM_Rq 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 APCM_Rq 0;
+BA_ "GenSigStartValue" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigInactiveValue" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigSendType" SG_ 520 TCM_EngFSO_Allw 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TCM_EngFSO_Allw 0;
+BA_ "GenSigStartValue" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigInactiveValue" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigSendType" SG_ 520 TCM_EngFSO_Rq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TCM_EngFSO_Rq 0;
+BA_ "GenSigStartValue" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigInactiveValue" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigSendType" SG_ 520 TCM_TrqGradLim_Lo 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TCM_TrqGradLim_Lo 0;
+BA_ "GenSigStartValue" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigInactiveValue" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigSendType" SG_ 520 TCM_TrqGradLim_Up 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TCM_TrqGradLim_Up 0;
+BA_ "GenSigStartValue" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigInactiveValue" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigSendType" SG_ 520 TCM_TrqGradLimActive 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TCM_TrqGradLimActive 0;
+BA_ "GenSigStartValue" SG_ 520 AirFlowRequest_TCM 127;
+BA_ "GenSigInactiveValue" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigSendType" SG_ 520 AirFlowRequest_TCM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 AirFlowRequest_TCM 0;
+BA_ "GenSigStartValue" SG_ 520 TransInputSpeedMaxReq 1022;
+BA_ "GenSigInactiveValue" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigSendType" SG_ 520 TransInputSpeedMaxReq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TransInputSpeedMaxReq 0;
+BA_ "GenSigStartValue" SG_ 520 OUTPUT_SPEED 65535;
+BA_ "GenSigInactiveValue" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigSendType" SG_ 520 OUTPUT_SPEED 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 OUTPUT_SPEED 0;
+BA_ "GenSigStartValue" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigInactiveValue" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigSendType" SG_ 520 TransmissionTemperature 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TransmissionTemperature 0;
+BA_ "GenSigStartValue" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigInactiveValue" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigSendType" SG_ 520 TransReadyForESS 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TransReadyForESS 0;
+BA_ "GenSigStartValue" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigInactiveValue" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigSendType" SG_ 520 Trns_EMCC_Achvd 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 Trns_EMCC_Achvd 0;
+BA_ "GenSigStartValue" SG_ 520 TRNS_StpSt_FLT 1;
+BA_ "GenSigInactiveValue" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigSendType" SG_ 520 TRNS_StpSt_FLT 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TRNS_StpSt_FLT 0;
+BA_ "GenSigStartValue" SG_ 520 TurbineSpeed 65535;
+BA_ "GenSigInactiveValue" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigSendType" SG_ 520 TurbineSpeed 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 520 TurbineSpeed 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigStartValue" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigInactiveValue" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigSendType" SG_ 1450 DriveModeSts 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 DriveModeSts 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 GearEngaged 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 GearEngaged 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 GearEngaged 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 GearEngaged 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 MIReq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 MIReq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 MIReq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 MIReq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigStartValue" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigInactiveValue" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigSendType" SG_ 1450 TxDisengaged_Fault 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 TxDisengaged_Fault 0;
+BA_ "GenSigStartValue" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigInactiveValue" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigSendType" SG_ 1450 CRC_TRANSM4 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 CRC_TRANSM4 0;
+BA_ "GenSigStartValue" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigInactiveValue" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigSendType" SG_ 1450 MessageCounter_TRANSM4 7;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 MessageCounter_TRANSM4 0;
+BA_ "GenSigStartValue" SG_ 1450 ShiftMapNotAchieved 0;
+BA_ "GenSigInactiveValue" SG_ 1450 ShiftMapNotAchieved 0;
+BA_ "GenSigSendType" SG_ 1450 ShiftMapNotAchieved 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 ShiftMapNotAchieved 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 ShiftMapNotAchieved 0;
+BA_ "GenSigStartValue" SG_ 1450 GearEngaged 0;
+BA_ "GenSigInactiveValue" SG_ 1450 GearEngaged 0;
+BA_ "GenSigSendType" SG_ 1450 GearEngaged 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 GearEngaged 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 GearEngaged 0;
+BA_ "GenSigStartValue" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigInactiveValue" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigSendType" SG_ 1450 LimpHomeSts 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 LimpHomeSts 0;
+BA_ "GenSigStartValue" SG_ 1450 MIReq 0;
+BA_ "GenSigInactiveValue" SG_ 1450 MIReq 0;
+BA_ "GenSigSendType" SG_ 1450 MIReq 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 MIReq 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 MIReq 0;
+BA_ "GenSigStartValue" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigInactiveValue" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigSendType" SG_ 1450 ShiftInProgress 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 ShiftInProgress 0;
+BA_ "GenSigStartValue" SG_ 1450 ShiftModeSts 0;
+BA_ "GenSigInactiveValue" SG_ 1450 ShiftModeSts 0;
+BA_ "GenSigSendType" SG_ 1450 ShiftModeSts 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 ShiftModeSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 ShiftModeSts 0;
+BA_ "GenSigStartValue" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigInactiveValue" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigSendType" SG_ 1450 TxDisengaged 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1450 TxDisengaged 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigStartValue" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigInactiveValue" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigSendType" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 ESS_EBOOST_BRKHLD_STATUS 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigStartValue" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigSendType" SG_ 262 EngTrq_Enbl_Rq_TCM_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 EngTrq_Enbl_Rq_TCM_W 0;
+BA_ "GenSigStartValue" SG_ 262 ESS_ENG_ST_W 15;
+BA_ "GenSigInactiveValue" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigSendType" SG_ 262 ESS_ENG_ST_W 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 ESS_ENG_ST_W 0;
+BA_ "GenSigStartValue" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigSendType" SG_ 262 ESS_RqShftPark_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 ESS_RqShftPark_W 0;
+BA_ "GenSigStartValue" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigSendType" SG_ 262 GasPedalPosition_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 GasPedalPosition_W 0;
+BA_ "GenSigStartValue" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigSendType" SG_ 262 GasPedalPositionFailSts_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 GasPedalPositionFailSts_W 0;
+BA_ "GenSigStartValue" SG_ 262 IntakeAirTemperature_W 65;
+BA_ "GenSigInactiveValue" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigSendType" SG_ 262 IntakeAirTemperature_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 IntakeAirTemperature_W 0;
+BA_ "GenSigStartValue" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigSendType" SG_ 262 ECM_LHOM_Trans_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 ECM_LHOM_Trans_W 0;
+BA_ "GenSigStartValue" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigSendType" SG_ 262 ECM_LHOM_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 ECM_LHOM_W 0;
+BA_ "GenSigStartValue" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigSendType" SG_ 262 EngineFrictionTorque_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 EngineFrictionTorque_W 0;
+BA_ "GenSigStartValue" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigInactiveValue" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigSendType" SG_ 262 EngineIdleRefSpeed 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 EngineIdleRefSpeed 0;
+BA_ "GenSigStartValue" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigSendType" SG_ 262 EngineSpeed_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 EngineSpeed_W 0;
+BA_ "GenSigStartValue" SG_ 262 EngineSts_W 3;
+BA_ "GenSigInactiveValue" SG_ 262 EngineSts_W 0;
+BA_ "GenSigSendType" SG_ 262 EngineSts_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 EngineSts_W 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 EngineSts_W 0;
+BA_ "GenSigStartValue" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigInactiveValue" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigSendType" SG_ 262 Torque_Interface_Mask 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 Torque_Interface_Mask 0;
+BA_ "GenSigStartValue" SG_ 262 CrankHold_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 CrankHold_W 0;
+BA_ "GenSigSendType" SG_ 262 CrankHold_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 CrankHold_W 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 CrankHold_W 0;
+BA_ "GenSigStartValue" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigInactiveValue" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigSendType" SG_ 262 CRC_ENGINE2 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 CRC_ENGINE2 0;
+BA_ "GenSigStartValue" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigSendType" SG_ 262 KickDownRequest_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 KickDownRequest_W 0;
+BA_ "GenSigStartValue" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigSendType" SG_ 262 LV12PwrFreeRq_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 LV12PwrFreeRq_W 0;
+BA_ "GenSigStartValue" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigInactiveValue" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigSendType" SG_ 262 MessageCounter_ENGINE2 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 MessageCounter_ENGINE2 0;
+BA_ "GenSigStartValue" SG_ 262 PowertrainPrplsnActv 0;
+BA_ "GenSigInactiveValue" SG_ 262 PowertrainPrplsnActv 0;
+BA_ "GenSigSendType" SG_ 262 PowertrainPrplsnActv 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 PowertrainPrplsnActv 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 PowertrainPrplsnActv 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 262 PowertrainPrplsnActv 0;
+BA_ "GenSigStartValue" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigSendType" SG_ 262 TRANS_CLU_SLIP_MODE_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 TRANS_CLU_SLIP_MODE_W 0;
+BA_ "GenSigStartValue" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigInactiveValue" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigSendType" SG_ 262 TxAC_EMCC_rq_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 262 TxAC_EMCC_rq_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigStartValue" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigInactiveValue" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigSendType" SG_ 271 EngTrqFSO_CurrAir 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 EngTrqFSO_CurrAir 0;
+BA_ "GenSigStartValue" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigSendType" SG_ 271 CRC_ENGINE_HYBD_FD_1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 CRC_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigStartValue" SG_ 271 EngAirFlwStdyStTorq 938;
+BA_ "GenSigInactiveValue" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigSendType" SG_ 271 EngAirFlwStdyStTorq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 EngAirFlwStdyStTorq 0;
+BA_ "GenSigStartValue" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigInactiveValue" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigSendType" SG_ 271 EngAirFlwStdyStTorqV 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 EngAirFlwStdyStTorqV 0;
+BA_ "GenSigStartValue" SG_ 271 MaxPrdtdEngTorqCap 938;
+BA_ "GenSigInactiveValue" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigSendType" SG_ 271 MaxPrdtdEngTorqCap 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MaxPrdtdEngTorqCap 0;
+BA_ "GenSigStartValue" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigInactiveValue" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigSendType" SG_ 271 MaxPrdtdEngTorqCapV 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MaxPrdtdEngTorqCapV 0;
+BA_ "GenSigStartValue" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigSendType" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MessageCounter_ENGINE_HYBD_FD_1 0;
+BA_ "GenSigStartValue" SG_ 271 MinAirFlowMinSparkTorqCap 938;
+BA_ "GenSigInactiveValue" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigSendType" SG_ 271 MinAirFlowMinSparkTorqCap 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MinAirFlowMinSparkTorqCap 0;
+BA_ "GenSigStartValue" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigInactiveValue" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigSendType" SG_ 271 MinAirFlowMinSparkTorqCapV 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MinAirFlowMinSparkTorqCapV 0;
+BA_ "GenSigStartValue" SG_ 271 MinImmedEngTorqCap 938;
+BA_ "GenSigInactiveValue" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigSendType" SG_ 271 MinImmedEngTorqCap 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MinImmedEngTorqCap 0;
+BA_ "GenSigStartValue" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigInactiveValue" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigSendType" SG_ 271 MinImmedEngTorqCapV 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 271 MinImmedEngTorqCapV 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigStartValue" SG_ 1036 EngineOilTemperature 255;
+BA_ "GenSigInactiveValue" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1036 EngineOilTemperature 0;
+BA_ "GenSigStartValue" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigInactiveValue" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigSendType" SG_ 1036 CRC_ENGINE3 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1036 CRC_ENGINE3 0;
+BA_ "GenSigStartValue" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigInactiveValue" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigSendType" SG_ 1036 MessageCounter_ENGINE3 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1036 MessageCounter_ENGINE3 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigStartValue" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigInactiveValue" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigSendType" SG_ 255 Accel_Pedal_Override 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 Accel_Pedal_Override 0;
+BA_ "GenSigStartValue" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigSendType" SG_ 255 CRC_PT_TORQUE_FD_1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 CRC_PT_TORQUE_FD_1 0;
+BA_ "GenSigStartValue" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigInactiveValue" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigSendType" SG_ 255 MessageCounter_PT_TORQUE_FD_1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 MessageCounter_PT_TORQUE_FD_1 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigSendType" SG_ 255 SumTorque_DrvReqMod 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorque_DrvReqMod 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueMax 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueMax 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueMin 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueMin 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueSel_D_TTC 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueSel_D_TTC 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueStatic 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueStatic 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueStatic_SEM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueStatic_SEM 0;
+BA_ "GenSigStartValue" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigInactiveValue" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigSendType" SG_ 255 SumTorqueTgt_SEM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 255 SumTorqueTgt_SEM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigStartValue" SG_ 1054 AtmosphericPressure_W 255;
+BA_ "GenSigInactiveValue" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigSendType" SG_ 1054 AtmosphericPressure_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 AtmosphericPressure_W 0;
+BA_ "GenSigStartValue" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigInactiveValue" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigSendType" SG_ 1054 AtmosphericPressureFailSts_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 AtmosphericPressureFailSts_W 0;
+BA_ "GenSigStartValue" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigInactiveValue" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigSendType" SG_ 1054 CRC_ENGINE1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 CRC_ENGINE1 0;
+BA_ "GenSigStartValue" SG_ 1054 EngMaxRPM_W 255;
+BA_ "GenSigInactiveValue" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigSendType" SG_ 1054 EngMaxRPM_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 EngMaxRPM_W 0;
+BA_ "GenSigStartValue" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigInactiveValue" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigSendType" SG_ 1054 MessageCounter_ENGINE1 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 MessageCounter_ENGINE1 0;
+BA_ "GenSigStartValue" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigInactiveValue" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigSendType" SG_ 1054 ThermalManagementActive_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 ThermalManagementActive_W 0;
+BA_ "GenSigStartValue" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigInactiveValue" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigSendType" SG_ 1054 TransWarmUpMin_RPM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 TransWarmUpMin_RPM 0;
+BA_ "GenSigStartValue" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigInactiveValue" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigSendType" SG_ 1054 TransWarmUpReq 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1054 TransWarmUpReq 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigStartValue" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigInactiveValue" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigSendType" SG_ 518 CRC_ENGINE5 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 CRC_ENGINE5 0;
+BA_ "GenSigStartValue" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigSendType" SG_ 518 ECM_CODE_CLR_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 ECM_CODE_CLR_W 0;
+BA_ "GenSigStartValue" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigSendType" SG_ 518 ECM_READINESS_RESET_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 ECM_READINESS_RESET_W 0;
+BA_ "GenSigStartValue" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigSendType" SG_ 518 EngineReadyForESS_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 EngineReadyForESS_W 0;
+BA_ "GenSigStartValue" SG_ 518 EngTrqMaxCorrFctr_W 255;
+BA_ "GenSigInactiveValue" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigSendType" SG_ 518 EngTrqMaxCorrFctr_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 EngTrqMaxCorrFctr_W 0;
+BA_ "GenSigStartValue" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigSendType" SG_ 518 GrMax_Rq_ECM_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 GrMax_Rq_ECM_W 0;
+BA_ "GenSigStartValue" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigSendType" SG_ 518 GrMin_Rq_ECM_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 GrMin_Rq_ECM_W 0;
+BA_ "GenSigStartValue" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigInactiveValue" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigSendType" SG_ 518 MessageCounter_ENGINE5 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 MessageCounter_ENGINE5 0;
+BA_ "GenSigStartValue" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigInactiveValue" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigSendType" SG_ 518 RPMOverRev_W 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 518 RPMOverRev_W 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigStartValue" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigInactiveValue" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigSendType" SG_ 751 Trns_DrvMdReq_ECM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 Trns_DrvMdReq_ECM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigStartValue" SG_ 751 Selector_SystemFailSts 0;
+BA_ "GenSigInactiveValue" SG_ 751 Selector_SystemFailSts 0;
+BA_ "GenSigSendType" SG_ 751 Selector_SystemFailSts 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 Selector_SystemFailSts 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 Selector_SystemFailSts 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 751 Selector_SystemFailSts 0;
+BA_ "GenSigStartValue" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigInactiveValue" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigSendType" SG_ 751 CRC_ENGINE6 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 CRC_ENGINE6 0;
+BA_ "GenSigStartValue" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigInactiveValue" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigSendType" SG_ 751 MessageCounter_ENGINE6 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 MessageCounter_ENGINE6 0;
+BA_ "GenSigStartValue" SG_ 751 Terrain_HMI_Rq_ECM 0;
+BA_ "GenSigInactiveValue" SG_ 751 Terrain_HMI_Rq_ECM 0;
+BA_ "GenSigSendType" SG_ 751 Terrain_HMI_Rq_ECM 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 Terrain_HMI_Rq_ECM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 Terrain_HMI_Rq_ECM 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 751 Terrain_HMI_Rq_ECM 0;
+BA_ "GenSigStartValue" SG_ 751 TerrainModeDesiredStat 0;
+BA_ "GenSigInactiveValue" SG_ 751 TerrainModeDesiredStat 0;
+BA_ "GenSigSendType" SG_ 751 TerrainModeDesiredStat 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 TerrainModeDesiredStat 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 TerrainModeDesiredStat 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 751 TerrainModeDesiredStat 0;
+BA_ "GenSigStartValue" SG_ 751 TerrainModeStat_ECM 31;
+BA_ "GenSigInactiveValue" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigSendType" SG_ 751 TerrainModeStat_ECM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 TerrainModeStat_ECM 0;
+BA_ "GenSigStartValue" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigInactiveValue" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigSendType" SG_ 751 EngineWaterTemp 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 EngineWaterTemp 0;
+BA_ "GenSigStartValue" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigInactiveValue" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigSendType" SG_ 751 StartRelayECMFeedbackFault 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 751 StartRelayECMFeedbackFault 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigStartValue" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigInactiveValue" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigSendType" SG_ 1448 SpStSwStat 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1448 SpStSwStat 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1448 CompressorSts 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1448 CompressorSts 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1448 CompressorSts 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1448 CompressorSts 0;
+BA_ "GenSigStartValue" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigInactiveValue" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigSendType" SG_ 1448 CRC_ENGINE7 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1448 CRC_ENGINE7 0;
+BA_ "GenSigStartValue" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigInactiveValue" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigSendType" SG_ 1448 MessageCounter_ENGINE7 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1448 MessageCounter_ENGINE7 0;
+BA_ "GenSigStartValue" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigInactiveValue" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigSendType" SG_ 1448 SpStDispstat 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1448 SpStDispstat 0;
+BA_ "GenSigStartValue" SG_ 1448 CompressorSts 2;
+BA_ "GenSigInactiveValue" SG_ 1448 CompressorSts 0;
+BA_ "GenSigSendType" SG_ 1448 CompressorSts 3;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1448 CompressorSts 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1448 CompressorSts 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1055 MdsAct 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1055 MdsAct 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1055 MdsAct 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1055 MdsAct 0;
+BA_ "GenSigStartValue" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigInactiveValue" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigSendType" SG_ 1055 CRC_ENGINE8 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1055 CRC_ENGINE8 0;
+BA_ "GenSigStartValue" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigInactiveValue" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigSendType" SG_ 1055 MessageCounter_ENGINE8 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1055 MessageCounter_ENGINE8 0;
+BA_ "GenSigStartValue" SG_ 1055 MdsAct 0;
+BA_ "GenSigInactiveValue" SG_ 1055 MdsAct 0;
+BA_ "GenSigSendType" SG_ 1055 MdsAct 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1055 MdsAct 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1055 MdsAct 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 GenDenominator 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 GenDenominator 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 GenDenominator 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 GenDenominator 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigTimeoutTime_EVCU2" SG_ 1058 LoadOBD 0;
+BA_ "GenSigTimeoutTime_MCPA" SG_ 1058 LoadOBD 0;
+BA_ "GenSigTimeoutTime_MCPB" SG_ 1058 LoadOBD 0;
+BA_ "GenSigTimeoutTime_MRGB" SG_ 1058 LoadOBD 0;
+BA_ "GenSigStartValue" SG_ 1058 IgnCntrFuelEngTrue 0;
+BA_ "GenSigInactiveValue" SG_ 1058 IgnCntrFuelEngTrue 0;
+BA_ "GenSigSendType" SG_ 1058 IgnCntrFuelEngTrue 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 IgnCntrFuelEngTrue 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 IgnCntrFuelEngTrue 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1058 IgnCntrFuelEngTrue 0;
+BA_ "GenSigStartValue" SG_ 1058 InpICCFuelEng_Fail 0;
+BA_ "GenSigInactiveValue" SG_ 1058 InpICCFuelEng_Fail 0;
+BA_ "GenSigSendType" SG_ 1058 InpICCFuelEng_Fail 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 InpICCFuelEng_Fail 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 InpICCFuelEng_Fail 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1058 InpICCFuelEng_Fail 0;
+BA_ "GenSigStartValue" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigInactiveValue" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigSendType" SG_ 1058 AccelPdlPosn_OBD 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 AccelPdlPosn_OBD 0;
+BA_ "GenSigStartValue" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigInactiveValue" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigSendType" SG_ 1058 CARB_PERM 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 CARB_PERM 0;
+BA_ "GenSigStartValue" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigInactiveValue" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigSendType" SG_ 1058 CarbWarmUp 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 CarbWarmUp 0;
+BA_ "GenSigStartValue" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigInactiveValue" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigSendType" SG_ 1058 CldStrtDenominator 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigTimeoutTime_TCM" SG_ 1058 CldStrtDenominator 0;
+BA_ "GenSigStartValue" SG_ 1058 EngActiveTimer_OBD 0;
+BA_ "GenSigInactiveValue" SG_ 1058 EngActiveTimer_OBD 0;
+BA_ "GenSigSendType" SG_ 1058 EngActiveTimer_OBD 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 EngActiveTimer_OBD 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 EngActiveTimer_OBD 0;
+BA_ "GenSigStartValue" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigInactiveValue" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigSendType" SG_ 1058 CRC_OBDCONTENTFRAME 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 CRC_OBDCONTENTFRAME 0;
+BA_ "GenSigStartValue" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigInactiveValue" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigSendType" SG_ 1058 MessageCounter_OBDCONTENTFRAME 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 MessageCounter_OBDCONTENTFRAME 0;
+BA_ "GenSigStartValue" SG_ 1058 EngineOFFTime 1023;
+BA_ "GenSigInactiveValue" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigSendType" SG_ 1058 EngineOFFTime 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 EngineOFFTime 0;
+BA_ "GenSigStartValue" SG_ 1058 GenDenominator 0;
+BA_ "GenSigInactiveValue" SG_ 1058 GenDenominator 0;
+BA_ "GenSigSendType" SG_ 1058 GenDenominator 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 GenDenominator 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 GenDenominator 0;
+BA_ "GenSigStartValue" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigInactiveValue" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigSendType" SG_ 1058 IgnCntrTrue 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 IgnCntrTrue 0;
+BA_ "GenSigStartValue" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigInactiveValue" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigSendType" SG_ 1058 Inp_ICC_Fail 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 Inp_ICC_Fail 0;
+BA_ "GenSigStartValue" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigInactiveValue" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigSendType" SG_ 1058 InputsGDFail 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 InputsGDFail 0;
+BA_ "GenSigStartValue" SG_ 1058 LoadOBD 0;
+BA_ "GenSigInactiveValue" SG_ 1058 LoadOBD 0;
+BA_ "GenSigSendType" SG_ 1058 LoadOBD 7;
+BA_ "GenSigTimeoutTime_AGSM" SG_ 1058 LoadOBD 0;
+BA_ "GenSigTimeoutTime_ECM" SG_ 1058 LoadOBD 0;
+VAL_ 1450 TxDisengaged 0 "Engaged" 1 "Disengaged";
+VAL_ 1450 ShiftModeSts 0 "Manual" 1 "Automatic";
+VAL_ 1450 ShiftInProgress 0 "No Shift in progress" 1 "Shift in progress";
+VAL_ 1450 MIReq 0 "No_EOBD_error" 1 "EOBD_error";
+VAL_ 1450 LimpHomeSts 0 "NotActive" 1 "Active";
+VAL_ 1450 GearEngaged 0 "Neutral" 1 "ForwardGear_1" 2 "ForwardGear_2" 3 "ForwardGear_3" 4 "ForwardGear_4" 5 "ForwardGear_5" 6 "ForwardGear_6" 7 "ForwardGear_7" 8 "ForwardGear_8" 9 "ForwardGear_9" 13 "Parking" 14 "ReverseGear" 15 "SNA";
+VAL_ 520 TurbineSpeed 65535 "SNA";
+VAL_ 520 TRNS_StpSt_FLT 0 "Not_Present" 1 "Present";
+VAL_ 520 Trns_EMCC_Achvd 0 "False" 1 "True";
+VAL_ 520 TransReadyForESS 0 "Not_Ready" 1 "Ready";
+VAL_ 520 TransmissionTemperature 63 "SNA";
+VAL_ 520 OUTPUT_SPEED 65535 "SNA";
+VAL_ 520 APCM_Rq 0 "OFF" 1 "ON" 2 "PENDING" 3 "SNA";
+VAL_ 1058 InputsGDFail 0 "False" 1 "True";
+VAL_ 1058 Inp_ICC_Fail 0 "Fail_Not_Present" 1 "Fail_Present";
+VAL_ 1058 IgnCntrTrue 0 "False" 1 "True";
+VAL_ 1058 GenDenominator 0 "False" 1 "True";
+VAL_ 1058 EngineOFFTime 1023 "SNA";
+VAL_ 1058 CldStrtDenominator 0 "Not_Active" 1 "Active";
+VAL_ 1058 CarbWarmUp 0 "False" 1 "True";
+VAL_ 1058 CARB_PERM 0 "False" 1 "True";
+VAL_ 1448 CompressorSts 0 "Not_Used" 1 "Not_inserted_by_NCM" 2 "Not_insrtd_by_driver_or_security" 3 "Inserted";
+VAL_ 751 StartRelayECMFeedbackFault 0 "False" 1 "True";
+VAL_ 751 EngineWaterTemp 255 "SNA";
+VAL_ 1450 ShiftMapNotAchieved 0 "Achieved" 1 "Not_Achieved";
+VAL_ 520 EngShutOffRq_TCM 0 "FALSE" 1 "TRUE";
+VAL_ 255 SumTorqueTgt_SEM 2047 "SNA";
+VAL_ 255 SumTorqueStatic_SEM 2047 "SNA";
+VAL_ 255 SumTorqueStatic 2047 "SNA";
+VAL_ 255 SumTorqueSel_D_TTC 2047 "SNA";
+VAL_ 255 SumTorqueMin 2047 "SNA";
+VAL_ 255 SumTorqueMax 2047 "SNA";
+VAL_ 255 SumTorque_DrvReqMod 8191 "SNA";
+VAL_ 1055 MdsAct 0 "Not Active" 1 "Active";
+VAL_ 1448 SpStSwStat 0 "OFF" 1 "CONT" 2 "BLINK" 3 "SNA";
+VAL_ 1448 SpStDispstat 0 "NONE" 1 "PCR_OPENS" 3 "ACTIVE" 4 "D_OR_SB" 5 "NR_DRV_NOT_DET" 6 "DR_INHIB" 7 "TX_INHIB" 8 "KEY" 9 "BATT" 10 "SYSFLT" 11 "NR" 12 "READY" 13 "OFF" 14 "HOOD" 15 "PEDAL" 16 "BATT_CHG" 17 "TM" 18 "T4WD_L" 20 "INCLINE" 21 "AMB_TEMP" 23 "SB" 24 "DR_AJAR" 25 "CABIN" 26 "MAX_HVAC" 27 "FT_DEFROST" 29 "ST_WHEEL" 30 "Eng_Temp_Hi" 31 "Eng_Temp_Lo" 32 "Prk_Brk_Inhib" 33 "Park_Inhib" 34 "Hood_Inhib" 35 "DPF_Regen" 38 "BATT_HIGH" 63 "SNA";
+VAL_ 751 TerrainModeStat_ECM 0 "Auto" 1 "Auto_Fault" 2 "Rock" 3 "Track" 4 "Snow" 5 "Offroad" 6 "Eco" 7 "Corsa" 8 "Sport" 9 "Mud_Sand" 10 "Mud" 11 "Sand" 12 "Valet" 13 "Custom" 14 "Tow" 15 "DRAG" 16 "BAJA" 31 "SNA";
+VAL_ 751 TerrainModeDesiredStat 0 "Auto" 1 "Auto_Fault" 2 "Rock" 3 "Track" 4 "Snow" 5 "Offroad" 6 "Eco" 7 "Corsa" 8 "Sport" 9 "Mud_Sand" 10 "Mud" 11 "Sand" 12 "Valet" 13 "Custom" 14 "Tow" 15 "DRAG" 16 "BAJA" 31 "SNA";
+VAL_ 751 Terrain_HMI_Rq_ECM 0 "No_Request" 1 "SCREEN_1" 2 "SCREEN_2" 3 "SCREEN_3" 4 "SCREEN_4" 5 "SCREEN_5" 6 "SCREEN_6" 7 "SCREEN_7" 8 "SCREEN_8" 9 "SCREEN_9" 10 "SCREEN_10" 11 "SCREEN_11" 12 "SCREEN_12" 13 "SCREEN_13" 14 "SCREEN_14" 15 "SCREEN_15" 16 "SCREEN_16" 17 "SCREEN_17" 18 "SCREEN_18" 19 "SCREEN_19" 20 "SCREEN_20" 21 "SCREEN_21" 22 "SCREEN_22" 23 "SCREEN_23" 24 "SCREEN_24" 25 "SCREEN_25" 26 "SCREEN_26" 27 "SCREEN_27" 28 "SCREEN_28" 29 "SCREEN_29" 30 "SCREEN_30" 31 "SNA";
+VAL_ 518 RPMOverRev_W 0 "FALSE" 1 "TRUE";
+VAL_ 518 GrMin_Rq_ECM_W 0 "Passive" 1 "G1" 2 "G2" 3 "G3" 4 "G4" 5 "G5" 6 "G6" 7 "G7" 8 "G8" 9 "G9";
+VAL_ 518 GrMax_Rq_ECM_W 0 "Passive" 1 "G1" 2 "G2" 3 "G3" 4 "G4" 5 "G5" 6 "G6" 7 "G7" 8 "G8" 9 "G9";
+VAL_ 518 EngTrqMaxCorrFctr_W 255 "SNA";
+VAL_ 518 EngineReadyForESS_W 0 "Not_Active" 1 "Active";
+VAL_ 518 ECM_READINESS_RESET_W 0 "Not Set" 1 "Set";
+VAL_ 518 ECM_CODE_CLR_W 0 "Not Cleared" 1 "Cleared";
+VAL_ 1054 TransWarmUpReq 0 "WarmUp_Not_Enabled" 1 "WarmUp_Enabled";
+VAL_ 1054 TransWarmUpMin_RPM 255 "SNA";
+VAL_ 1054 ThermalManagementActive_W 0 "Not_active" 1 "Active";
+VAL_ 1054 EngMaxRPM_W 255 "SNA";
+VAL_ 1054 AtmosphericPressureFailSts_W 0 "Fail_Not_Present" 1 "Fail_Present";
+VAL_ 1054 AtmosphericPressure_W 255 "SNA";
+VAL_ 278 TransmissionSailingSts 0 "Sailing_Not Possible" 1 "Sailing_Possible_Passive" 2 "Transition_To_Sailing" 3 "Sailing_Active" 4 "Transition_Out_Of_Sailing" 5 "Sailing_Not_Available" 15 "SNA";
+VAL_ 278 TransLosses 1023 "SNA";
+VAL_ 278 TorqueConverterSts 0 "Lock_up_clutch_opened" 1 "Lock_up_clutch_is_slipping" 2 "Lock_up_clutch_closed" 3 "SNA";
+VAL_ 278 TorqueConverterSTO 0 "Not_Active" 1 "Active";
+VAL_ 278 TargetGear 0 "Neutral" 1 "ForwardGear_1" 2 "ForwardGear_2" 3 "ForwardGear_3" 4 "ForwardGear_4" 5 "ForwardGear_5" 6 "ForwardGear_6" 7 "ForwardGear_7" 8 "ForwardGear_8" 9 "ForwardGear_9" 13 "Parking" 14 "ReverseGear" 15 "SNA";
+VAL_ 278 MaxTrqDes 2047 "SNA";
+VAL_ 278 EngTrq_Rq_TCM 2047 "SNA";
+VAL_ 271 MinImmedEngTorqCapV 0 "Valid" 1 "Not_Valid";
+VAL_ 271 MinImmedEngTorqCap 4095 "SNA";
+VAL_ 271 MinAirFlowMinSparkTorqCap 4095 "SNA";
+VAL_ 271 MaxPrdtdEngTorqCapV 0 "Valid" 1 "Not_Valid";
+VAL_ 271 MaxPrdtdEngTorqCap 4095 "SNA";
+VAL_ 271 EngAirFlwStdyStTorqV 0 "Valid" 1 "Not_Valid";
+VAL_ 271 EngAirFlwStdyStTorq 4095 "SNA";
+VAL_ 262 TxAC_EMCC_rq_W 0 "False" 1 "True";
+VAL_ 262 TRANS_CLU_SLIP_MODE_W 0 "NORMAL" 1 "MDS_RQ" 2 "IDFSO_RQ" 3 "AC_EN_DIS_RQ" 4 "IDFSO_ACTIVE" 5 "MDS_IDFSO_ACT" 7 "SNA";
+VAL_ 262 PowertrainPrplsnActv 0 "Off" 1 "Active";
+VAL_ 262 LV12PwrFreeRq_W 0 "Level 1 or 2 Power free Mode NOT active" 1 "Level 1 or 2 Power free Mode Active";
+VAL_ 262 KickDownRequest_W 0 "No_kd_request" 1 "Kd_request";
+VAL_ 262 IntakeAirTemperature_W 255 "SNA";
+VAL_ 262 GasPedalPositionFailSts_W 0 "Fail_not_present" 1 "Fail_present";
+VAL_ 262 GasPedalPosition_W 255 "SNA";
+VAL_ 262 ESS_ENG_ST_W 1 "ENS Stopped / ENS_STOPPED" 2 "ENS Request Start / ENS_RQ_ST" 3 "ENS Running / ENS_RUN" 4 "ENS Stop Pending / ENS_STOP_PEND" 5 "ENS Start protection / ENS_ST_PRTCT" 6 "ENS Start inhibit / ENS_ST_INH" 7 "ENS disabled / ENS_DSBL" 8 "ENS_IHB_LATCH" 9 "ENS Starting / ENS_Starting" 15 "SNA";
+VAL_ 262 EngTrq_Enbl_Rq_TCM_W 0 "Not_Active" 1 "Active";
+VAL_ 262 EngineSts_W 0 "Engine_Off" 1 "Engine_Cranking" 2 "Engine_On" 3 "SNA";
+VAL_ 262 EngineSpeed_W 16383 "SNA";
+VAL_ 262 EngineIdleRefSpeed 4095 "SNA";
+VAL_ 262 EngineFrictionTorque_W 511 "SNA";
+VAL_ 262 ECM_LHOM_W 0 "Not_In_Limp_Home" 1 "In_Limp_Home";
+VAL_ 262 ECM_LHOM_Trans_W 0 "Limp Home not Active" 1 "No Redundant Torque Req" 2 "Precise Torque +/-15%" 3 "Imprecise Torque";
+VAL_ 262 CrankHold_W 0 "Not_Active" 1 "Active";
+VAL_ 520 Trans_ESS_Inhibit 0 "False" 1 "True";
+VAL_ 520 GearEngagedForDisplay 0 "Initialize" 1 "1st_gear" 2 "2nd_gear" 3 "3rd_gear" 4 "4th_gear" 5 "5th_gear" 6 "6th_gear" 7 "7th_gear" 8 "8th_gear " 9 "9th_gear" 10 "Not_used1" 11 "Not_Used2" 12 "P" 13 "N" 14 "R" 15 "D" 16 "L" 17 "M" 18 "S" 31 "SNA";
+VAL_ 520 AirFlowRequest_TCM 127 "SNA";
+VAL_ 278 REPRGD_PFC_CLR_TCM 0 "Do Nothing" 1 "Set Incomplete";
+VAL_ 278 PaddleShiftRequest 0 "PS_OFF" 1 "PS_RIGHT" 2 "PS_LEFT" 3 "PS_BOTH" 7 "SNA";
+VAL_ 278 DriveLineRatio 16383 "SNA";
+VAL_ 278 CODE_CLR_TCM 0 "Not Clear" 1 "Clear";
+VAL_ 1036 EngineOilTemperature 255 "SNA";
+VAL_ 278 TxIdleRq 255 "SNA";
+VAL_ 751 Selector_SystemFailSts 0 "Fail_Not_Present" 1 "Fail_Present";
+VAL_ 262 ESS_EBOOST_BRKHLD_STATUS 0 "Default_Hold_BSM" 1 "ImmediateRelease" 2 "PositiveGradeTorqueBlending" 3 "NegativeGradeTorqueBlending" 7 "SNA";
+VAL_ 1450 DriveModeSts 0 "No_programs_available_selected" 1 "Eco" 2 "Sport" 3 "Valet" 4 "Ice_Winter" 5 "Tow_Haul" 6 "Track" 7 "4LowMode" 8 "HDC/SSC" 9 "Rock" 10 "Sand" 11 "Mud" 12 "Normal" 13 "Mud_Sand" 14 "RRCC" 15 "Drag";
+VAL_ 278 TCASERANGESTATUS_TCM 0 "High" 1 "Neutral" 2 "Low" 3 "SNA";
+VAL_ 278 Trans_Adapt_Status 0 "No_Routine_Running" 1 "Shift_Clutches_Pulse_Adapt_Eng_On" 2 "Shift_Clutches_Pulse_Adapt_EV_Md" 3 "K0_Pulse_Adapt" 4 "ILE_Adapt" 5 "STADA_Shift_Clutches_Adapt" 6 "STADA_K0_Adapt" 7 "STADA_ILE_Adapt" 8 "EOLAD_Shift_Clutches_Adapt" 9 "EOLAD_K0_Adapt" 10 "Start_Adapt";
+VAL_ 278 TorqueAmpTransmission 2047 "SNA";
+VAL_ 278 TrqCtrlModeReq 0 "None" 1 "TRQ_INC" 2 "TRQ_DEC" 3 "SNA";
+VAL_ 278 TransIntakeTorq 2047 "SNA";
+VAL_ 278 CrankEnable_Fast 0 "Disabled" 1 "Enabled";
+VAL_ 751 Trns_DrvMdReq_ECM 0 "NP" 1 "STREET" 2 "VALET" 3 "SPORT" 4 "S_PLUS" 5 "TRACK" 6 "ECO" 7 "SNOW" 8 "ROCK " 9 "TOW" 10 "DRAG" 11 "MUD" 12 "SAND" 13 "BAJA" 14 "OFFROAD" 15 "LAUNCH" 16 "LINELOCK" 31 "SNA";
+VAL_ 1450 TxDisengaged_Fault 0 "No_Fault" 1 "Fault";
+VAL_ 255 Accel_Pedal_Override 0 "FALSE" 1 "TRUE";
+VAL_ 520 TCM_TrqGradLimActive 0 "Not_Active" 1 "Active";
+VAL_ 520 TCM_TrqGradLim_Up 255 "SNA";
+VAL_ 520 TCM_TrqGradLim_Lo 255 "SNA";
+VAL_ 520 TCM_EngFSO_Rq 0 "FSO_Not_Requested" 1 "FSO_Requested";
+VAL_ 520 TCM_EngFSO_Allw 0 "FSO_Not_Allowed" 1 "Normal_FSO_Allowed";
+VAL_ 278 EngTrq_Rq_TCM_Prdtd 2047 "SNA";
+VAL_ 271 EngTrqFSO_CurrAir 4095 "SNA";
+VAL_ 520 TransInputSpeedMaxReq 1023 "SNA";
+VAL_ 278 PumpTrqOnImpShaft 1023 "SNA";
+VAL_ 278 TorqueCtrlModeReq_Prdtd 0 "None" 1 "TRQ_INC" 2 "TRQ_DEC" 3 "SNA";
+VAL_ 1058 EngActiveTimer_OBD 65535 "SNA";
+
+
+
+
+SIG_GROUP_ 1450 TRANSM_FD_4_Pkt 1 : TxDisengaged ShiftModeSts ShiftInProgress MIReq LimpHomeSts GearEngaged ShiftMapNotAchieved MessageCounter_TRANSM4 CRC_TRANSM4 DriveModeSts TxDisengaged_Fault;
+SIG_GROUP_ 520 TRANSM_FD_2_Pkt 1 : TurbineSpeed TRNS_StpSt_FLT Trns_EMCC_Achvd TransReadyForESS TransmissionTemperature OUTPUT_SPEED APCM_Rq MessageCounter_TRANSM2 EngShutOffRq_TCM CRC_TRANSM2 Trans_ESS_Inhibit GearEngagedForDisplay AirFlowRequest_TCM TCM_TrqGradLimActive TCM_TrqGradLim_Up TCM_TrqGradLim_Lo TCM_EngFSO_Rq TCM_EngFSO_Allw TransInputSpeedMaxReq;
+SIG_GROUP_ 518 ENGINE_FD_5_Pkt 1 : RPMOverRev_W MessageCounter_ENGINE5 GrMin_Rq_ECM_W GrMax_Rq_ECM_W EngTrqMaxCorrFctr_W EngineReadyForESS_W ECM_READINESS_RESET_W ECM_CODE_CLR_W CRC_ENGINE5;
+SIG_GROUP_ 255 PT_TORQUE_FD_1_Pkt 1 : SumTorqueTgt_SEM SumTorqueStatic_SEM SumTorqueStatic SumTorqueSel_D_TTC SumTorqueMin SumTorqueMax SumTorque_DrvReqMod MessageCounter_PT_TORQUE_FD_1 CRC_PT_TORQUE_FD_1 Accel_Pedal_Override;
+SIG_GROUP_ 278 TRANSM_FD_1_Pkt 1 : TransmissionSailingSts TransLosses TorqueConverterSts TorqueConverterSTO TargetGear MaxTrqDes EngTrq_Rq_TCM CRC_TRANSM1 REPRGD_PFC_CLR_TCM PaddleShiftRequest MessageCounter_TRANSM1 DriveLineRatio CODE_CLR_TCM TxIdleRq TCASERANGESTATUS_TCM Trans_Adapt_Status TorqueAmpTransmission TrqCtrlModeReq TransIntakeTorq CrankEnable_Fast EngTrq_Rq_TCM_Prdtd PumpTrqOnImpShaft TorqueCtrlModeReq_Prdtd;
+SIG_GROUP_ 271 ENGINE_HYBD_FD_1_Pkt 1 : MinImmedEngTorqCapV MinImmedEngTorqCap MinAirFlowMinSparkTorqCapV MinAirFlowMinSparkTorqCap MessageCounter_ENGINE_HYBD_FD_1 MaxPrdtdEngTorqCapV MaxPrdtdEngTorqCap EngAirFlwStdyStTorqV EngAirFlwStdyStTorq CRC_ENGINE_HYBD_FD_1 EngTrqFSO_CurrAir;
+SIG_GROUP_ 262 ENGINE_FD_2_Pkt 1 : TxAC_EMCC_rq_W TRANS_CLU_SLIP_MODE_W PowertrainPrplsnActv MessageCounter_ENGINE2 LV12PwrFreeRq_W KickDownRequest_W IntakeAirTemperature_W GasPedalPositionFailSts_W GasPedalPosition_W ESS_RqShftPark_W ESS_ENG_ST_W EngTrq_Enbl_Rq_TCM_W EngineSts_W EngineSpeed_W EngineIdleRefSpeed EngineFrictionTorque_W ECM_LHOM_W ECM_LHOM_Trans_W CRC_ENGINE2 CrankHold_W ESS_EBOOST_BRKHLD_STATUS Torque_Interface_Mask;
+SIG_GROUP_ 263 PT_SYSTEM_FD_1_Pkt 1 : MessageCounter_PT_SYSTEM_FD_1 CRC_PT_SYSTEM_FD_1;
+
+

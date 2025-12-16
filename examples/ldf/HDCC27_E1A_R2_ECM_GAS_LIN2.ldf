@@ -1,0 +1,324 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                Chrysler LLC                                */
+/*                            All rights reserved                             */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Description:   LIN Description file                                       */
+/*  Network:       AtlantisHigh ECM_GAS_LIN_2                                 */
+/*  Release:       2014-17a                                                   */
+/*                                                                            */
+/*  Engineer:      EE Core Network team                                       */
+/*                 (248)xxx-xxxx                                              */
+/*  Creation Date: 2024-05-03                                                 */
+/*  Status:        IN PROCESS                                                 */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.200 kbps;
+
+Channel_name = "ECM_LIN2";
+
+Nodes {
+	Master : ECM, 5.000 ms, 0.160 ms;
+	Slaves : CVFVM, HAPM;
+}
+
+
+Signals {
+	CVFVM_BlockgErr : 1, 0, CVFVM, ECM;
+	CVFVM_CalStat : 2, 0, CVFVM, ECM;
+	CVFVM_Cal_Req : 1, 0, ECM, CVFVM;
+	CVFVM_DefErr : 1, 0, CVFVM, ECM;
+	CVFVM_ElecFault : 1, 0, CVFVM, ECM;
+	CVFVM_MechErr : 1, 0, CVFVM, ECM;
+	CVFVM_OverCurrent : 1, 0, CVFVM, ECM;
+	CVFVM_OverTemp : 1, 0, CVFVM, ECM;
+	CVFVM_OverVoltWarn : 1, 0, CVFVM, ECM;
+	CVFVM_OverVoltage : 1, 0, CVFVM, ECM;
+	CVFVM_Posn_Req : 9, 511, ECM, CVFVM;
+	CVFVM_Posn_Stat : 9, 511, CVFVM, ECM;
+	CVFVM_RspnErr : 1, 0, CVFVM, ECM;
+	CVFVM_Sel_Req : 1, 0, ECM, CVFVM;
+	CVFVM_SleepErr : 1, 0, CVFVM, ECM;
+	CVFVM_TempWarn : 1, 0, CVFVM, ECM;
+	CVFVM_UnderVoltWarn : 1, 0, CVFVM, ECM;
+	CVFVM_UnderVoltage : 1, 0, CVFVM, ECM;
+	CVFVM_UnlckStat : 2, 0, CVFVM, ECM;
+	HAPM_AIR_PRE_ERR : 2, 3, HAPM, ECM;
+	HAPM_CURR : 8, 255, HAPM, ECM;
+	HAPM_DBLK_ACTV : 2, 3, HAPM, ECM;
+	HAPM_DR_RN_ERR : 2, 3, HAPM, ECM;
+	HAPM_NODE_ERR : 2, 3, HAPM, ECM;
+	HAPM_OVR_CUR_ERR : 2, 3, HAPM, ECM;
+	HAPM_OVR_TMP_ERR : 2, 3, HAPM, ECM;
+	HAPM_POST_RUN_REQ : 3, 7, ECM, HAPM;
+	HAPM_POST_RUN_STAT : 3, 7, HAPM, ECM;
+	HAPM_RPM_ACTL : 8, 255, HAPM, ECM;
+	HAPM_RPM_REQ : 8, 255, ECM, HAPM;
+	HAPM_RPM_TGT : 8, 255, HAPM, ECM;
+	HAPM_SUPPLIER : 4, 0, HAPM, ECM;
+	HAPM_TEMP : 8, 255, HAPM, ECM;
+	HAPM_VER : 8, 255, HAPM, ECM;
+	HAPM_VLTG : 8, 255, HAPM, ECM;
+	HAPM_VLTG_ERR : 2, 3, HAPM, ECM;
+	RsErr_HAPM_PUMP : 1, 0, HAPM, ECM;
+}
+
+
+Diagnostic_signals {
+	MasterReqB0:8,0;
+	MasterReqB1:8,0;
+	MasterReqB2:8,0;
+	MasterReqB3:8,0;
+	MasterReqB4:8,0;
+	MasterReqB5:8,0;
+	MasterReqB6:8,0;
+	MasterReqB7:8,0;
+	SlaveRespB0:8,0;
+	SlaveRespB1:8,0;
+	SlaveRespB2:8,0;
+	SlaveRespB3:8,0;
+	SlaveRespB4:8,0;
+	SlaveRespB5:8,0;
+	SlaveRespB6:8,0;
+	SlaveRespB7:8,0;
+}
+
+Frames {
+	ECM_CVFVM : 5, ECM, 2 {
+		CVFVM_Posn_Req, 0;
+		CVFVM_Sel_Req, 9;
+		CVFVM_Cal_Req, 10;
+	}
+	CVFVM_ECM : 6, CVFVM, 8 {
+		CVFVM_Posn_Stat, 0;
+		CVFVM_RspnErr, 13;
+		CVFVM_SleepErr, 14;
+		CVFVM_UnderVoltage, 15;
+		CVFVM_OverVoltage, 16;
+		CVFVM_OverCurrent, 17;
+		CVFVM_ElecFault, 18;
+		CVFVM_MechErr, 19;
+		CVFVM_BlockgErr, 20;
+		CVFVM_OverTemp, 21;
+		CVFVM_DefErr, 22;
+		CVFVM_CalStat, 23;
+		CVFVM_UnlckStat, 25;
+		CVFVM_TempWarn, 27;
+		CVFVM_UnderVoltWarn, 28;
+		CVFVM_OverVoltWarn, 29;
+	}
+	HAPM_VER : 7, HAPM, 2 {
+		HAPM_VER, 0;
+		HAPM_SUPPLIER, 8;
+	}
+	HAPM_STAT : 10, HAPM, 8 {
+		HAPM_RPM_TGT, 0;
+		HAPM_RPM_ACTL, 8;
+		HAPM_VLTG, 16;
+		HAPM_TEMP, 24;
+		HAPM_CURR, 32;
+		HAPM_AIR_PRE_ERR, 44;
+		HAPM_OVR_TMP_ERR, 46;
+		HAPM_OVR_CUR_ERR, 48;
+		HAPM_DR_RN_ERR, 50;
+		HAPM_VLTG_ERR, 52;
+		HAPM_DBLK_ACTV, 54;
+		HAPM_NODE_ERR, 58;
+		HAPM_POST_RUN_STAT, 60;
+		RsErr_HAPM_PUMP, 63;
+	}
+	HAPM_REQ : 11, ECM, 2 {
+		HAPM_RPM_REQ, 0;
+		HAPM_POST_RUN_REQ, 8;
+	}
+}
+
+
+Diagnostic_frames {
+	MasterReq : 60 {
+		MasterReqB0, 0;
+		MasterReqB1, 8;
+		MasterReqB2, 16;
+		MasterReqB3, 24;
+		MasterReqB4, 32;
+		MasterReqB5, 40;
+		MasterReqB6, 48;
+		MasterReqB7, 56;
+	}
+	SlaveResp : 61 {
+		SlaveRespB0, 0;
+		SlaveRespB1, 8;
+		SlaveRespB2, 16;
+		SlaveRespB3, 24;
+		SlaveRespB4, 32;
+		SlaveRespB5, 40;
+		SlaveRespB6, 48;
+		SlaveRespB7, 56;
+	}
+}
+
+Node_attributes {
+	CVFVM {
+		LIN_protocol = 2.1;
+		configured_NAD = 0x03;
+		initial_NAD = 0x03;
+		product_id = 0x0000, 0xFFFE, 0x00;
+		response_error = CVFVM_RspnErr;
+		P2_min = 50 ms;
+		ST_min = 0 ms;
+		configurable_frames {
+			CVFVM_ECM;
+			ECM_CVFVM;
+		}
+	}
+	HAPM {
+		LIN_protocol = 2.1;
+		configured_NAD = 0x11;
+		initial_NAD = 0x11;
+		product_id = 0x0000, 0xFFFE, 0x00;
+		response_error = RsErr_HAPM_PUMP;
+		P2_min = 50 ms;
+		ST_min = 0 ms;
+		configurable_frames {
+			HAPM_REQ;
+			HAPM_STAT;
+			HAPM_VER;
+		}
+	}
+}
+
+
+Schedule_tables {
+	Diag {
+		MasterReq	delay	20.000 ms;
+		SlaveResp	delay	20.000 ms;
+	}
+	ECM_GAS {
+		HAPM_REQ	delay	10.000 ms;
+		HAPM_STAT	delay	10.000 ms;
+		HAPM_VER	delay	10.000 ms;
+		ECM_CVFVM	delay	10.000 ms;
+		CVFVM_ECM	delay	210.000 ms;
+	}
+}
+
+
+Signal_encoding_types {
+	CVFVM_CalStat {
+		logical_value, 0, "Position_Known";
+		logical_value, 1, "Position_Unknown";
+		logical_value, 2, "Learning_Inprogress";
+		logical_value, 3, "Reserved";
+	}
+	CVFVM_Posn_SigType {
+		physical_value, 0, 360, 1, 0;
+	}
+	CVFVM_UnlckStat {
+		logical_value, 0, "No_Unlocking";
+		logical_value, 1, "Unlocking_Needed";
+		logical_value, 2, "Unlocking_Inprogress";
+		logical_value, 3, "Reserved";
+	}
+	Cal_Req_Sig_Type {
+		logical_value, 0, "No_Calibration_Request";
+		logical_value, 1, "Calibration_Request_Active";
+	}
+	Errorstate01 {
+		logical_value, 0, "NO_ERROR";
+		logical_value, 1, "ERROR";
+	}
+	FALSE_TRUE_SNA {
+		logical_value, 0, "FALSE";
+		logical_value, 1, "TRUE";
+		logical_value, 3, "SNA";
+	}
+	HAPM_Post_Run_Rq {
+		logical_value, 0, "NO_POST_RUNNING";
+		logical_value, 1, "HAPM_1";
+		logical_value, 2, "HAPM_2";
+		logical_value, 3, "HAPM_3";
+		logical_value, 4, "HAPM_4";
+		logical_value, 5, "HAPM_5";
+		logical_value, 6, "HAPM_6";
+		logical_value, 7, "SNA";
+	}
+	LTRP_SUPPLIER {
+		logical_value, 0, "Unknown";
+		logical_value, 1, "BOSCH";
+		logical_value, 2, "COOPER_STD";
+		logical_value, 3, "MAGNA";
+		logical_value, 4, "PIERBURG";
+		logical_value, 5, "SALERI";
+		logical_value, 6, "GMB";
+		logical_value, 7, "Buehler";
+		logical_value, 8, "Johnson_Electric";
+	}
+	NODE_ERROR_STATUS {
+		logical_value, 0, "No_ERROR";
+		logical_value, 1, "ACTIVE_ERROR";
+		logical_value, 2, "ERROR_STATUS_CHANGED";
+		logical_value, 3, "SNA";
+	}
+	Pump_Current {
+		physical_value, 0, 254, 0.2, 0, "Amp";
+		logical_value, 255, "SNA";
+	}
+	Pump_Temp {
+		physical_value, 0, 254, 1, -50, "°C";
+		logical_value, 255, "SNA";
+	}
+	Pump_Voltage {
+		physical_value, 0, 254, 0.1, 0, "Volts";
+		logical_value, 255, "SNA";
+	}
+	c01_FalseTrue {
+		logical_value, 0, "FALSE";
+		logical_value, 1, "TRUE";
+	}
+	c01_Normal_Unblocking_Mode {
+		logical_value, 0, "Normal_Mode";
+		logical_value, 1, "Unblocking_Mode";
+	}
+	c01_Normal_Warning {
+		logical_value, 0, "Normal";
+		logical_value, 1, "Warning";
+	}
+	c08_percent_0_to_100_0p3937 {
+		physical_value, 0, 254, 0.3937, 0, "%";
+		logical_value, 255, "SNA";
+	}
+	c8bit_0_254_Version {
+		physical_value, 0, 254, 1, 0, "Version";
+		logical_value, 255, "SNA";
+	}
+}
+
+
+Signal_representation {
+	CVFVM_CalStat : CVFVM_CalStat;
+	CVFVM_Posn_SigType : CVFVM_Posn_Req, CVFVM_Posn_Stat;
+	CVFVM_UnlckStat : CVFVM_UnlckStat;
+	Cal_Req_Sig_Type : CVFVM_Cal_Req;
+	Errorstate01 : CVFVM_BlockgErr, CVFVM_DefErr, CVFVM_ElecFault, CVFVM_MechErr, CVFVM_OverCurrent, CVFVM_OverTemp, CVFVM_OverVoltage, CVFVM_RspnErr, CVFVM_SleepErr, CVFVM_UnderVoltage;
+	FALSE_TRUE_SNA : HAPM_AIR_PRE_ERR, HAPM_DBLK_ACTV, HAPM_DR_RN_ERR, HAPM_OVR_CUR_ERR, HAPM_OVR_TMP_ERR, HAPM_VLTG_ERR;
+	HAPM_Post_Run_Rq : HAPM_POST_RUN_REQ, HAPM_POST_RUN_STAT;
+	LTRP_SUPPLIER : HAPM_SUPPLIER;
+	NODE_ERROR_STATUS : HAPM_NODE_ERR;
+	Pump_Current : HAPM_CURR;
+	Pump_Temp : HAPM_TEMP;
+	Pump_Voltage : HAPM_VLTG;
+	c01_FalseTrue : RsErr_HAPM_PUMP;
+	c01_Normal_Unblocking_Mode : CVFVM_Sel_Req;
+	c01_Normal_Warning : CVFVM_OverVoltWarn, CVFVM_TempWarn, CVFVM_UnderVoltWarn;
+	c08_percent_0_to_100_0p3937 : HAPM_RPM_ACTL, HAPM_RPM_REQ, HAPM_RPM_TGT;
+	c8bit_0_254_Version : HAPM_VER;
+}
+
+

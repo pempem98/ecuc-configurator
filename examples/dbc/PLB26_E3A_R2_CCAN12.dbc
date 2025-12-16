@@ -1,0 +1,1636 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECM ISCM
+
+
+BO_ 250 BCM_COMMAND: 8 ECM
+ SG_ OperationalModeSts : 7|4@0+ (1,0) [0|15] "" ISCM
+BO_ 1994 BCM_IGNITION_ON_COUNTER: 2 ECM
+ SG_ IgnitionOnCounter : 7|16@0+ (1,0) [0|65535] "-" ISCM
+BO_ 900 BODY2: 8 ECM
+ SG_ CmdIgnSts : 3|3@0+ (1,0) [0|7] "" ISCM
+ SG_ ExternalTemperature : 9|9@0+ (0.5,-85) [-85|170] "°C" ISCM
+BO_ 768 BODY9: 8 ECM
+ SG_ Battery_Volt_1 : 0|9@0+ (0.025,5) [5|17.75] "Volt" ISCM
+BO_ 257 BRAKE1: 8 ECM
+ SG_ VehicleSpeedVSOSig : 1|13@0+ (0.0625,0) [0|511.875] "Km/h" ISCM
+BO_ 601 CLUSTER1: 8 ECM
+ SG_ TotalOdometer : 23|20@0+ (1,0) [0|1048575] "km" ISCM
+BO_ 2564502513 DIAGNOSTIC_REQUEST_FUNC_OBD: 8 ECM
+ SG_ N_PDU : 7|64@0+ (1,0) [0|0] "" Vector__XXX
+BO_ 2564554481 DIAGNOSTIC_REQUEST_FUNCTIONAL: 8 ECM
+ SG_ N_PDU : 7|64@0+ (1,0) [0|0] "" ISCM
+BO_ 2564480497 DIAGNOSTIC_REQUEST_ISCM: 8 ECM
+ SG_ N_PDU : 7|64@0+ (1,0) [0|0] "" ISCM
+BO_ 2564485597 DIAGNOSTIC_RESPONSE_ISCM: 8 ISCM
+ SG_ N_PDU : 7|64@0+ (1,0) [0|0] "" ECM
+BO_ 208 ECM_EISB_1: 8 ECM
+ SG_ ClearDTCReq : 47|1@0+ (1,0) [0|1] "" ISCM
+ SG_ DesCutOff_IGN : 49|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ DesCutOff_INJ : 48|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ EngStSCAN : 45|6@0+ (1,0) [0|63] "" ISCM
+ SG_ FlgNoTrqCtrSACAN : 58|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ KeyStatus : 46|1@0+ (1,0) [0|1] "" ISCM
+ SG_ LoadCAN : 7|8@0+ (1,0) [0|255] "%" ISCM
+ SG_ MC_ECM_EISB_1 : 55|4@0+ (1,0) [0|15] "counter" ISCM
+ SG_ RpmCAN : 31|16@0+ (0.25,0) [0|16383.8] "rpm" ISCM
+ SG_ TAirCAN : 15|8@0+ (0.75,-48) [-48|143.25] "deg C" ISCM
+ SG_ TWatCAN : 23|8@0+ (0.75,-48) [-48|143.25] "deg C" ISCM
+ SG_ VDLoadCAN : 59|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ VDRpmCAN : 57|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ VDTAirCAN : 60|1@0+ (1,0) [0|1] "flag" ISCM
+ SG_ VDTWaterCAN : 56|1@0+ (1,0) [0|1] "flag" ISCM
+BO_ 214 ECM_EISB_2: 8 ECM
+ SG_ AFR_CL_Active_CAN : 45|1@0+ (1,0) [0|1] "Flag" ISCM
+ SG_ CatHeatgColdStrtReq : 41|1@0+ (1,0) [0|1] "" ISCM
+ SG_ CatHeatgWrmReq : 42|1@0+ (1,0) [0|1] "" ISCM
+ SG_ CRC_ECM_EISB_2 : 63|8@0+ (1,0) [0|255] "" ISCM
+ SG_ Cyl_Bal_CL_request : 44|1@0+ (1,0) [0|1] "Flag" ISCM
+ SG_ EGRPerc : 39|8@0+ (0.5,0) [0|127.5] "" ISCM
+ SG_ ISCMKnkPIUsedByECM : 40|1@0+ (1,0) [0|1] "Flag" ISCM
+ SG_ Lam_Obj_1_CAN : 7|8@0+ (0.02,0.7) [0.7|5.8] "lambda" ISCM
+ SG_ Lam_Obj_2_CAN : 15|8@0+ (0.02,0.7) [0.7|5.8] "lambda" ISCM
+ SG_ Lam_Sens_1_CAN : 23|8@0+ (0.02,0.7) [0.7|5.8] "lambda" ISCM
+ SG_ Lam_Sens_2_CAN : 31|8@0+ (0.02,0.7) [0.7|5.8] "lambda" ISCM
+ SG_ MessageCounter_ECM_EISB_2 : 51|4@0+ (1,0) [0|15] "" ISCM
+ SG_ ReqResetCylCorrAd : 43|1@0+ (1,0) [0|1] "Flag" ISCM
+ SG_ VD_Lam_Sens_1 : 47|1@0+ (1,0) [0|1] "Flag" ISCM
+ SG_ VD_Lam_Sens_2 : 46|1@0+ (1,0) [0|1] "Flag" ISCM
+BO_ 193 EISB_ECM_1: 8 ISCM
+ SG_ FirstKnockAbsTDC : 58|3@0+ (1,0) [0|7] "counter" ECM
+ SG_ KnockCorr0_0p1 : 7|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCorr1_0p1 : 15|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCorr2_0p1 : 23|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCorr3_0p1 : 31|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCorr4_0p1 : 39|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCorr5_0p1 : 47|8@0+ (0.1,-25.4) [-25.4|0.1] "CA deg" ECM
+ SG_ KnockCycleCnt : 49|2@0+ (1,0) [0|3] "Counter" ECM
+ SG_ LastKnockAbsTDC : 61|3@0+ (1,0) [0|7] "Counter" ECM
+ SG_ MC_EISB_ECM_1 : 63|2@0+ (1,0) [0|3] "counter" ECM
+ SG_ MKnockDet_0 : 55|1@0+ (1,0) [0|1] "" ECM
+ SG_ MKnockDet_1 : 54|1@0+ (1,0) [0|1] "" ECM
+ SG_ MKnockDet_2 : 53|1@0+ (1,0) [0|1] "" ECM
+ SG_ MKnockDet_3 : 52|1@0+ (1,0) [0|1] "" ECM
+ SG_ MKnockDet_4 : 51|1@0+ (1,0) [0|1] "" ECM
+ SG_ MKnockDet_5 : 50|1@0+ (1,0) [0|1] "" ECM
+BO_ 195 EISB_ECM_1_CoilCmd: 8 ISCM
+ SG_ EffDwellTime_0 : 7|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ EffDwellTime_1 : 15|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ EffDwellTime_2 : 23|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ EffDwellTime_3 : 31|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ EffDwellTime_4 : 39|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ EffDwellTime_5 : 47|8@0+ (0.01,0) [0|2.55] "ms" ECM
+ SG_ MC_EISB_ECM_1_CoilCmd : 55|4@0+ (1,0) [0|15] "counter" ECM
+BO_ 196 EISB_ECM_1_SparkAdvance: 8 ISCM
+ SG_ MC_EISB_ECM_1_SparkAdvance : 55|4@0+ (1,0) [0|15] "counter" ECM
+ SG_ SAOutCyl_0 : 7|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+ SG_ SAOutCyl_1 : 15|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+ SG_ SAOutCyl_2 : 23|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+ SG_ SAOutCyl_3 : 31|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+ SG_ SAOutCyl_4 : 39|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+ SG_ SAOutCyl_5 : 47|8@0+ (0.5,-30) [-30|97.5] "CA deg" ECM
+BO_ 210 EISB_ECM_2: 8 ISCM
+ SG_ Ack_CatHeatingMode : 49|2@0+ (1,0) [0|3] "" ECM
+ SG_ ClearDTCAck : 39|1@0+ (1,0) [0|1] "" ECM
+ SG_ CRC_EISB_ECM_2 : 63|8@0+ (1,0) [0|31] "" ECM
+ SG_ EISBTempStatus : 37|2@0+ (1,0) [0|3] "" ECM
+ SG_ FirstMisfAbsTDC : 42|3@0+ (1,0) [0|7] "Counter" ECM
+ SG_ IgnFault0 : 15|3@0+ (1,0) [0|7] "" ECM
+ SG_ IgnFault1 : 19|3@0+ (1,0) [0|7] "" ECM
+ SG_ IgnFault2 : 23|3@0+ (1,0) [0|7] "" ECM
+ SG_ IgnFault3 : 27|3@0+ (1,0) [0|7] "" ECM
+ SG_ IgnFault4 : 31|3@0+ (1,0) [0|7] "" ECM
+ SG_ IgnFault5 : 35|3@0+ (1,0) [0|7] "" ECM
+ SG_ LastMisfAbsTDC : 45|3@0+ (1,0) [0|7] "" ECM
+ SG_ MC_EISB_ECM_2 : 55|4@0+ (1,0) [0|15] "Counter" ECM
+ SG_ Misf_flag_0 : 1|2@0+ (1,0) [0|3] "" ECM
+ SG_ Misf_flag_1 : 3|2@0+ (1,0) [0|3] "" ECM
+ SG_ Misf_flag_2 : 5|2@0+ (1,0) [0|3] "" ECM
+ SG_ Misf_flag_3 : 7|2@0+ (1,0) [0|3] "" ECM
+ SG_ Misf_flag_4 : 9|2@0+ (1,0) [0|3] "" ECM
+ SG_ Misf_flag_5 : 11|2@0+ (1,0) [0|3] "" ECM
+ SG_ MisfCyclesCnt : 47|2@0+ (1,0) [0|3] "" ECM
+ SG_ SparkPlugFouled_0 : 12|1@0+ (1,0) [0|1] "" ECM
+ SG_ SparkPlugFouled_1 : 16|1@0+ (1,0) [0|1] "" ECM
+ SG_ SparkPlugFouled_2 : 20|1@0+ (1,0) [0|1] "" ECM
+ SG_ SparkPlugFouled_3 : 24|1@0+ (1,0) [0|1] "" ECM
+ SG_ SparkPlugFouled_4 : 28|1@0+ (1,0) [0|1] "" ECM
+ SG_ SparkPlugFouled_5 : 32|1@0+ (1,0) [0|1] "" ECM
+BO_ 199 EISB_ECM_3: 8 ISCM
+ SG_ AckReqResetCylCorrAd : 45|2@0+ (1,0) [0|3] "" ECM
+ SG_ CRC_EISB_ECM_3 : 63|8@0+ (1,0) [0|255] "" ECM
+ SG_ Cyl_Bal_CL_Enable : 43|1@0+ (1,0) [0|1] "" ECM
+ SG_ Inj_Corr_Cyl0CAN : 7|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ Inj_Corr_Cyl1CAN : 0|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ Inj_Corr_Cyl2CAN : 9|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ Inj_Corr_Cyl3CAN : 18|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ Inj_Corr_Cyl4CAN : 27|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ Inj_Corr_Cyl5CAN : 36|7@0+ (0.0078125,0.5) [0.5|1.4921875] "gain" ECM
+ SG_ MC_EISB_ECM_3 : 55|4@0+ (1,0) [0|15] "Counter" ECM
+ SG_ StAdaption : 42|2@0+ (1,0) [0|3] "Status" ECM
+BO_ 213 EISB_ECM_4: 8 ISCM
+ SG_ BitFault_ADC : 1|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Bank_Misf : 29|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_A : 44|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_A_Curr_HI : 23|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_A_Curr_LO : 7|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_B : 43|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_B_Curr_HI : 22|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Buck_B_Curr_LO : 6|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_CAN_Node_1 : 25|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_CAN_node_Over_Run : 56|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_CPU : 24|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ECU_3 : 47|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_0 : 14|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_1 : 13|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_2 : 12|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_3 : 11|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_4 : 10|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_5 : 9|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_A_HI : 41|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_A_LO : 42|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_B_HI : 55|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_B_LO : 40|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_C_HI : 53|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_ION_CH_C_LO : 54|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_0 : 38|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_1 : 37|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_2 : 36|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_3 : 35|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_4 : 34|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Knock_Coh_5 : 33|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Liveness : 30|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Pri_A : 16|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Pri_B : 31|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Private_CAN : 26|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_RAM : 39|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Rpm : 4|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Sec_1_4 : 62|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Sec_2_5 : 61|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Sec_3_6 : 60|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_0 : 52|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_1 : 51|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_2 : 50|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_3 : 49|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_4 : 48|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_5 : 63|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_Ev_A : 46|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Spark_Ev_B : 45|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Sync : 32|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Temp_ECU_1_HI : 5|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Temp_ECU_1_LO : 28|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Temp_ECU_2_HI : 21|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Temp_ECU_2_LO : 27|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Vbat_Circuit : 8|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Vbattery_HI : 3|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Vbattery_LO : 2|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_1_4_HI : 20|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_1_4_LO : 59|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_2_5_HI : 19|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_2_5_LO : 58|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_3_6_HI : 18|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_VCap_3_6_LO : 57|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Vcoil_A_Mon : 0|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_Vcoil_B_Mon : 15|1@0+ (1,0) [0|1] "" ECM
+ SG_ BitFault_WDT : 17|1@0+ (1,0) [0|1] "" ECM
+BO_ 1808 EISB_ECM_CALID_1: 8 ISCM
+ SG_ CALID_00 : 7|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_01 : 15|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_02 : 23|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_03 : 31|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_04 : 39|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_05 : 47|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_06 : 55|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_07 : 63|8@0+ (1,0) [0|255] "ASCII" ECM
+BO_ 1824 EISB_ECM_CALID_2: 8 ISCM
+ SG_ CALID_08 : 7|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_09 : 15|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_10 : 23|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_11 : 31|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_12 : 39|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_13 : 47|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_14 : 55|8@0+ (1,0) [0|255] "ASCII" ECM
+ SG_ CALID_15 : 63|8@0+ (1,0) [0|255] "ASCII" ECM
+BO_ 1841 EISB_ECM_CVN: 8 ISCM
+ SG_ CVN_00 : 15|8@0+ (1,0) [0|255] "HEX" ECM
+ SG_ CVN_01 : 23|8@0+ (1,0) [0|255] "HEX" ECM
+ SG_ CVN_02 : 31|8@0+ (1,0) [0|255] "HEX" ECM
+ SG_ CVN_03 : 39|8@0+ (1,0) [0|255] "HEX" ECM
+ SG_ CVN_Calc_Flag : 0|1@0+ (1,0) [0|1] "boolean" ECM
+BO_ 227 ENGINE1_W: 8 ECM
+ SG_ EngineSpeed_W : 37|14@0+ (1,0) [0|16382] "1/min" ISCM
+BO_ 2654339230 STATUS_C_ISCM: 1 ISCM
+ SG_ CurrentFailSts_ISCM : 1|1@0+ (1,0) [0|1] "-" ECM
+ SG_ DES_ISCM : 4|2@0+ (1,0) [0|2] "-" ECM
+ SG_ EOL_ISCM : 2|1@0+ (1,0) [0|1] "-" ECM
+ SG_ GenericFailSts_ISCM : 0|1@0+ (1,0) [0|1] "-" ECM
+BO_ 1046 VIN: 8 ECM
+ SG_ VIN_DATA : 15|56@0+ (1,0) [0|72057594037927900] "" ISCM
+ SG_ VIN_MSG : 1|2@0+ (1,0) [0|3] "" ISCM
+
+
+CM_ "Project_LB26_ProjectStandard_C-CAN12 [07340]";
+CM_ SG_ 250 OperationalModeSts "";
+CM_ SG_ 1994 IgnitionOnCounter "";
+CM_ SG_ 900 CmdIgnSts "";
+CM_ SG_ 900 ExternalTemperature "";
+CM_ SG_ 768 Battery_Volt_1 "Battery Volt 1 signal";
+CM_ SG_ 257 VehicleSpeedVSOSig "It is the average vehicle speed calculated.";
+CM_ SG_ 601 TotalOdometer "Used to give information about the total odometer value in km.";
+CM_ SG_ 2564502513 N_PDU "This signal is used for diagnostic purposes";
+CM_ SG_ 2564554481 N_PDU "This signal is used for diagnostic purposes";
+CM_ SG_ 2564480497 N_PDU "This signal is used for diagnostic purposes";
+CM_ SG_ 2564485597 N_PDU "This signal is used for diagnostic purposes";
+CM_ SG_ 208 ClearDTCReq "Clear DTC Request";
+CM_ SG_ 208 DesCutOff_IGN "ECM programmed ignition cutoff";
+CM_ SG_ 208 DesCutOff_INJ "ECM programmed fuel cutoff";
+CM_ SG_ 208 EngStSCAN "Engine Status";
+CM_ SG_ 208 FlgNoTrqCtrSACAN "Torque intervention not active";
+CM_ SG_ 208 KeyStatus "Ignition Switch Status";
+CM_ SG_ 208 LoadCAN "Relative Load";
+CM_ SG_ 208 MC_ECM_EISB_1 "Counter message diag";
+CM_ SG_ 208 RpmCAN "Engine angular speed";
+CM_ SG_ 208 TAirCAN "Inlet Air Temperature";
+CM_ SG_ 208 TWatCAN "Engine Coolant Temperature";
+CM_ SG_ 208 VDLoadCAN "Fault load signal";
+CM_ SG_ 208 VDRpmCAN "Fault engine speed";
+CM_ SG_ 208 VDTAirCAN "Fault air temperature";
+CM_ SG_ 208 VDTWaterCAN "Faulted engine coolant temperature sensor";
+CM_ SG_ 214 AFR_CL_Active_CAN "ECM AFR Closed Loop Active";
+CM_ SG_ 214 CatHeatgColdStrtReq "Cold start catalyst heating status for ISCM";
+CM_ SG_ 214 CatHeatgWrmReq "Catalyst warming status for ISCM";
+CM_ SG_ 214 CRC_ECM_EISB_2 "";
+CM_ SG_ 214 Cyl_Bal_CL_request "Cylinder balancing closed loop request";
+CM_ SG_ 214 EGRPerc "EGRPerc";
+CM_ SG_ 214 ISCMKnkPIUsedByECM "Status flag to inform the ISCM that the ECM is using the ion sense based knock and pre- ignition detection system";
+CM_ SG_ 214 Lam_Obj_1_CAN "Upstream Lambda Target triplet 1";
+CM_ SG_ 214 Lam_Obj_2_CAN "Upstream Lambda Target triplet 2";
+CM_ SG_ 214 Lam_Sens_1_CAN "Measured Lambda triplet 1";
+CM_ SG_ 214 Lam_Sens_2_CAN "Measured Lambda triplet 2";
+CM_ SG_ 214 MessageCounter_ECM_EISB_2 "";
+CM_ SG_ 214 ReqResetCylCorrAd "Request from Ecm to reset cylinder";
+CM_ SG_ 214 VD_Lam_Sens_1 "Fault Lambda Sensor triplet 1";
+CM_ SG_ 214 VD_Lam_Sens_2 "Fault Lambda Sensor triplet 2";
+CM_ SG_ 193 FirstKnockAbsTDC "First analyzed cylinder";
+CM_ SG_ 193 KnockCorr0_0p1 "Saknock for cylinder 1";
+CM_ SG_ 193 KnockCorr1_0p1 "Saknock for cylinder 5";
+CM_ SG_ 193 KnockCorr2_0p1 "Saknock for cylinder 3";
+CM_ SG_ 193 KnockCorr3_0p1 "Saknock for cylinder 6";
+CM_ SG_ 193 KnockCorr4_0p1 "Saknock for cylinder 2";
+CM_ SG_ 193 KnockCorr5_0p1 "Saknock for cylinder 4";
+CM_ SG_ 193 KnockCycleCnt "KnockCycleCnt";
+CM_ SG_ 193 LastKnockAbsTDC "Last analyzed cylinder";
+CM_ SG_ 193 MC_EISB_ECM_1 "Counter message diag";
+CM_ SG_ 193 MKnockDet_0 "PI for cylinder 1";
+CM_ SG_ 193 MKnockDet_1 "PI for cylinder 5";
+CM_ SG_ 193 MKnockDet_2 "PI for cylinder 3";
+CM_ SG_ 193 MKnockDet_3 "PI for cylinder 6";
+CM_ SG_ 193 MKnockDet_4 "PI for cylinder 2";
+CM_ SG_ 193 MKnockDet_5 "PI for cylinder 4";
+CM_ SG_ 195 EffDwellTime_0 "Ignition coil command duration for cylinder 1";
+CM_ SG_ 195 EffDwellTime_1 "Ignition coil command duration for cylinder 5";
+CM_ SG_ 195 EffDwellTime_2 "Ignition coil command duration for cylinder 3";
+CM_ SG_ 195 EffDwellTime_3 "Ignition coil command duration for cylinder 6";
+CM_ SG_ 195 EffDwellTime_4 "Ignition coil command duration for cylinder 2";
+CM_ SG_ 195 EffDwellTime_5 "Ignition coil command duration for cylinder 4";
+CM_ SG_ 195 MC_EISB_ECM_1_CoilCmd "Counter message diag";
+CM_ SG_ 196 MC_EISB_ECM_1_SparkAdvance "Counter message diag";
+CM_ SG_ 196 SAOutCyl_0 "Spark advance on cylinder 1";
+CM_ SG_ 196 SAOutCyl_1 "Spark advance on cylinder 5";
+CM_ SG_ 196 SAOutCyl_2 "Spark advance on cylinder 3";
+CM_ SG_ 196 SAOutCyl_3 "Spark advance on cylinder 6";
+CM_ SG_ 196 SAOutCyl_4 "Spark advance on cylinder 2";
+CM_ SG_ 196 SAOutCyl_5 "Spark advance on cylinder 4";
+CM_ SG_ 210 Ack_CatHeatingMode "ISCM acknowledgement of the current combustion or heating mode";
+CM_ SG_ 210 ClearDTCAck "ClearDTCAck";
+CM_ SG_ 210 CRC_EISB_ECM_2 "Message cheksum";
+CM_ SG_ 210 EISBTempStatus "";
+CM_ SG_ 210 FirstMisfAbsTDC "First analyzed counter";
+CM_ SG_ 210 IgnFault0 "Ignition Error cylinder 1";
+CM_ SG_ 210 IgnFault1 "Ignition Error cylinder 5";
+CM_ SG_ 210 IgnFault2 "Ignition Error cylinder 3";
+CM_ SG_ 210 IgnFault3 "Ignition Error cylinder 6";
+CM_ SG_ 210 IgnFault4 "Ignition Error cylinder 2";
+CM_ SG_ 210 IgnFault5 "Ignition Error cylinder 4";
+CM_ SG_ 210 LastMisfAbsTDC "Last analyzed counter";
+CM_ SG_ 210 MC_EISB_ECM_2 "Counter message diag";
+CM_ SG_ 210 Misf_flag_0 "Misfire flag on cyl 1";
+CM_ SG_ 210 Misf_flag_1 "Misfire flag on cyl 5";
+CM_ SG_ 210 Misf_flag_2 "Misfire flag on cyl 3";
+CM_ SG_ 210 Misf_flag_3 "Misfire flag on cyl 6";
+CM_ SG_ 210 Misf_flag_4 "Misfire flag on cyl 2";
+CM_ SG_ 210 Misf_flag_5 "Misfire flag on cyl 4";
+CM_ SG_ 210 MisfCyclesCnt "Working cycle counter";
+CM_ SG_ 210 SparkPlugFouled_0 "SP fouling on cylinder 1";
+CM_ SG_ 210 SparkPlugFouled_1 "SP fouling on cylinder 5";
+CM_ SG_ 210 SparkPlugFouled_2 "SP fouling on cylinder 3";
+CM_ SG_ 210 SparkPlugFouled_3 "SP fouling on cylinder 6";
+CM_ SG_ 210 SparkPlugFouled_4 "SP fouling on cylinder 2";
+CM_ SG_ 210 SparkPlugFouled_5 "SP fouling on cylinder 4";
+CM_ SG_ 199 AckReqResetCylCorrAd "Reset request acknowledged";
+CM_ SG_ 199 CRC_EISB_ECM_3 "Message Checksum";
+CM_ SG_ 199 Cyl_Bal_CL_Enable "Cylinder balancing closed loop active";
+CM_ SG_ 199 Inj_Corr_Cyl0CAN "Injection correction on cylinder 1";
+CM_ SG_ 199 Inj_Corr_Cyl1CAN "Injection correction on cylinder 5";
+CM_ SG_ 199 Inj_Corr_Cyl2CAN "Injection correction on cylinder 3";
+CM_ SG_ 199 Inj_Corr_Cyl3CAN "Injection correction on cylinder 6";
+CM_ SG_ 199 Inj_Corr_Cyl4CAN "Injection correction on cylinder 2";
+CM_ SG_ 199 Inj_Corr_Cyl5CAN "Injection correction on cylinder 4";
+CM_ SG_ 199 MC_EISB_ECM_3 "Counter message diag";
+CM_ SG_ 199 StAdaption "Status Adaption completed";
+CM_ SG_ 213 BitFault_ADC "BitFault_ADC";
+CM_ SG_ 213 BitFault_Bank_Misf "BitFault_Bank_Misf";
+CM_ SG_ 213 BitFault_Buck_A "BitFault_Buck_A";
+CM_ SG_ 213 BitFault_Buck_A_Curr_HI "BitFault_Buck_A_Curr_HI";
+CM_ SG_ 213 BitFault_Buck_A_Curr_LO "BitFault_Buck_A_Curr_LO";
+CM_ SG_ 213 BitFault_Buck_B "BitFault_Buck_B";
+CM_ SG_ 213 BitFault_Buck_B_Curr_HI "BitFault_Buck_B_Curr_HI";
+CM_ SG_ 213 BitFault_Buck_B_Curr_LO "BitFault_Buck_B_Curr_LO";
+CM_ SG_ 213 BitFault_CAN_Node_1 "BitFault_CAN_Node_1";
+CM_ SG_ 213 BitFault_CAN_node_Over_Run "BitFault_CAN_node_Over_Run";
+CM_ SG_ 213 BitFault_CPU "BitFault_CPU";
+CM_ SG_ 213 BitFault_ECU_3 "BitFault_ECU_3";
+CM_ SG_ 213 BitFault_ION_0 "BitFault_ION_0";
+CM_ SG_ 213 BitFault_ION_1 "BitFault_ION_1";
+CM_ SG_ 213 BitFault_ION_2 "BitFault_ION_2";
+CM_ SG_ 213 BitFault_ION_3 "BitFault_ION_3";
+CM_ SG_ 213 BitFault_ION_4 "BitFault_ION_4";
+CM_ SG_ 213 BitFault_ION_5 "BitFault_ION_5";
+CM_ SG_ 213 BitFault_ION_CH_A_HI "BitFault_ION_CH_A_HI";
+CM_ SG_ 213 BitFault_ION_CH_A_LO "BitFault_ION_CH_A_LO";
+CM_ SG_ 213 BitFault_ION_CH_B_HI "BitFault_ION_CH_B_HI";
+CM_ SG_ 213 BitFault_ION_CH_B_LO "BitFault_ION_CH_B_LO";
+CM_ SG_ 213 BitFault_ION_CH_C_HI "BitFault_ION_CH_C_HI";
+CM_ SG_ 213 BitFault_ION_CH_C_LO "BitFault_ION_CH_C_LO";
+CM_ SG_ 213 BitFault_Knock_Coh_0 "BitFault_Knock_Coh_0";
+CM_ SG_ 213 BitFault_Knock_Coh_1 "BitFault_Knock_Coh_1";
+CM_ SG_ 213 BitFault_Knock_Coh_2 "BitFault_Knock_Coh_2";
+CM_ SG_ 213 BitFault_Knock_Coh_3 "BitFault_Knock_Coh_3";
+CM_ SG_ 213 BitFault_Knock_Coh_4 "BitFault_Knock_Coh_4";
+CM_ SG_ 213 BitFault_Knock_Coh_5 "BitFault_Knock_Coh_5";
+CM_ SG_ 213 BitFault_Liveness "BitFault_Liveness";
+CM_ SG_ 213 BitFault_Pri_A "BitFault_Pri_A";
+CM_ SG_ 213 BitFault_Pri_B "BitFault_Pri_B";
+CM_ SG_ 213 BitFault_Private_CAN "BitFault_Private_CAN";
+CM_ SG_ 213 BitFault_RAM "BitFault_RAM";
+CM_ SG_ 213 BitFault_Rpm "BitFault_Rpm";
+CM_ SG_ 213 BitFault_Sec_1_4 "BitFault_Sec_1_4";
+CM_ SG_ 213 BitFault_Sec_2_5 "BitFault_Sec_2_5";
+CM_ SG_ 213 BitFault_Sec_3_6 "BitFault_Sec_3_6";
+CM_ SG_ 213 BitFault_Spark_0 "BitFault_Spark_0";
+CM_ SG_ 213 BitFault_Spark_1 "BitFault_Spark_1";
+CM_ SG_ 213 BitFault_Spark_2 "BitFault_Spark_2";
+CM_ SG_ 213 BitFault_Spark_3 "BitFault_Spark_3";
+CM_ SG_ 213 BitFault_Spark_4 "BitFault_Spark_4";
+CM_ SG_ 213 BitFault_Spark_5 "BitFault_Spark_5";
+CM_ SG_ 213 BitFault_Spark_Ev_A "BitFault_Spark_Ev_A";
+CM_ SG_ 213 BitFault_Spark_Ev_B "BitFault_Spark_Ev_B";
+CM_ SG_ 213 BitFault_Sync "BitFault_Sync";
+CM_ SG_ 213 BitFault_Temp_ECU_1_HI "BitFault_Temp_ECU_1_HI";
+CM_ SG_ 213 BitFault_Temp_ECU_1_LO "BitFault_Temp_ECU_1_LO";
+CM_ SG_ 213 BitFault_Temp_ECU_2_HI "BitFault_Temp_ECU_2_HI";
+CM_ SG_ 213 BitFault_Temp_ECU_2_LO "BitFault_Temp_ECU_2_LO";
+CM_ SG_ 213 BitFault_Vbat_Circuit "BitFault_Vbat_Circuit";
+CM_ SG_ 213 BitFault_Vbattery_HI "BitFault_Vbattery_HI";
+CM_ SG_ 213 BitFault_Vbattery_LO "BitFault_Vbattery_LO";
+CM_ SG_ 213 BitFault_VCap_1_4_HI "BitFault_VCap_1_4_HI";
+CM_ SG_ 213 BitFault_VCap_1_4_LO "BitFault_VCap_1_4_LO";
+CM_ SG_ 213 BitFault_VCap_2_5_HI "BitFault_VCap_2_5_HI";
+CM_ SG_ 213 BitFault_VCap_2_5_LO "BitFault_VCap_2_5_LO";
+CM_ SG_ 213 BitFault_VCap_3_6_HI "BitFault_VCap_3_6_HI";
+CM_ SG_ 213 BitFault_VCap_3_6_LO "BitFault_VCap_3_6_LO";
+CM_ SG_ 213 BitFault_Vcoil_A_Mon "BitFault_Vcoil_A_Mon";
+CM_ SG_ 213 BitFault_Vcoil_B_Mon "BitFault_Vcoil_B_Mon";
+CM_ SG_ 213 BitFault_WDT "BitFault_WDT";
+CM_ SG_ 1808 CALID_00 "";
+CM_ SG_ 1808 CALID_01 "";
+CM_ SG_ 1808 CALID_02 "";
+CM_ SG_ 1808 CALID_03 "";
+CM_ SG_ 1808 CALID_04 "";
+CM_ SG_ 1808 CALID_05 "";
+CM_ SG_ 1808 CALID_06 "";
+CM_ SG_ 1808 CALID_07 "";
+CM_ SG_ 1824 CALID_08 "";
+CM_ SG_ 1824 CALID_09 "";
+CM_ SG_ 1824 CALID_10 "";
+CM_ SG_ 1824 CALID_11 "";
+CM_ SG_ 1824 CALID_12 "";
+CM_ SG_ 1824 CALID_13 "";
+CM_ SG_ 1824 CALID_14 "";
+CM_ SG_ 1824 CALID_15 "";
+CM_ SG_ 1841 CVN_00 "";
+CM_ SG_ 1841 CVN_01 "";
+CM_ SG_ 1841 CVN_02 "";
+CM_ SG_ 1841 CVN_03 "";
+CM_ SG_ 1841 CVN_Calc_Flag "";
+CM_ SG_ 227 EngineSpeed_W "It gives inforrmation on C-CAN network about  engine speed";
+CM_ SG_ 2654339230 CurrentFailSts_ISCM "The signal indicates that a present fault exists on node";
+CM_ SG_ 2654339230 DES_ISCM "The signal indicates the CAN Controller status";
+CM_ SG_ 2654339230 EOL_ISCM "This signal indicates if it is required/not required to the node to partecipate to the PROXI procedure.";
+CM_ SG_ 2654339230 GenericFailSts_ISCM "The signal indicates that one or more cells containing fault information exist on node memory.";
+CM_ SG_ 1046 VIN_DATA "VIN Digits (8 bit ascii encoded)";
+CM_ SG_ 1046 VIN_MSG "VIN Message Information";
+
+BA_DEF_ SG_ "Accuracy" STRING ;
+BA_DEF_ SG_ "Event trans." ENUM "Yes","No";
+BA_DEF_ SG_ "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_ "GenSigInactiveValue" INT 0 2147483647;
+BA_DEF_ SG_ "GenSigSendType" ENUM "NotUsed","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_ "SystemSignalLongSymbol" STRING ;
+BA_DEF_ BO_ "DiagRequest" ENUM "No","Yes";
+BA_DEF_ BO_ "Period [ms]" INT 0 65535;
+BA_DEF_ BO_ "Type" ENUM "P","C","PE","COC","PE_Cntrl","E","E_Cntrl","OC","S","BAF","DC","EM","MM","ISO-TP","-";
+BA_DEF_ BO_ "DiagResponse" ENUM "No","Yes";
+BA_DEF_ BO_ "NmMessage" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ BO_ "GenMsgTimeoutTime" INT 0 10000;
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 255;
+BA_DEF_ BO_ "GenMsgILSupport" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_ "DiagState" ENUM "No","Yes";
+BA_DEF_ "Manufacturer" STRING ;
+BA_DEF_ "NmType" STRING ;
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ "Baudrate" INT 0 1000000;
+BA_DEF_ "DBName" STRING ;
+BA_DEF_ "Version" HEX 0 255;
+BA_DEF_ "VersionWeek" INT 0 53;
+BA_DEF_ "VersionYear" INT 0 99;
+BA_DEF_ BU_ "NodeLayerModules" STRING ;
+BA_DEF_ BU_ "Description" STRING ;
+BA_DEF_ BU_ "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_ "NmNode" ENUM "No","Yes";
+BA_DEF_ BU_ "ILUsed" ENUM "No","Yes";
+BA_DEF_ BU_ "TpOwnSystemEcuNumber" HEX 0 255;
+BA_DEF_ BU_ "NmNodeType" ENUM "kMaster","kSlave15","kSlave30","none";
+BA_DEF_ BU_ "NwmNodeType" ENUM "kMaster","kSlave15","kSlave30","none";
+BA_DEF_DEF_ "DiagRequest" "No";
+BA_DEF_DEF_ "Period [ms]" 0;
+BA_DEF_DEF_ "Type" "-";
+BA_DEF_DEF_ "DiagResponse" "No";
+BA_DEF_DEF_ "NmMessage" "No";
+BA_DEF_DEF_ "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_ "GenMsgTimeoutTime" 0;
+BA_DEF_DEF_ "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_ "GenMsgILSupport" "No";
+BA_DEF_DEF_ "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_ "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenMsgDelayTime" 0;
+BA_DEF_DEF_ "DiagState" "No";
+BA_DEF_DEF_ "Manufacturer" "Fiat";
+BA_DEF_DEF_ "NmType" "";
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "Baudrate" 500000;
+BA_DEF_DEF_ "DBName" "CAN";
+BA_DEF_DEF_ "Version" 160;
+BA_DEF_DEF_ "VersionWeek" 14;
+BA_DEF_DEF_ "VersionYear" 25;
+BA_DEF_DEF_ "NodeLayerModules" "Osek_TP.dll";
+BA_DEF_DEF_ "Description" "";
+BA_DEF_DEF_ "NmStationAddress" 0;
+BA_DEF_DEF_ "NmNode" "Yes";
+BA_DEF_DEF_ "ILUsed" "Yes";
+BA_DEF_DEF_ "TpOwnSystemEcuNumber" 0;
+BA_DEF_DEF_ "NmNodeType" "none";
+BA_DEF_DEF_ "NwmNodeType" "none";
+BA_DEF_DEF_ "Accuracy" "";
+BA_DEF_DEF_ "Event trans." "No";
+BA_DEF_DEF_ "GenSigStartValue" 0;
+BA_DEF_DEF_ "GenSigInactiveValue" 0;
+BA_DEF_DEF_ "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_ "SystemSignalLongSymbol" "";
+BA_ "Description" BU_ ECM "Engine Control Module";
+BA_ "NmStationAddress" BU_ ECM 1;
+BA_ "NmNode" BU_ ECM 0;
+BA_ "TpOwnSystemEcuNumber" BU_ ECM 16;
+BA_ "NmNodeType" BU_ ECM 3;
+BA_ "NwmNodeType" BU_ ECM 3;
+BA_ "Description" BU_ ISCM "Ignition System Control Module";
+BA_ "NmStationAddress" BU_ ISCM 158;
+BA_ "NmNode" BU_ ISCM 0;
+BA_ "TpOwnSystemEcuNumber" BU_ ISCM 221;
+BA_ "NmNodeType" BU_ ISCM 3;
+BA_ "NwmNodeType" BU_ ISCM 3;
+BA_ "DiagRequest" BO_ 250 0;
+BA_ "Period [ms]" BO_ 250 20;
+BA_ "Type" BO_ 250 1;
+BA_ "DiagResponse" BO_ 250 0;
+BA_ "NmMessage" BO_ 250 0;
+BA_ "GenMsgSendType" BO_ 250 0;
+BA_ "GenMsgILSupport" BO_ 250 1;
+BA_ "GenMsgCycleTime" BO_ 250 20;
+BA_ "DiagState" BO_ 250 0;
+BA_ "DiagRequest" BO_ 1994 0;
+BA_ "Period [ms]" BO_ 1994 1000;
+BA_ "Type" BO_ 1994 1;
+BA_ "DiagResponse" BO_ 1994 0;
+BA_ "NmMessage" BO_ 1994 0;
+BA_ "GenMsgSendType" BO_ 1994 0;
+BA_ "GenMsgTimeoutTime" BO_ 1994 2500;
+BA_ "GenMsgNrOfRepetition" BO_ 1994 0;
+BA_ "GenMsgILSupport" BO_ 1994 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1994 0;
+BA_ "GenMsgCycleTime" BO_ 1994 1000;
+BA_ "GenMsgDelayTime" BO_ 1994 0;
+BA_ "DiagState" BO_ 1994 0;
+BA_ "DiagRequest" BO_ 900 0;
+BA_ "Period [ms]" BO_ 900 250;
+BA_ "Type" BO_ 900 3;
+BA_ "DiagResponse" BO_ 900 0;
+BA_ "NmMessage" BO_ 900 0;
+BA_ "GenMsgSendType" BO_ 900 0;
+BA_ "GenMsgTimeoutTime" BO_ 900 0;
+BA_ "GenMsgILSupport" BO_ 900 1;
+BA_ "GenMsgCycleTimeFast" BO_ 900 0;
+BA_ "GenMsgCycleTime" BO_ 900 250;
+BA_ "GenMsgDelayTime" BO_ 900 20;
+BA_ "DiagState" BO_ 900 0;
+BA_ "DiagRequest" BO_ 768 0;
+BA_ "Period [ms]" BO_ 768 50;
+BA_ "Type" BO_ 768 1;
+BA_ "DiagResponse" BO_ 768 0;
+BA_ "NmMessage" BO_ 768 0;
+BA_ "GenMsgSendType" BO_ 768 0;
+BA_ "GenMsgTimeoutTime" BO_ 768 0;
+BA_ "GenMsgILSupport" BO_ 768 1;
+BA_ "GenMsgCycleTimeFast" BO_ 768 0;
+BA_ "GenMsgCycleTime" BO_ 768 50;
+BA_ "GenMsgDelayTime" BO_ 768 0;
+BA_ "DiagState" BO_ 768 0;
+BA_ "DiagRequest" BO_ 257 0;
+BA_ "Period [ms]" BO_ 257 10;
+BA_ "Type" BO_ 257 1;
+BA_ "DiagResponse" BO_ 257 0;
+BA_ "NmMessage" BO_ 257 0;
+BA_ "GenMsgSendType" BO_ 257 0;
+BA_ "GenMsgTimeoutTime" BO_ 257 0;
+BA_ "GenMsgILSupport" BO_ 257 1;
+BA_ "GenMsgCycleTimeFast" BO_ 257 0;
+BA_ "GenMsgCycleTime" BO_ 257 10;
+BA_ "DiagState" BO_ 257 0;
+BA_ "DiagRequest" BO_ 601 0;
+BA_ "Period [ms]" BO_ 601 100;
+BA_ "Type" BO_ 601 3;
+BA_ "DiagResponse" BO_ 601 0;
+BA_ "NmMessage" BO_ 601 0;
+BA_ "GenMsgSendType" BO_ 601 0;
+BA_ "GenMsgTimeoutTime" BO_ 601 0;
+BA_ "GenMsgNrOfRepetition" BO_ 601 3;
+BA_ "GenMsgILSupport" BO_ 601 1;
+BA_ "GenMsgCycleTimeFast" BO_ 601 20;
+BA_ "GenMsgCycleTime" BO_ 601 100;
+BA_ "GenMsgDelayTime" BO_ 601 20;
+BA_ "DiagState" BO_ 601 0;
+BA_ "DiagRequest" BO_ 2564502513 0;
+BA_ "Type" BO_ 2564502513 8;
+BA_ "DiagResponse" BO_ 2564502513 0;
+BA_ "NmMessage" BO_ 2564502513 0;
+BA_ "GenMsgSendType" BO_ 2564502513 8;
+BA_ "GenMsgILSupport" BO_ 2564502513 0;
+BA_ "DiagState" BO_ 2564502513 1;
+BA_ "DiagRequest" BO_ 2564554481 0;
+BA_ "Type" BO_ 2564554481 8;
+BA_ "DiagResponse" BO_ 2564554481 0;
+BA_ "NmMessage" BO_ 2564554481 0;
+BA_ "GenMsgSendType" BO_ 2564554481 8;
+BA_ "GenMsgTimeoutTime" BO_ 2564554481 2500;
+BA_ "GenMsgILSupport" BO_ 2564554481 0;
+BA_ "DiagState" BO_ 2564554481 1;
+BA_ "DiagRequest" BO_ 2564480497 1;
+BA_ "Type" BO_ 2564480497 8;
+BA_ "DiagResponse" BO_ 2564480497 0;
+BA_ "NmMessage" BO_ 2564480497 0;
+BA_ "GenMsgSendType" BO_ 2564480497 8;
+BA_ "GenMsgILSupport" BO_ 2564480497 0;
+BA_ "DiagState" BO_ 2564480497 0;
+BA_ "DiagRequest" BO_ 2564485597 0;
+BA_ "Type" BO_ 2564485597 8;
+BA_ "DiagResponse" BO_ 2564485597 1;
+BA_ "NmMessage" BO_ 2564485597 0;
+BA_ "GenMsgSendType" BO_ 2564485597 8;
+BA_ "GenMsgILSupport" BO_ 2564485597 0;
+BA_ "DiagState" BO_ 2564485597 0;
+BA_ "DiagRequest" BO_ 208 0;
+BA_ "Period [ms]" BO_ 208 10;
+BA_ "Type" BO_ 208 1;
+BA_ "DiagResponse" BO_ 208 0;
+BA_ "NmMessage" BO_ 208 0;
+BA_ "GenMsgSendType" BO_ 208 0;
+BA_ "GenMsgTimeoutTime" BO_ 208 0;
+BA_ "GenMsgILSupport" BO_ 208 1;
+BA_ "GenMsgCycleTimeFast" BO_ 208 0;
+BA_ "GenMsgCycleTime" BO_ 208 10;
+BA_ "DiagState" BO_ 208 0;
+BA_ "DiagRequest" BO_ 214 0;
+BA_ "Period [ms]" BO_ 214 10;
+BA_ "Type" BO_ 214 1;
+BA_ "DiagResponse" BO_ 214 0;
+BA_ "NmMessage" BO_ 214 0;
+BA_ "GenMsgSendType" BO_ 214 0;
+BA_ "GenMsgTimeoutTime" BO_ 214 0;
+BA_ "GenMsgILSupport" BO_ 214 1;
+BA_ "GenMsgCycleTimeFast" BO_ 214 0;
+BA_ "GenMsgCycleTime" BO_ 214 10;
+BA_ "DiagState" BO_ 214 0;
+BA_ "DiagRequest" BO_ 193 0;
+BA_ "Period [ms]" BO_ 193 5;
+BA_ "Type" BO_ 193 1;
+BA_ "DiagResponse" BO_ 193 0;
+BA_ "NmMessage" BO_ 193 0;
+BA_ "GenMsgSendType" BO_ 193 0;
+BA_ "GenMsgTimeoutTime" BO_ 193 0;
+BA_ "GenMsgILSupport" BO_ 193 1;
+BA_ "GenMsgCycleTimeFast" BO_ 193 0;
+BA_ "GenMsgCycleTime" BO_ 193 5;
+BA_ "DiagState" BO_ 193 0;
+BA_ "DiagRequest" BO_ 195 0;
+BA_ "Period [ms]" BO_ 195 5;
+BA_ "Type" BO_ 195 1;
+BA_ "DiagResponse" BO_ 195 0;
+BA_ "NmMessage" BO_ 195 0;
+BA_ "GenMsgSendType" BO_ 195 0;
+BA_ "GenMsgTimeoutTime" BO_ 195 0;
+BA_ "GenMsgILSupport" BO_ 195 1;
+BA_ "GenMsgCycleTimeFast" BO_ 195 0;
+BA_ "GenMsgCycleTime" BO_ 195 5;
+BA_ "DiagState" BO_ 195 0;
+BA_ "DiagRequest" BO_ 196 0;
+BA_ "Period [ms]" BO_ 196 5;
+BA_ "Type" BO_ 196 1;
+BA_ "DiagResponse" BO_ 196 0;
+BA_ "NmMessage" BO_ 196 0;
+BA_ "GenMsgSendType" BO_ 196 0;
+BA_ "GenMsgTimeoutTime" BO_ 196 0;
+BA_ "GenMsgILSupport" BO_ 196 1;
+BA_ "GenMsgCycleTimeFast" BO_ 196 0;
+BA_ "GenMsgCycleTime" BO_ 196 5;
+BA_ "DiagState" BO_ 196 0;
+BA_ "DiagRequest" BO_ 210 0;
+BA_ "Period [ms]" BO_ 210 10;
+BA_ "Type" BO_ 210 1;
+BA_ "DiagResponse" BO_ 210 0;
+BA_ "NmMessage" BO_ 210 0;
+BA_ "GenMsgSendType" BO_ 210 0;
+BA_ "GenMsgTimeoutTime" BO_ 210 0;
+BA_ "GenMsgILSupport" BO_ 210 1;
+BA_ "GenMsgCycleTimeFast" BO_ 210 0;
+BA_ "GenMsgCycleTime" BO_ 210 10;
+BA_ "DiagState" BO_ 210 0;
+BA_ "DiagRequest" BO_ 199 0;
+BA_ "Period [ms]" BO_ 199 5;
+BA_ "Type" BO_ 199 1;
+BA_ "DiagResponse" BO_ 199 0;
+BA_ "NmMessage" BO_ 199 0;
+BA_ "GenMsgSendType" BO_ 199 0;
+BA_ "GenMsgTimeoutTime" BO_ 199 0;
+BA_ "GenMsgILSupport" BO_ 199 1;
+BA_ "GenMsgCycleTimeFast" BO_ 199 0;
+BA_ "GenMsgCycleTime" BO_ 199 5;
+BA_ "DiagState" BO_ 199 0;
+BA_ "DiagRequest" BO_ 213 0;
+BA_ "Period [ms]" BO_ 213 10;
+BA_ "Type" BO_ 213 1;
+BA_ "DiagResponse" BO_ 213 0;
+BA_ "NmMessage" BO_ 213 0;
+BA_ "GenMsgSendType" BO_ 213 0;
+BA_ "GenMsgTimeoutTime" BO_ 213 0;
+BA_ "GenMsgILSupport" BO_ 213 1;
+BA_ "GenMsgCycleTimeFast" BO_ 213 0;
+BA_ "GenMsgCycleTime" BO_ 213 10;
+BA_ "DiagState" BO_ 213 0;
+BA_ "DiagRequest" BO_ 1808 0;
+BA_ "Period [ms]" BO_ 1808 1000;
+BA_ "Type" BO_ 1808 1;
+BA_ "DiagResponse" BO_ 1808 0;
+BA_ "NmMessage" BO_ 1808 0;
+BA_ "GenMsgSendType" BO_ 1808 0;
+BA_ "GenMsgTimeoutTime" BO_ 1808 0;
+BA_ "GenMsgILSupport" BO_ 1808 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1808 0;
+BA_ "GenMsgCycleTime" BO_ 1808 1000;
+BA_ "DiagState" BO_ 1808 0;
+BA_ "DiagRequest" BO_ 1824 0;
+BA_ "Period [ms]" BO_ 1824 1000;
+BA_ "Type" BO_ 1824 1;
+BA_ "DiagResponse" BO_ 1824 0;
+BA_ "NmMessage" BO_ 1824 0;
+BA_ "GenMsgSendType" BO_ 1824 0;
+BA_ "GenMsgTimeoutTime" BO_ 1824 0;
+BA_ "GenMsgILSupport" BO_ 1824 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1824 0;
+BA_ "GenMsgCycleTime" BO_ 1824 1000;
+BA_ "DiagState" BO_ 1824 0;
+BA_ "DiagRequest" BO_ 1841 0;
+BA_ "Period [ms]" BO_ 1841 1000;
+BA_ "Type" BO_ 1841 1;
+BA_ "DiagResponse" BO_ 1841 0;
+BA_ "NmMessage" BO_ 1841 0;
+BA_ "GenMsgSendType" BO_ 1841 0;
+BA_ "GenMsgTimeoutTime" BO_ 1841 0;
+BA_ "GenMsgILSupport" BO_ 1841 1;
+BA_ "GenMsgCycleTimeFast" BO_ 1841 0;
+BA_ "GenMsgCycleTime" BO_ 1841 1000;
+BA_ "DiagState" BO_ 1841 0;
+BA_ "DiagRequest" BO_ 227 0;
+BA_ "Period [ms]" BO_ 227 10;
+BA_ "Type" BO_ 227 1;
+BA_ "DiagResponse" BO_ 227 0;
+BA_ "NmMessage" BO_ 227 0;
+BA_ "GenMsgSendType" BO_ 227 0;
+BA_ "GenMsgTimeoutTime" BO_ 227 0;
+BA_ "GenMsgILSupport" BO_ 227 1;
+BA_ "GenMsgCycleTimeFast" BO_ 227 0;
+BA_ "GenMsgCycleTime" BO_ 227 10;
+BA_ "DiagState" BO_ 227 0;
+BA_ "DiagRequest" BO_ 2654339230 0;
+BA_ "Period [ms]" BO_ 2654339230 1000;
+BA_ "Type" BO_ 2654339230 1;
+BA_ "DiagResponse" BO_ 2654339230 0;
+BA_ "NmMessage" BO_ 2654339230 0;
+BA_ "GenMsgSendType" BO_ 2654339230 0;
+BA_ "GenMsgTimeoutTime" BO_ 2654339230 2500;
+BA_ "GenMsgNrOfRepetition" BO_ 2654339230 0;
+BA_ "GenMsgILSupport" BO_ 2654339230 1;
+BA_ "GenMsgCycleTimeFast" BO_ 2654339230 0;
+BA_ "GenMsgCycleTime" BO_ 2654339230 1000;
+BA_ "GenMsgDelayTime" BO_ 2654339230 0;
+BA_ "DiagState" BO_ 2654339230 0;
+BA_ "DiagRequest" BO_ 1046 0;
+BA_ "Period [ms]" BO_ 1046 100;
+BA_ "Type" BO_ 1046 1;
+BA_ "DiagResponse" BO_ 1046 0;
+BA_ "NmMessage" BO_ 1046 0;
+BA_ "GenMsgSendType" BO_ 1046 0;
+BA_ "GenMsgILSupport" BO_ 1046 1;
+BA_ "GenMsgCycleTime" BO_ 1046 100;
+BA_ "DiagState" BO_ 1046 0;
+BA_ "Event trans." SG_ 250 OperationalModeSts 1;
+BA_ "GenSigStartValue" SG_ 250 OperationalModeSts 0;
+BA_ "GenSigInactiveValue" SG_ 250 OperationalModeSts 0;
+BA_ "GenSigSendType" SG_ 250 OperationalModeSts 7;
+BA_ "Accuracy" SG_ 1994 IgnitionOnCounter "-";
+BA_ "Event trans." SG_ 1994 IgnitionOnCounter 1;
+BA_ "GenSigStartValue" SG_ 1994 IgnitionOnCounter 0;
+BA_ "GenSigInactiveValue" SG_ 1994 IgnitionOnCounter 0;
+BA_ "GenSigSendType" SG_ 1994 IgnitionOnCounter 7;
+BA_ "Event trans." SG_ 900 CmdIgnSts 0;
+BA_ "GenSigStartValue" SG_ 900 CmdIgnSts 0;
+BA_ "GenSigInactiveValue" SG_ 900 CmdIgnSts 0;
+BA_ "GenSigSendType" SG_ 900 CmdIgnSts 3;
+BA_ "Event trans." SG_ 900 ExternalTemperature 1;
+BA_ "GenSigStartValue" SG_ 900 ExternalTemperature 0;
+BA_ "GenSigInactiveValue" SG_ 900 ExternalTemperature 0;
+BA_ "GenSigSendType" SG_ 900 ExternalTemperature 7;
+BA_ "Event trans." SG_ 768 Battery_Volt_1 1;
+BA_ "GenSigStartValue" SG_ 768 Battery_Volt_1 0;
+BA_ "GenSigInactiveValue" SG_ 768 Battery_Volt_1 0;
+BA_ "GenSigSendType" SG_ 768 Battery_Volt_1 7;
+BA_ "Event trans." SG_ 257 VehicleSpeedVSOSig 1;
+BA_ "GenSigStartValue" SG_ 257 VehicleSpeedVSOSig 0;
+BA_ "GenSigInactiveValue" SG_ 257 VehicleSpeedVSOSig 0;
+BA_ "GenSigSendType" SG_ 257 VehicleSpeedVSOSig 7;
+BA_ "Event trans." SG_ 601 TotalOdometer 1;
+BA_ "GenSigStartValue" SG_ 601 TotalOdometer 0;
+BA_ "GenSigInactiveValue" SG_ 601 TotalOdometer 0;
+BA_ "GenSigSendType" SG_ 601 TotalOdometer 7;
+BA_ "Event trans." SG_ 2564502513 N_PDU 1;
+BA_ "GenSigStartValue" SG_ 2564502513 N_PDU 0;
+BA_ "GenSigInactiveValue" SG_ 2564502513 N_PDU 0;
+BA_ "GenSigSendType" SG_ 2564502513 N_PDU 7;
+BA_ "Event trans." SG_ 2564554481 N_PDU 1;
+BA_ "GenSigStartValue" SG_ 2564554481 N_PDU 0;
+BA_ "GenSigInactiveValue" SG_ 2564554481 N_PDU 0;
+BA_ "GenSigSendType" SG_ 2564554481 N_PDU 7;
+BA_ "Event trans." SG_ 2564480497 N_PDU 1;
+BA_ "GenSigStartValue" SG_ 2564480497 N_PDU 0;
+BA_ "GenSigInactiveValue" SG_ 2564480497 N_PDU 0;
+BA_ "GenSigSendType" SG_ 2564480497 N_PDU 7;
+BA_ "Event trans." SG_ 2564485597 N_PDU 1;
+BA_ "GenSigStartValue" SG_ 2564485597 N_PDU 0;
+BA_ "GenSigInactiveValue" SG_ 2564485597 N_PDU 0;
+BA_ "GenSigSendType" SG_ 2564485597 N_PDU 7;
+BA_ "Event trans." SG_ 208 ClearDTCReq 1;
+BA_ "GenSigStartValue" SG_ 208 ClearDTCReq 0;
+BA_ "GenSigInactiveValue" SG_ 208 ClearDTCReq 0;
+BA_ "GenSigSendType" SG_ 208 ClearDTCReq 7;
+BA_ "Event trans." SG_ 208 DesCutOff_IGN 1;
+BA_ "GenSigStartValue" SG_ 208 DesCutOff_IGN 0;
+BA_ "GenSigInactiveValue" SG_ 208 DesCutOff_IGN 0;
+BA_ "GenSigSendType" SG_ 208 DesCutOff_IGN 7;
+BA_ "Event trans." SG_ 208 DesCutOff_INJ 1;
+BA_ "GenSigStartValue" SG_ 208 DesCutOff_INJ 0;
+BA_ "GenSigInactiveValue" SG_ 208 DesCutOff_INJ 0;
+BA_ "GenSigSendType" SG_ 208 DesCutOff_INJ 7;
+BA_ "Event trans." SG_ 208 EngStSCAN 1;
+BA_ "GenSigStartValue" SG_ 208 EngStSCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 EngStSCAN 0;
+BA_ "GenSigSendType" SG_ 208 EngStSCAN 7;
+BA_ "Event trans." SG_ 208 FlgNoTrqCtrSACAN 1;
+BA_ "GenSigStartValue" SG_ 208 FlgNoTrqCtrSACAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 FlgNoTrqCtrSACAN 0;
+BA_ "GenSigSendType" SG_ 208 FlgNoTrqCtrSACAN 7;
+BA_ "Event trans." SG_ 208 KeyStatus 1;
+BA_ "GenSigStartValue" SG_ 208 KeyStatus 0;
+BA_ "GenSigInactiveValue" SG_ 208 KeyStatus 0;
+BA_ "GenSigSendType" SG_ 208 KeyStatus 7;
+BA_ "Event trans." SG_ 208 LoadCAN 1;
+BA_ "GenSigStartValue" SG_ 208 LoadCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 LoadCAN 0;
+BA_ "GenSigSendType" SG_ 208 LoadCAN 7;
+BA_ "Event trans." SG_ 208 MC_ECM_EISB_1 1;
+BA_ "GenSigStartValue" SG_ 208 MC_ECM_EISB_1 0;
+BA_ "GenSigInactiveValue" SG_ 208 MC_ECM_EISB_1 0;
+BA_ "GenSigSendType" SG_ 208 MC_ECM_EISB_1 7;
+BA_ "Event trans." SG_ 208 RpmCAN 1;
+BA_ "GenSigStartValue" SG_ 208 RpmCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 RpmCAN 0;
+BA_ "GenSigSendType" SG_ 208 RpmCAN 7;
+BA_ "Event trans." SG_ 208 TAirCAN 1;
+BA_ "GenSigStartValue" SG_ 208 TAirCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 TAirCAN 0;
+BA_ "GenSigSendType" SG_ 208 TAirCAN 7;
+BA_ "Event trans." SG_ 208 TWatCAN 1;
+BA_ "GenSigStartValue" SG_ 208 TWatCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 TWatCAN 0;
+BA_ "GenSigSendType" SG_ 208 TWatCAN 7;
+BA_ "Event trans." SG_ 208 VDLoadCAN 1;
+BA_ "GenSigStartValue" SG_ 208 VDLoadCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 VDLoadCAN 0;
+BA_ "GenSigSendType" SG_ 208 VDLoadCAN 7;
+BA_ "Event trans." SG_ 208 VDRpmCAN 1;
+BA_ "GenSigStartValue" SG_ 208 VDRpmCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 VDRpmCAN 0;
+BA_ "GenSigSendType" SG_ 208 VDRpmCAN 7;
+BA_ "Event trans." SG_ 208 VDTAirCAN 1;
+BA_ "GenSigStartValue" SG_ 208 VDTAirCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 VDTAirCAN 0;
+BA_ "GenSigSendType" SG_ 208 VDTAirCAN 7;
+BA_ "Event trans." SG_ 208 VDTWaterCAN 1;
+BA_ "GenSigStartValue" SG_ 208 VDTWaterCAN 0;
+BA_ "GenSigInactiveValue" SG_ 208 VDTWaterCAN 0;
+BA_ "GenSigSendType" SG_ 208 VDTWaterCAN 7;
+BA_ "Event trans." SG_ 214 AFR_CL_Active_CAN 1;
+BA_ "GenSigStartValue" SG_ 214 AFR_CL_Active_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 214 AFR_CL_Active_CAN 0;
+BA_ "GenSigSendType" SG_ 214 AFR_CL_Active_CAN 7;
+BA_ "Event trans." SG_ 214 CatHeatgColdStrtReq 1;
+BA_ "GenSigStartValue" SG_ 214 CatHeatgColdStrtReq 0;
+BA_ "GenSigInactiveValue" SG_ 214 CatHeatgColdStrtReq 0;
+BA_ "GenSigSendType" SG_ 214 CatHeatgColdStrtReq 7;
+BA_ "Event trans." SG_ 214 CatHeatgWrmReq 1;
+BA_ "GenSigStartValue" SG_ 214 CatHeatgWrmReq 0;
+BA_ "GenSigInactiveValue" SG_ 214 CatHeatgWrmReq 0;
+BA_ "GenSigSendType" SG_ 214 CatHeatgWrmReq 7;
+BA_ "Accuracy" SG_ 214 CRC_ECM_EISB_2 "-";
+BA_ "Event trans." SG_ 214 CRC_ECM_EISB_2 1;
+BA_ "GenSigStartValue" SG_ 214 CRC_ECM_EISB_2 0;
+BA_ "GenSigInactiveValue" SG_ 214 CRC_ECM_EISB_2 0;
+BA_ "GenSigSendType" SG_ 214 CRC_ECM_EISB_2 7;
+BA_ "Event trans." SG_ 214 Cyl_Bal_CL_request 1;
+BA_ "GenSigStartValue" SG_ 214 Cyl_Bal_CL_request 0;
+BA_ "GenSigInactiveValue" SG_ 214 Cyl_Bal_CL_request 0;
+BA_ "GenSigSendType" SG_ 214 Cyl_Bal_CL_request 7;
+BA_ "Event trans." SG_ 214 EGRPerc 1;
+BA_ "GenSigStartValue" SG_ 214 EGRPerc 0;
+BA_ "GenSigInactiveValue" SG_ 214 EGRPerc 0;
+BA_ "GenSigSendType" SG_ 214 EGRPerc 7;
+BA_ "Event trans." SG_ 214 ISCMKnkPIUsedByECM 1;
+BA_ "GenSigStartValue" SG_ 214 ISCMKnkPIUsedByECM 0;
+BA_ "GenSigInactiveValue" SG_ 214 ISCMKnkPIUsedByECM 0;
+BA_ "GenSigSendType" SG_ 214 ISCMKnkPIUsedByECM 7;
+BA_ "Event trans." SG_ 214 Lam_Obj_1_CAN 1;
+BA_ "GenSigStartValue" SG_ 214 Lam_Obj_1_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 214 Lam_Obj_1_CAN 0;
+BA_ "GenSigSendType" SG_ 214 Lam_Obj_1_CAN 7;
+BA_ "Event trans." SG_ 214 Lam_Obj_2_CAN 1;
+BA_ "GenSigStartValue" SG_ 214 Lam_Obj_2_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 214 Lam_Obj_2_CAN 0;
+BA_ "GenSigSendType" SG_ 214 Lam_Obj_2_CAN 7;
+BA_ "Event trans." SG_ 214 Lam_Sens_1_CAN 1;
+BA_ "GenSigStartValue" SG_ 214 Lam_Sens_1_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 214 Lam_Sens_1_CAN 0;
+BA_ "GenSigSendType" SG_ 214 Lam_Sens_1_CAN 7;
+BA_ "Event trans." SG_ 214 Lam_Sens_2_CAN 1;
+BA_ "GenSigStartValue" SG_ 214 Lam_Sens_2_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 214 Lam_Sens_2_CAN 0;
+BA_ "GenSigSendType" SG_ 214 Lam_Sens_2_CAN 7;
+BA_ "Accuracy" SG_ 214 MessageCounter_ECM_EISB_2 "-";
+BA_ "Event trans." SG_ 214 MessageCounter_ECM_EISB_2 1;
+BA_ "GenSigStartValue" SG_ 214 MessageCounter_ECM_EISB_2 0;
+BA_ "GenSigInactiveValue" SG_ 214 MessageCounter_ECM_EISB_2 0;
+BA_ "GenSigSendType" SG_ 214 MessageCounter_ECM_EISB_2 7;
+BA_ "Event trans." SG_ 214 ReqResetCylCorrAd 1;
+BA_ "GenSigStartValue" SG_ 214 ReqResetCylCorrAd 0;
+BA_ "GenSigInactiveValue" SG_ 214 ReqResetCylCorrAd 0;
+BA_ "GenSigSendType" SG_ 214 ReqResetCylCorrAd 7;
+BA_ "Event trans." SG_ 214 VD_Lam_Sens_1 1;
+BA_ "GenSigStartValue" SG_ 214 VD_Lam_Sens_1 0;
+BA_ "GenSigInactiveValue" SG_ 214 VD_Lam_Sens_1 0;
+BA_ "GenSigSendType" SG_ 214 VD_Lam_Sens_1 7;
+BA_ "Event trans." SG_ 214 VD_Lam_Sens_2 1;
+BA_ "GenSigStartValue" SG_ 214 VD_Lam_Sens_2 0;
+BA_ "GenSigInactiveValue" SG_ 214 VD_Lam_Sens_2 0;
+BA_ "GenSigSendType" SG_ 214 VD_Lam_Sens_2 7;
+BA_ "Event trans." SG_ 193 FirstKnockAbsTDC 1;
+BA_ "GenSigStartValue" SG_ 193 FirstKnockAbsTDC 0;
+BA_ "GenSigInactiveValue" SG_ 193 FirstKnockAbsTDC 0;
+BA_ "GenSigSendType" SG_ 193 FirstKnockAbsTDC 7;
+BA_ "Event trans." SG_ 193 KnockCorr0_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr0_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr0_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr0_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCorr1_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr1_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr1_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr1_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCorr2_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr2_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr2_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr2_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCorr3_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr3_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr3_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr3_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCorr4_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr4_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr4_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr4_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCorr5_0p1 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCorr5_0p1 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCorr5_0p1 0;
+BA_ "GenSigSendType" SG_ 193 KnockCorr5_0p1 7;
+BA_ "Event trans." SG_ 193 KnockCycleCnt 1;
+BA_ "GenSigStartValue" SG_ 193 KnockCycleCnt 0;
+BA_ "GenSigInactiveValue" SG_ 193 KnockCycleCnt 0;
+BA_ "GenSigSendType" SG_ 193 KnockCycleCnt 7;
+BA_ "Event trans." SG_ 193 LastKnockAbsTDC 1;
+BA_ "GenSigStartValue" SG_ 193 LastKnockAbsTDC 0;
+BA_ "GenSigInactiveValue" SG_ 193 LastKnockAbsTDC 0;
+BA_ "GenSigSendType" SG_ 193 LastKnockAbsTDC 7;
+BA_ "Event trans." SG_ 193 MC_EISB_ECM_1 1;
+BA_ "GenSigStartValue" SG_ 193 MC_EISB_ECM_1 0;
+BA_ "GenSigInactiveValue" SG_ 193 MC_EISB_ECM_1 0;
+BA_ "GenSigSendType" SG_ 193 MC_EISB_ECM_1 7;
+BA_ "Event trans." SG_ 193 MKnockDet_0 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_0 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_0 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_0 7;
+BA_ "Event trans." SG_ 193 MKnockDet_1 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_1 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_1 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_1 7;
+BA_ "Event trans." SG_ 193 MKnockDet_2 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_2 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_2 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_2 7;
+BA_ "Event trans." SG_ 193 MKnockDet_3 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_3 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_3 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_3 7;
+BA_ "Event trans." SG_ 193 MKnockDet_4 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_4 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_4 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_4 7;
+BA_ "Event trans." SG_ 193 MKnockDet_5 1;
+BA_ "GenSigStartValue" SG_ 193 MKnockDet_5 0;
+BA_ "GenSigInactiveValue" SG_ 193 MKnockDet_5 0;
+BA_ "GenSigSendType" SG_ 193 MKnockDet_5 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_0 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_0 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_0 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_0 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_1 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_1 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_1 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_1 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_2 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_2 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_2 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_2 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_3 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_3 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_3 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_3 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_4 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_4 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_4 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_4 7;
+BA_ "Event trans." SG_ 195 EffDwellTime_5 1;
+BA_ "GenSigStartValue" SG_ 195 EffDwellTime_5 0;
+BA_ "GenSigInactiveValue" SG_ 195 EffDwellTime_5 0;
+BA_ "GenSigSendType" SG_ 195 EffDwellTime_5 7;
+BA_ "Event trans." SG_ 195 MC_EISB_ECM_1_CoilCmd 1;
+BA_ "GenSigStartValue" SG_ 195 MC_EISB_ECM_1_CoilCmd 0;
+BA_ "GenSigInactiveValue" SG_ 195 MC_EISB_ECM_1_CoilCmd 0;
+BA_ "GenSigSendType" SG_ 195 MC_EISB_ECM_1_CoilCmd 7;
+BA_ "Event trans." SG_ 196 MC_EISB_ECM_1_SparkAdvance 1;
+BA_ "GenSigStartValue" SG_ 196 MC_EISB_ECM_1_SparkAdvance 0;
+BA_ "GenSigInactiveValue" SG_ 196 MC_EISB_ECM_1_SparkAdvance 0;
+BA_ "GenSigSendType" SG_ 196 MC_EISB_ECM_1_SparkAdvance 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_0 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_0 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_0 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_0 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_1 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_1 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_1 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_1 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_2 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_2 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_2 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_2 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_3 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_3 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_3 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_3 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_4 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_4 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_4 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_4 7;
+BA_ "Event trans." SG_ 196 SAOutCyl_5 1;
+BA_ "GenSigStartValue" SG_ 196 SAOutCyl_5 0;
+BA_ "GenSigInactiveValue" SG_ 196 SAOutCyl_5 0;
+BA_ "GenSigSendType" SG_ 196 SAOutCyl_5 7;
+BA_ "Event trans." SG_ 210 Ack_CatHeatingMode 1;
+BA_ "GenSigStartValue" SG_ 210 Ack_CatHeatingMode 0;
+BA_ "GenSigInactiveValue" SG_ 210 Ack_CatHeatingMode 0;
+BA_ "GenSigSendType" SG_ 210 Ack_CatHeatingMode 7;
+BA_ "Event trans." SG_ 210 ClearDTCAck 1;
+BA_ "GenSigStartValue" SG_ 210 ClearDTCAck 0;
+BA_ "GenSigInactiveValue" SG_ 210 ClearDTCAck 0;
+BA_ "GenSigSendType" SG_ 210 ClearDTCAck 7;
+BA_ "Event trans." SG_ 210 CRC_EISB_ECM_2 1;
+BA_ "GenSigStartValue" SG_ 210 CRC_EISB_ECM_2 0;
+BA_ "GenSigInactiveValue" SG_ 210 CRC_EISB_ECM_2 0;
+BA_ "GenSigSendType" SG_ 210 CRC_EISB_ECM_2 7;
+BA_ "Event trans." SG_ 210 EISBTempStatus 1;
+BA_ "GenSigStartValue" SG_ 210 EISBTempStatus 0;
+BA_ "GenSigInactiveValue" SG_ 210 EISBTempStatus 0;
+BA_ "GenSigSendType" SG_ 210 EISBTempStatus 7;
+BA_ "Event trans." SG_ 210 FirstMisfAbsTDC 1;
+BA_ "GenSigStartValue" SG_ 210 FirstMisfAbsTDC 0;
+BA_ "GenSigInactiveValue" SG_ 210 FirstMisfAbsTDC 0;
+BA_ "GenSigSendType" SG_ 210 FirstMisfAbsTDC 7;
+BA_ "Event trans." SG_ 210 IgnFault0 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault0 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault0 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault0 7;
+BA_ "Event trans." SG_ 210 IgnFault1 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault1 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault1 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault1 7;
+BA_ "Event trans." SG_ 210 IgnFault2 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault2 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault2 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault2 7;
+BA_ "Event trans." SG_ 210 IgnFault3 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault3 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault3 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault3 7;
+BA_ "Event trans." SG_ 210 IgnFault4 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault4 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault4 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault4 7;
+BA_ "Event trans." SG_ 210 IgnFault5 1;
+BA_ "GenSigStartValue" SG_ 210 IgnFault5 0;
+BA_ "GenSigInactiveValue" SG_ 210 IgnFault5 0;
+BA_ "GenSigSendType" SG_ 210 IgnFault5 7;
+BA_ "Event trans." SG_ 210 LastMisfAbsTDC 1;
+BA_ "GenSigStartValue" SG_ 210 LastMisfAbsTDC 0;
+BA_ "GenSigInactiveValue" SG_ 210 LastMisfAbsTDC 0;
+BA_ "GenSigSendType" SG_ 210 LastMisfAbsTDC 7;
+BA_ "Event trans." SG_ 210 MC_EISB_ECM_2 1;
+BA_ "GenSigStartValue" SG_ 210 MC_EISB_ECM_2 0;
+BA_ "GenSigInactiveValue" SG_ 210 MC_EISB_ECM_2 0;
+BA_ "GenSigSendType" SG_ 210 MC_EISB_ECM_2 7;
+BA_ "Event trans." SG_ 210 Misf_flag_0 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_0 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_0 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_0 7;
+BA_ "Event trans." SG_ 210 Misf_flag_1 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_1 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_1 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_1 7;
+BA_ "Event trans." SG_ 210 Misf_flag_2 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_2 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_2 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_2 7;
+BA_ "Event trans." SG_ 210 Misf_flag_3 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_3 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_3 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_3 7;
+BA_ "Event trans." SG_ 210 Misf_flag_4 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_4 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_4 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_4 7;
+BA_ "Event trans." SG_ 210 Misf_flag_5 1;
+BA_ "GenSigStartValue" SG_ 210 Misf_flag_5 0;
+BA_ "GenSigInactiveValue" SG_ 210 Misf_flag_5 0;
+BA_ "GenSigSendType" SG_ 210 Misf_flag_5 7;
+BA_ "Event trans." SG_ 210 MisfCyclesCnt 1;
+BA_ "GenSigStartValue" SG_ 210 MisfCyclesCnt 0;
+BA_ "GenSigInactiveValue" SG_ 210 MisfCyclesCnt 0;
+BA_ "GenSigSendType" SG_ 210 MisfCyclesCnt 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_0 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_0 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_0 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_0 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_1 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_1 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_1 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_1 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_2 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_2 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_2 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_2 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_3 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_3 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_3 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_3 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_4 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_4 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_4 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_4 7;
+BA_ "Event trans." SG_ 210 SparkPlugFouled_5 1;
+BA_ "GenSigStartValue" SG_ 210 SparkPlugFouled_5 0;
+BA_ "GenSigInactiveValue" SG_ 210 SparkPlugFouled_5 0;
+BA_ "GenSigSendType" SG_ 210 SparkPlugFouled_5 7;
+BA_ "Event trans." SG_ 199 AckReqResetCylCorrAd 1;
+BA_ "GenSigStartValue" SG_ 199 AckReqResetCylCorrAd 0;
+BA_ "GenSigInactiveValue" SG_ 199 AckReqResetCylCorrAd 0;
+BA_ "GenSigSendType" SG_ 199 AckReqResetCylCorrAd 7;
+BA_ "Event trans." SG_ 199 CRC_EISB_ECM_3 1;
+BA_ "GenSigStartValue" SG_ 199 CRC_EISB_ECM_3 0;
+BA_ "GenSigInactiveValue" SG_ 199 CRC_EISB_ECM_3 0;
+BA_ "GenSigSendType" SG_ 199 CRC_EISB_ECM_3 7;
+BA_ "Event trans." SG_ 199 Cyl_Bal_CL_Enable 1;
+BA_ "GenSigStartValue" SG_ 199 Cyl_Bal_CL_Enable 0;
+BA_ "GenSigInactiveValue" SG_ 199 Cyl_Bal_CL_Enable 0;
+BA_ "GenSigSendType" SG_ 199 Cyl_Bal_CL_Enable 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl0CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl0CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl0CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl0CAN 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl1CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl1CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl1CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl1CAN 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl2CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl2CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl2CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl2CAN 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl3CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl3CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl3CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl3CAN 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl4CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl4CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl4CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl4CAN 7;
+BA_ "Event trans." SG_ 199 Inj_Corr_Cyl5CAN 1;
+BA_ "GenSigStartValue" SG_ 199 Inj_Corr_Cyl5CAN 0;
+BA_ "GenSigInactiveValue" SG_ 199 Inj_Corr_Cyl5CAN 0;
+BA_ "GenSigSendType" SG_ 199 Inj_Corr_Cyl5CAN 7;
+BA_ "Event trans." SG_ 199 MC_EISB_ECM_3 1;
+BA_ "GenSigStartValue" SG_ 199 MC_EISB_ECM_3 0;
+BA_ "GenSigInactiveValue" SG_ 199 MC_EISB_ECM_3 0;
+BA_ "GenSigSendType" SG_ 199 MC_EISB_ECM_3 7;
+BA_ "Event trans." SG_ 199 StAdaption 1;
+BA_ "GenSigStartValue" SG_ 199 StAdaption 0;
+BA_ "GenSigInactiveValue" SG_ 199 StAdaption 0;
+BA_ "GenSigSendType" SG_ 199 StAdaption 7;
+BA_ "Event trans." SG_ 213 BitFault_ADC 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ADC 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ADC 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ADC 7;
+BA_ "Event trans." SG_ 213 BitFault_Bank_Misf 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Bank_Misf 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Bank_Misf 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Bank_Misf 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_A 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_A 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_A 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_A 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_A_Curr_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_A_Curr_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_A_Curr_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_A_Curr_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_A_Curr_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_A_Curr_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_A_Curr_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_A_Curr_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_B 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_B 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_B 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_B 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_B_Curr_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_B_Curr_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_B_Curr_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_B_Curr_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_Buck_B_Curr_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Buck_B_Curr_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Buck_B_Curr_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Buck_B_Curr_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_CAN_Node_1 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_CAN_Node_1 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_CAN_Node_1 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_CAN_Node_1 7;
+BA_ "Event trans." SG_ 213 BitFault_CAN_node_Over_Run 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_CAN_node_Over_Run 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_CAN_node_Over_Run 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_CAN_node_Over_Run 7;
+BA_ "Event trans." SG_ 213 BitFault_CPU 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_CPU 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_CPU 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_CPU 7;
+BA_ "Event trans." SG_ 213 BitFault_ECU_3 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ECU_3 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ECU_3 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ECU_3 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_0 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_0 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_0 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_0 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_1 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_1 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_1 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_1 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_2 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_2 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_2 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_2 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_3 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_3 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_3 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_3 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_4 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_4 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_4 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_4 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_5 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_5 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_5 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_5 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_A_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_A_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_A_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_A_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_A_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_A_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_A_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_A_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_B_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_B_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_B_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_B_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_B_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_B_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_B_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_B_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_C_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_C_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_C_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_C_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_ION_CH_C_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_ION_CH_C_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_ION_CH_C_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_ION_CH_C_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_0 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_0 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_0 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_0 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_1 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_1 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_1 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_1 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_2 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_2 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_2 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_2 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_3 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_3 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_3 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_3 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_4 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_4 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_4 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_4 7;
+BA_ "Event trans." SG_ 213 BitFault_Knock_Coh_5 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Knock_Coh_5 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Knock_Coh_5 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Knock_Coh_5 7;
+BA_ "Event trans." SG_ 213 BitFault_Liveness 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Liveness 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Liveness 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Liveness 7;
+BA_ "Event trans." SG_ 213 BitFault_Pri_A 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Pri_A 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Pri_A 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Pri_A 7;
+BA_ "Event trans." SG_ 213 BitFault_Pri_B 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Pri_B 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Pri_B 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Pri_B 7;
+BA_ "Event trans." SG_ 213 BitFault_Private_CAN 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Private_CAN 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Private_CAN 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Private_CAN 7;
+BA_ "Event trans." SG_ 213 BitFault_RAM 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_RAM 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_RAM 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_RAM 7;
+BA_ "Event trans." SG_ 213 BitFault_Rpm 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Rpm 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Rpm 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Rpm 7;
+BA_ "Event trans." SG_ 213 BitFault_Sec_1_4 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Sec_1_4 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Sec_1_4 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Sec_1_4 7;
+BA_ "Event trans." SG_ 213 BitFault_Sec_2_5 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Sec_2_5 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Sec_2_5 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Sec_2_5 7;
+BA_ "Event trans." SG_ 213 BitFault_Sec_3_6 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Sec_3_6 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Sec_3_6 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Sec_3_6 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_0 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_0 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_0 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_0 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_1 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_1 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_1 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_1 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_2 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_2 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_2 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_2 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_3 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_3 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_3 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_3 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_4 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_4 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_4 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_4 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_5 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_5 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_5 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_5 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_Ev_A 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_Ev_A 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_Ev_A 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_Ev_A 7;
+BA_ "Event trans." SG_ 213 BitFault_Spark_Ev_B 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Spark_Ev_B 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Spark_Ev_B 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Spark_Ev_B 7;
+BA_ "Event trans." SG_ 213 BitFault_Sync 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Sync 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Sync 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Sync 7;
+BA_ "Event trans." SG_ 213 BitFault_Temp_ECU_1_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Temp_ECU_1_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Temp_ECU_1_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Temp_ECU_1_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_Temp_ECU_1_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Temp_ECU_1_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Temp_ECU_1_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Temp_ECU_1_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_Temp_ECU_2_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Temp_ECU_2_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Temp_ECU_2_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Temp_ECU_2_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_Temp_ECU_2_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Temp_ECU_2_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Temp_ECU_2_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Temp_ECU_2_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_Vbat_Circuit 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Vbat_Circuit 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Vbat_Circuit 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Vbat_Circuit 7;
+BA_ "Event trans." SG_ 213 BitFault_Vbattery_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Vbattery_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Vbattery_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Vbattery_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_Vbattery_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Vbattery_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Vbattery_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Vbattery_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_1_4_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_1_4_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_1_4_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_1_4_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_1_4_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_1_4_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_1_4_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_1_4_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_2_5_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_2_5_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_2_5_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_2_5_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_2_5_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_2_5_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_2_5_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_2_5_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_3_6_HI 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_3_6_HI 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_3_6_HI 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_3_6_HI 7;
+BA_ "Event trans." SG_ 213 BitFault_VCap_3_6_LO 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_VCap_3_6_LO 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_VCap_3_6_LO 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_VCap_3_6_LO 7;
+BA_ "Event trans." SG_ 213 BitFault_Vcoil_A_Mon 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Vcoil_A_Mon 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Vcoil_A_Mon 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Vcoil_A_Mon 7;
+BA_ "Event trans." SG_ 213 BitFault_Vcoil_B_Mon 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_Vcoil_B_Mon 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_Vcoil_B_Mon 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_Vcoil_B_Mon 7;
+BA_ "Event trans." SG_ 213 BitFault_WDT 1;
+BA_ "GenSigStartValue" SG_ 213 BitFault_WDT 0;
+BA_ "GenSigInactiveValue" SG_ 213 BitFault_WDT 0;
+BA_ "GenSigSendType" SG_ 213 BitFault_WDT 7;
+BA_ "Event trans." SG_ 1808 CALID_00 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_00 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_00 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_00 7;
+BA_ "Event trans." SG_ 1808 CALID_01 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_01 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_01 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_01 7;
+BA_ "Event trans." SG_ 1808 CALID_02 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_02 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_02 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_02 7;
+BA_ "Event trans." SG_ 1808 CALID_03 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_03 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_03 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_03 7;
+BA_ "Event trans." SG_ 1808 CALID_04 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_04 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_04 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_04 7;
+BA_ "Event trans." SG_ 1808 CALID_05 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_05 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_05 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_05 7;
+BA_ "Event trans." SG_ 1808 CALID_06 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_06 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_06 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_06 7;
+BA_ "Event trans." SG_ 1808 CALID_07 1;
+BA_ "GenSigStartValue" SG_ 1808 CALID_07 0;
+BA_ "GenSigInactiveValue" SG_ 1808 CALID_07 0;
+BA_ "GenSigSendType" SG_ 1808 CALID_07 7;
+BA_ "Event trans." SG_ 1824 CALID_08 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_08 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_08 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_08 7;
+BA_ "Event trans." SG_ 1824 CALID_09 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_09 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_09 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_09 7;
+BA_ "Event trans." SG_ 1824 CALID_10 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_10 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_10 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_10 7;
+BA_ "Event trans." SG_ 1824 CALID_11 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_11 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_11 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_11 7;
+BA_ "Event trans." SG_ 1824 CALID_12 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_12 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_12 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_12 7;
+BA_ "Event trans." SG_ 1824 CALID_13 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_13 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_13 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_13 7;
+BA_ "Event trans." SG_ 1824 CALID_14 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_14 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_14 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_14 7;
+BA_ "Event trans." SG_ 1824 CALID_15 1;
+BA_ "GenSigStartValue" SG_ 1824 CALID_15 0;
+BA_ "GenSigInactiveValue" SG_ 1824 CALID_15 0;
+BA_ "GenSigSendType" SG_ 1824 CALID_15 7;
+BA_ "Event trans." SG_ 1841 CVN_00 1;
+BA_ "GenSigStartValue" SG_ 1841 CVN_00 0;
+BA_ "GenSigInactiveValue" SG_ 1841 CVN_00 0;
+BA_ "GenSigSendType" SG_ 1841 CVN_00 7;
+BA_ "Event trans." SG_ 1841 CVN_01 1;
+BA_ "GenSigStartValue" SG_ 1841 CVN_01 0;
+BA_ "GenSigInactiveValue" SG_ 1841 CVN_01 0;
+BA_ "GenSigSendType" SG_ 1841 CVN_01 7;
+BA_ "Event trans." SG_ 1841 CVN_02 1;
+BA_ "GenSigStartValue" SG_ 1841 CVN_02 0;
+BA_ "GenSigInactiveValue" SG_ 1841 CVN_02 0;
+BA_ "GenSigSendType" SG_ 1841 CVN_02 7;
+BA_ "Event trans." SG_ 1841 CVN_03 1;
+BA_ "GenSigStartValue" SG_ 1841 CVN_03 0;
+BA_ "GenSigInactiveValue" SG_ 1841 CVN_03 0;
+BA_ "GenSigSendType" SG_ 1841 CVN_03 7;
+BA_ "Event trans." SG_ 1841 CVN_Calc_Flag 1;
+BA_ "GenSigStartValue" SG_ 1841 CVN_Calc_Flag 0;
+BA_ "GenSigInactiveValue" SG_ 1841 CVN_Calc_Flag 0;
+BA_ "GenSigSendType" SG_ 1841 CVN_Calc_Flag 7;
+BA_ "Event trans." SG_ 227 EngineSpeed_W 1;
+BA_ "GenSigStartValue" SG_ 227 EngineSpeed_W 0;
+BA_ "GenSigInactiveValue" SG_ 227 EngineSpeed_W 0;
+BA_ "GenSigSendType" SG_ 227 EngineSpeed_W 7;
+BA_ "Accuracy" SG_ 2654339230 CurrentFailSts_ISCM "-";
+BA_ "Event trans." SG_ 2654339230 CurrentFailSts_ISCM 1;
+BA_ "GenSigStartValue" SG_ 2654339230 CurrentFailSts_ISCM 0;
+BA_ "GenSigInactiveValue" SG_ 2654339230 CurrentFailSts_ISCM 0;
+BA_ "GenSigSendType" SG_ 2654339230 CurrentFailSts_ISCM 7;
+BA_ "Accuracy" SG_ 2654339230 DES_ISCM "-";
+BA_ "Event trans." SG_ 2654339230 DES_ISCM 1;
+BA_ "GenSigStartValue" SG_ 2654339230 DES_ISCM 0;
+BA_ "GenSigInactiveValue" SG_ 2654339230 DES_ISCM 0;
+BA_ "GenSigSendType" SG_ 2654339230 DES_ISCM 7;
+BA_ "Accuracy" SG_ 2654339230 EOL_ISCM "-";
+BA_ "Event trans." SG_ 2654339230 EOL_ISCM 1;
+BA_ "GenSigStartValue" SG_ 2654339230 EOL_ISCM 0;
+BA_ "GenSigInactiveValue" SG_ 2654339230 EOL_ISCM 0;
+BA_ "GenSigSendType" SG_ 2654339230 EOL_ISCM 7;
+BA_ "Accuracy" SG_ 2654339230 GenericFailSts_ISCM "-";
+BA_ "Event trans." SG_ 2654339230 GenericFailSts_ISCM 1;
+BA_ "GenSigStartValue" SG_ 2654339230 GenericFailSts_ISCM 0;
+BA_ "GenSigInactiveValue" SG_ 2654339230 GenericFailSts_ISCM 0;
+BA_ "GenSigSendType" SG_ 2654339230 GenericFailSts_ISCM 7;
+BA_ "Event trans." SG_ 1046 VIN_DATA 1;
+BA_ "GenSigStartValue" SG_ 1046 VIN_DATA 0;
+BA_ "GenSigInactiveValue" SG_ 1046 VIN_DATA 0;
+BA_ "GenSigSendType" SG_ 1046 VIN_DATA 7;
+BA_ "Event trans." SG_ 1046 VIN_MSG 1;
+BA_ "GenSigStartValue" SG_ 1046 VIN_MSG 3;
+BA_ "GenSigInactiveValue" SG_ 1046 VIN_MSG 0;
+BA_ "GenSigSendType" SG_ 1046 VIN_MSG 7;
+BA_ "NmType" "Fiat_Class_C";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "CCAN12";
+BA_ "VersionWeek" 14;
+BA_ "VersionYear" 25;
+VAL_ 250 OperationalModeSts 0 "Initialization" 1 "Ignition_Off_WithoutKey" 2 "Ignition_Off" 3 "Ignition_Acc" 4 "Ignition_On" 5 "Ignition_Pre_Start" 6 "Ignition_Start" 7 "Ignition_Cranking" 8 "Ignition_On_EngOn" 9 "Ignition_Pre_Acc" 10 "Ignition_Pre_Off" 11 "Automatic_Cranking" 12 "Automatic_Stop" 13 "Key_Authenticated" 14 "Not_Used" 15 "SNA";
+VAL_ 900 CmdIgnSts 0 "Initialization" 1 "IGN_LK" 3 "ACC" 4 "RUN" 5 "START" 7 "SNA";
+VAL_ 900 ExternalTemperature 511 "SNA";
+VAL_ 768 Battery_Volt_1 511 "SNA";
+VAL_ 257 VehicleSpeedVSOSig 8191 "SNA";
+VAL_ 208 ClearDTCReq 0 "NO_REQ" 1 "REQ_IN_PROGRESS";
+VAL_ 208 EngStSCAN 0 "ENGSTS_OFF" 1 "ENGSTS_ON" 2 "ENGSTS_CRANKING" 3 "ENGSTS_SHUTDOWN" 63 "FAULT";
+VAL_ 208 KeyStatus 0 "IGNITION_SWITCH_OFF" 1 "IGNITION_SWITCH_ON";
+VAL_ 208 VDTWaterCAN 0 "Valid" 1 "Not_Valid";
+VAL_ 214 CatHeatgColdStrtReq 0 "Normal_Combustion" 1 "Catalyst_Heating_Active";
+VAL_ 214 CatHeatgWrmReq 0 "Normal_Combustion" 1 "Catalyst_Warming_Active";
+VAL_ 214 ISCMKnkPIUsedByECM 0 "Valid" 1 "Not_Valid";
+VAL_ 210 Ack_CatHeatingMode 0 "Normal_Combustion" 1 "Catalyst_Heating_Active" 2 "Catalyst_Warming_Active";
+VAL_ 210 ClearDTCAck 0 "Not_Acknowledged" 1 "Acknowledged";
+VAL_ 210 EISBTempStatus 0 "TEMP_STS_NORMAL" 1 "TEMP_STS_WARNING" 2 "TEMP_STS_HAZARD" 3 "TEMP_STS_FAULT";
+VAL_ 199 AckReqResetCylCorrAd 0 "ACK_NO_REQ" 1 "ACK_RESET_IN_PROGRESS" 2 "ACK_RESET_KO" 3 "ACK_RESET_OK";
+VAL_ 227 EngineSpeed_W 16383 "SNA";
+VAL_ 2654339230 DES_ISCM 0 "Error_Active_state" 1 "Error_passive_warning_state" 2 "Bus_off_state" 3 "Not_used";
+VAL_ 2654339230 EOL_ISCM 0 "No_EOL_prog_at_FIAT" 1 "EOL_prog_at_FIAT";
+VAL_ 1046 VIN_MSG 0 "VIN_LO" 1 "VIN_MID" 2 "VIN_HI" 3 "SNA";
+
