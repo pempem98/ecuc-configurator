@@ -24,6 +24,29 @@ from .can_model import (
     ValueTableEntry,
 )
 
+# XLSX Models
+from .xlsx_model import (
+    XLSXDatabase,
+    XLSXMessage,
+    XLSXSignal,
+    MessageDirection,
+    create_xlsx_signal,
+    create_xlsx_message,
+    create_xlsx_database,
+)
+
+# Complete XLSX Models (with ALL Excel columns)
+from .xlsx_complete_model import (
+    CompleteXLSXDatabase,
+    CompleteXLSXMessage,
+    CompleteXLSXSignal,
+    RxColumnMapping,
+    TxColumnMapping,
+    ExcelColumnMapping,
+    InvalidationPolicy,
+    SignalStatus,
+)
+
 # LIN Models
 from .lin_model import (
     LINNetwork,
@@ -80,6 +103,23 @@ __all__ = [
     "CANNode",
     "ValueTable",
     "ValueTableEntry",
+    # XLSX
+    "XLSXDatabase",
+    "XLSXMessage",
+    "XLSXSignal",
+    "MessageDirection",
+    "create_xlsx_signal",
+    "create_xlsx_message",
+    "create_xlsx_database",
+    # Complete XLSX (ALL columns)
+    "CompleteXLSXDatabase",
+    "CompleteXLSXMessage",
+    "CompleteXLSXSignal",
+    "RxColumnMapping",
+    "TxColumnMapping",
+    "ExcelColumnMapping",
+    "InvalidationPolicy",
+    "SignalStatus",
     # LIN
     "LINNetwork",
     "LINFrame",

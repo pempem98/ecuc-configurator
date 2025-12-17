@@ -208,6 +208,11 @@ temp/
 *.swo
 *~
 
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+.~lock.*
+
 # Log files
 *.log
 logs/
@@ -244,6 +249,13 @@ tests/data/temp_*
 # Generated documentation
 doc/_build/
 doc/api/
+
+# Duplicate/outdated docs (keep only README.md, CHANGELOG.md, CONTRIBUTING.md)
+*_SUMMARY.md
+*_IMPLEMENTATION.md
+*_QUICKSTART.md
+*_QUICK_REFERENCE.md
+IMPLEMENTATION_SUMMARY.md
 
 # Cache directories
 .cache/

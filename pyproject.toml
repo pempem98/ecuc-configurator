@@ -58,6 +58,8 @@ python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "-v --strict-markers"
+# Exclude legacy tests and demo scripts from test discovery
+norecursedirs = ["legacy", "demo", ".git", "__pycache__", "*.egg-info"]
 
 [tool.black]
 line-length = 88

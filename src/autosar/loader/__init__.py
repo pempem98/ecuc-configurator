@@ -19,6 +19,8 @@ from .base_loader import (
 )
 from .dbc_loader import DBCLoader
 from .ldf_loader import LDFLoader
+from .xlsx_loader import XLSXLoader
+from .complete_xlsx_loader import CompleteXLSXLoader
 
 __all__ = [
     # Base classes
@@ -33,4 +35,6 @@ __all__ = [
     # Loaders
     "DBCLoader",
     "LDFLoader",
+    "XLSXLoader",
+    "CompleteXLSXLoader",
 ]

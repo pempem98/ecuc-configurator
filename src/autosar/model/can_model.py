@@ -140,15 +140,16 @@ class CANMessage(Identifiable):
     Represents a CAN frame with its signals.
     """
     
+    # Define is_extended BEFORE message_id so validator can access it
+    is_extended: bool = Field(
+        default=False,
+        description="Extended frame format (29-bit ID)"
+    )
     message_id: int = Field(
         ...,
         ge=0,
         le=0x1FFFFFFF,
         description="CAN message ID (11-bit or 29-bit)"
-    )
-    is_extended: bool = Field(
-        default=False,
-        description="Extended frame format (29-bit ID)"
     )
     dlc: int = Field(..., ge=0, le=8, description="Data Length Code (0-8 bytes)")
     
